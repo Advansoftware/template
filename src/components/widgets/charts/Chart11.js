@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import numeral from "numeral";
 import Chart from "react-apexcharts";
 import {
