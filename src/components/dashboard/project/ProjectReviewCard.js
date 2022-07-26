@@ -1,7 +1,7 @@
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { formatDistanceToNowStrict } from 'date-fns';
-import { Avatar, Box, Card, CardHeader, Link, Rating, Typography } from '@material-ui/core';
+import { Avatar, Box, Card, CardHeader, Link, Rating, Typography } from '@mui/material';
 import getInitials from '../../../utils/getInitials';
 
 const ProjectReviewCard = (props) => {

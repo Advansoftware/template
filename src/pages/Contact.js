@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link as BrowserLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Avatar, Box, Container, Link, Typography } from '@material-ui/core';
+import { Avatar, Box, Container, Link, Typography } from '@mui/material';
 import { ContactForm } from '../components/contact';
 import Logo from '../components/Logo';
 import MailIcon from '../icons/Mail';

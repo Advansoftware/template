@@ -12,7 +12,7 @@ import {
   Paper,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import DotsHorizontalIcon from '../../../icons/DotsHorizontal';
 import { clearColumn, deleteColumn, updateColumn } from '../../../slices/kanban';
 import { useDispatch, useSelector } from '../../../store';
@@ -143,7 +143,7 @@ const KanbanColumn = (props) => {
             edge="end"
             onClick={handleMenuOpen}
             ref={moreRef}
-          >
+            size="large">
             <DotsHorizontalIcon fontSize="small" />
           </IconButton>
         </Box>

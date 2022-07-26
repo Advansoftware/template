@@ -1,7 +1,7 @@
 import Chart from 'react-apexcharts';
 import numeral from 'numeral';
-import { Box, Card, CardContent, CardHeader, Container, Typography } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import { Box, Card, CardContent, CardHeader, Container, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 const data = {
   series: [

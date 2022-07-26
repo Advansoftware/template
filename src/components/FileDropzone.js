@@ -11,7 +11,7 @@ import {
   ListItemText,
   Tooltip,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import DuplicateIcon from '../icons/Duplicate';
 import XIcon from '../icons/X';
 import bytesToSize from '../utils/bytesToSize';
@@ -141,10 +141,7 @@ const FileDropzone = (props) => {
                   secondary={bytesToSize(file.size)}
                 />
                 <Tooltip title="Remove">
-                  <IconButton
-                    edge="end"
-                    onClick={() => onRemove && onRemove(file)}
-                  >
+                  <IconButton edge="end" onClick={() => onRemove && onRemove(file)} size="large">
                     <XIcon fontSize="small" />
                   </IconButton>
                 </Tooltip>

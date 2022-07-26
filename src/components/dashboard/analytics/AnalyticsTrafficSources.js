@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Chart from 'react-apexcharts';
-import { Box, Card, CardHeader, Checkbox, Tooltip, Typography } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import { Box, Card, CardHeader, Checkbox, Tooltip, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import InformationCircleIcon from '../../../icons/InformationCircle';
 
 const data = {

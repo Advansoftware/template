@@ -11,11 +11,11 @@ import {
   Link,
   Tooltip,
   Typography
-} from '@material-ui/core';
-import red from '@material-ui/core/colors/red';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+} from '@mui/material';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import ClockIcon from '../../../icons/Clock';
 import ShareIcon from '../../../icons/Share';
+import { red } from '@mui/material/colors';
 
 const now = new Date();
 
@@ -46,7 +46,7 @@ const posts = [
   }
 ];
 
-const GridList5 = () => (
+const ImageList5 = () => (
   <Box
     sx={{
       backgroundColor: 'background.default',
@@ -134,7 +134,7 @@ const GridList5 = () => (
                 }}
               >
                 <Tooltip title="Unlike">
-                  <IconButton sx={{ color: red['600'] }}>
+                  <IconButton sx={{ color: red['600'] }} size="large">
                     <FavoriteIcon fontSize="small" />
                   </IconButton>
                 </Tooltip>
@@ -145,7 +145,7 @@ const GridList5 = () => (
                   {post.likes}
                 </Typography>
                 <Box sx={{ flexGrow: 1 }} />
-                <IconButton>
+                <IconButton size="large">
                   <ShareIcon fontSize="small" />
                 </IconButton>
               </Box>
@@ -157,4 +157,4 @@ const GridList5 = () => (
   </Box>
 );
 
-export default GridList5;
+export default ImageList5;

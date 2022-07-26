@@ -17,9 +17,9 @@ import {
   Grid,
   Link,
   Typography
-} from '@material-ui/core';
-import { alpha, experimentalStyled } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+} from '@mui/material';
+import { alpha, experimentalStyled } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { CalendarEventForm, CalendarToolbar } from '../../components/dashboard/calendar';
 import ChevronRightIcon from '../../icons/ChevronRight';
 import PlusIcon from '../../icons/Plus';
@@ -75,7 +75,7 @@ const FullCalendarWrapper = experimentalStyled('div')(({ theme }) => ({
 const Calendar = () => {
   const dispatch = useDispatch();
   const calendarRef = useRef(null);
-  const mobileDevice = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  const mobileDevice = useMediaQuery((theme) => theme.breakpoints.down('md'));
   const { events, isModalOpen, selectedRange } = useSelector((state) => state.calendar);
   const selectedEvent = useSelector(selectedEventSelector);
   const [date, setDate] = useState(new Date());

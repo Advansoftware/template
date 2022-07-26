@@ -1,7 +1,7 @@
 import Chart from 'react-apexcharts';
 import { format } from 'date-fns';
-import { Box, Card, CardHeader, Typography } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import { Box, Card, CardHeader, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import Scrollbar from '../../Scrollbar';
 
 const data = {

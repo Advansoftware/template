@@ -1,5 +1,5 @@
 import { Link as RouterLink, Outlet, useLocation } from 'react-router-dom';
-import { Box, Button, Container, Grid, Typography } from '@material-ui/core';
+import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import ArrowLeftIcon from '../icons/ArrowLeft';
 
 const BrowseLayout = () => {

@@ -18,7 +18,7 @@ import {
   Switch,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import useAuth from '../../../hooks/useAuth';
 import wait from '../../../utils/wait';
 import countries from './countries';

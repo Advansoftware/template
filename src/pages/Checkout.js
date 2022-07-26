@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Box, Button, Container, Grid, Typography } from '@material-ui/core';
+import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import { CheckoutBilling, CheckoutOrderSummary } from '../components/checkout';
 import ArrowLeftIcon from '../icons/ArrowLeft';
 import ArrowRightIcon from '../icons/ArrowRight';

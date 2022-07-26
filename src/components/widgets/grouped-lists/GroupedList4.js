@@ -9,8 +9,8 @@ import {
   ListItemText,
   Tooltip,
   Typography
-} from '@material-ui/core';
-import SendIcon from '@material-ui/icons/Send';
+} from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
 import CreditCardIcon from '../../../icons/CreditCard';
 import MailIcon from '../../../icons/Mail';
 import ChevronRightIcon from '../../../icons/ChevronRight';
@@ -72,7 +72,7 @@ const GroupedList4 = () => (
               </ListItemText>
               <ListItemSecondaryAction>
                 <Tooltip title="View">
-                  <IconButton edge="end">
+                  <IconButton edge="end" size="large">
                     <ChevronRightIcon fontSize="small" />
                   </IconButton>
                 </Tooltip>

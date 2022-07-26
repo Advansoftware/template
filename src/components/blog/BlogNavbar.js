@@ -1,5 +1,5 @@
 import { Link as RouterLink } from 'react-router-dom';
-import { AppBar, Box, Divider, Link, Toolbar } from '@material-ui/core';
+import { AppBar, Box, Divider, Link, Toolbar } from '@mui/material';
 import Logo from '../Logo';
 
 const BlogNavbar = (props) => (

@@ -1,5 +1,5 @@
 import merge from 'lodash/merge';
-import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { createTheme, responsiveFontSizes, adaptV4Theme } from '@mui/material/styles';
 import { THEMES } from '../constants';
 import { lightShadows, darkShadows } from './shadows';
 
@@ -245,7 +245,7 @@ export const createCustomTheme = (config = {}) => {
     themeOptions = themesOptions[THEMES.LIGHT];
   }
 
-  let theme = createTheme(merge({}, baseOptions, themeOptions, {
+  let theme = createTheme(adaptV4Theme(merge({}, baseOptions, themeOptions, {
     ...(config.roundedCorners && {
       shape: {
         borderRadius: 16
@@ -253,7 +253,7 @@ export const createCustomTheme = (config = {}) => {
     })
   }, {
     direction: config.direction
-  }));
+  })));
 
   if (config.responsiveFontSizes) {
     theme = responsiveFontSizes(theme);

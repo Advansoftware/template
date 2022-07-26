@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Box, Button, Card, FormHelperText, Paper, Typography } from '@material-ui/core';
+import { Box, Button, Card, FormHelperText, Paper, Typography } from '@mui/material';
 import QuillEditor from '../../QuillEditor';
 
 const ProjectDescriptionForm = (props) => {

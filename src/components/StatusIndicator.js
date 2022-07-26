@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { experimentalStyled } from '@material-ui/core/styles';
+import { experimentalStyled } from '@mui/material/styles';
 
 const sizes = {
   small: 8,

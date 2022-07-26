@@ -15,7 +15,7 @@ import {
   TableRow,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import Label from '../../Label';
 import Scrollbar from '../../Scrollbar';
 import ArrowRightIcon from '../../../icons/ArrowRight';
@@ -280,10 +280,10 @@ const Table6 = () => (
                     {format(invoice.issueDate, 'dd/MM/yyyy')}
                   </TableCell>
                   <TableCell align="right">
-                    <IconButton>
+                    <IconButton size="large">
                       <PencilAltIcon fontSize="small" />
                     </IconButton>
-                    <IconButton>
+                    <IconButton size="large">
                       <ArrowRightIcon fontSize="small" />
                     </IconButton>
                   </TableCell>

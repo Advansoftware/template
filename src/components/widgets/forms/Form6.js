@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import MobileDateTimePicker from '@material-ui/lab/MobileDateTimePicker';
-import { Box, Button, Divider, FormControlLabel, Switch, TextField } from '@material-ui/core';
+import MobileDateTimePicker from '@mui/lab/MobileDateTimePicker';
+import { Box, Button, Divider, FormControlLabel, Switch, TextField } from '@mui/material';
 
 const Form6 = () => {
   const [startDate, setStartDate] = useState(new Date());

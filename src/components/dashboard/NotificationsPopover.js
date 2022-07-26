@@ -14,7 +14,7 @@ import {
   Popover,
   Tooltip,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import BellIcon from '../../icons/Bell';
 import ChatAltIcon from '../../icons/ChatAlt';
 import CreditCardIcon from '../../icons/CreditCard';
@@ -71,111 +71,105 @@ const NotificationsPopover = () => {
     setOpen(false);
   };
 
-  return (
-    <>
-      <Tooltip title="Notifications">
-        <IconButton
-          color="inherit"
-          ref={anchorRef}
-          onClick={handleOpen}
+  return <>
+    <Tooltip title="Notifications">
+      <IconButton color="inherit" ref={anchorRef} onClick={handleOpen} size="large">
+        <Badge
+          color="error"
+          badgeContent={4}
         >
-          <Badge
-            color="error"
-            badgeContent={4}
-          >
-            <BellIcon fontSize="small" />
-          </Badge>
-        </IconButton>
-      </Tooltip>
-      <Popover
-        anchorEl={anchorRef.current}
-        anchorOrigin={{
-          horizontal: 'center',
-          vertical: 'bottom'
-        }}
-        onClose={handleClose}
-        open={open}
-        PaperProps={{
-          sx: { width: 320 }
-        }}
-      >
-        <Box sx={{ p: 2 }}>
-          <Typography
-            color="textPrimary"
-            variant="h6"
-          >
-            Notifications
-          </Typography>
-        </Box>
-        {notifications.length === 0
-          ? (
-            <Box sx={{ p: 2 }}>
-              <Typography
-                color="textPrimary"
-                variant="subtitle2"
-              >
-                There are no notifications
-              </Typography>
-            </Box>
-          )
-          : (
-            <>
-              <List disablePadding>
-                {notifications.map((notification) => {
-                  const Icon = iconsMap[notification.type];
+          <BellIcon fontSize="small" />
+        </Badge>
+      </IconButton>
+    </Tooltip>
+    <Popover
+      anchorEl={anchorRef.current}
+      anchorOrigin={{
+        horizontal: 'center',
+        vertical: 'bottom'
+      }}
+      onClose={handleClose}
+      open={open}
+      PaperProps={{
+        sx: { width: 320 }
+      }}
+    >
+      <Box sx={{ p: 2 }}>
+        <Typography
+          color="textPrimary"
+          variant="h6"
+        >
+          Notifications
+        </Typography>
+      </Box>
+      {notifications.length === 0
+        ? (
+          <Box sx={{ p: 2 }}>
+            <Typography
+              color="textPrimary"
+              variant="subtitle2"
+            >
+              There are no notifications
+            </Typography>
+          </Box>
+        )
+        : (
+          <>
+            <List disablePadding>
+              {notifications.map((notification) => {
+                const Icon = iconsMap[notification.type];
 
-                  return (
-                    <ListItem
-                      divider
-                      key={notification.id}
-                    >
-                      <ListItemAvatar>
-                        <Avatar
-                          sx={{
-                            backgroundColor: 'primary.main',
-                            color: 'primary.contrastText'
-                          }}
+                return (
+                  <ListItem
+                    divider
+                    key={notification.id}
+                  >
+                    <ListItemAvatar>
+                      <Avatar
+                        sx={{
+                          backgroundColor: 'primary.main',
+                          color: 'primary.contrastText'
+                        }}
+                      >
+                        <Icon fontSize="small" />
+                      </Avatar>
+                    </ListItemAvatar>
+                    <ListItemText
+                      primary={(
+                        <Link
+                          color="textPrimary"
+                          sx={{ cursor: 'pointer' }}
+                          underline="none"
+                          variant="subtitle2"
                         >
-                          <Icon fontSize="small" />
-                        </Avatar>
-                      </ListItemAvatar>
-                      <ListItemText
-                        primary={(
-                          <Link
-                            color="textPrimary"
-                            sx={{ cursor: 'pointer' }}
-                            underline="none"
-                            variant="subtitle2"
-                          >
-                            {notification.title}
-                          </Link>
-                        )}
-                        secondary={notification.description}
-                      />
-                    </ListItem>
-                  );
-                })}
-              </List>
-              <Box
-                sx={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  p: 1
-                }}
+                          {notification.title}
+                        </Link>
+                      )}
+                      secondary={notification.description}
+                    />
+                  </ListItem>
+                );
+              })}
+            </List>
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                p: 1
+              }}
+            >
+              <Button
+                color="primary"
+                size="small"
+                variant="text"
               >
-                <Button
-                  color="primary"
-                  size="small"
-                  variant="text"
-                >
-                  Mark all as read
-                </Button>
-              </Box>
-            </>
-          )}
-      </Popover>
-    </>
-  );
+                Mark all as read
+              </Button>
+            </Box>
+          </>
+        )}
+    </Popover>
+  </>;
 };
 
 export default NotificationsPopover;

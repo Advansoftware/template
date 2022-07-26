@@ -10,7 +10,7 @@ import {
   TableBody,
   TableCell,
   TableRow
-} from '@material-ui/core';
+} from '@mui/material';
 import { customerApi } from '../../../__fakeApi__/customerApi';
 import useMounted from '../../../hooks/useMounted';
 import Label from '../../Label';

@@ -1,4 +1,4 @@
-import { Avatar, Box, Card, Grid, LinearProgress, Typography } from '@material-ui/core';
+import { Avatar, Box, Card, Grid, LinearProgress, Typography } from '@mui/material';
 import Label from '../../Label';
 import CurrencyDollarIcon from '../../../icons/CurrencyDollar';
 import FolderOpenIcon from '../../../icons/FolderOpen';

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Button, FormHelperText } from '@material-ui/core';
+import { Box, Button, FormHelperText } from '@mui/material';
 import useAuth from '../../../hooks/useAuth';
 import useMounted from '../../../hooks/useMounted';
 

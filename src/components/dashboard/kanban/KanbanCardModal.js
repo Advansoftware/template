@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import toast from 'react-hot-toast';
 import debounce from 'lodash/debounce';
-import { Box, Dialog, Divider, Grid, TextField, Typography } from '@material-ui/core';
-import LabelIcon from '@material-ui/icons/Label';
+import { Box, Dialog, Divider, Grid, TextField, Typography } from '@mui/material';
+import LabelIcon from '@mui/icons-material/Label';
 import ArchiveIcon from '../../../icons/Archive';
 import ArrowRightIcon from '../../../icons/ArrowRight';
 import CheckIcon from '../../../icons/Check';

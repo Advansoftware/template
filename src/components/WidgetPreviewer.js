@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardHeader, Divider, IconButton, ThemeProvider } from '@material-ui/core';
+import { Card, CardHeader, Divider, IconButton, ThemeProvider, StyledEngineProvider } from '@mui/material';
 import { THEMES } from '../constants';
 import useSettings from '../hooks/useSettings';
 import MoonIcon from '../icons/Moon';
@@ -41,7 +41,7 @@ const WidgetPreviewer = (props) => {
     >
       <CardHeader
         action={(
-          <IconButton onClick={handleSwitch}>
+          <IconButton onClick={handleSwitch} size="large">
             {selectedTheme === 'LIGHT'
               ? <MoonIcon fontSize="small" />
               : <SunIcon fontSize="small" />}
@@ -50,9 +50,11 @@ const WidgetPreviewer = (props) => {
         title={name}
       />
       <Divider />
-      <ThemeProvider theme={theme}>
-        {element}
-      </ThemeProvider>
+      <StyledEngineProvider injectFirst>
+        <ThemeProvider theme={theme}>
+          {element}
+        </ThemeProvider>
+      </StyledEngineProvider>
     </Card>
   );
 };

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
-import MobileDatePicker from '@material-ui/lab/MobileDatePicker';
+import MobileDatePicker from '@mui/lab/MobileDatePicker';
 import {
   Box,
   Button,
@@ -12,7 +12,7 @@ import {
   IconButton,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import PlusIcon from '../../../icons/Plus';
 
 const ProjectDetailsForm = (props) => {
@@ -128,7 +128,7 @@ const ProjectDetailsForm = (props) => {
                     ]);
                     setTag('');
                   }}
-                >
+                  size="large">
                   <PlusIcon fontSize="small" />
                 </IconButton>
               </Box>

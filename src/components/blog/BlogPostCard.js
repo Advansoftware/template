@@ -1,8 +1,8 @@
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { format } from 'date-fns';
-import { Avatar, Box, CardMedia, Chip, Link, Typography } from '@material-ui/core';
-import { experimentalStyled } from '@material-ui/core/styles';
+import { Avatar, Box, CardMedia, Chip, Link, Typography } from '@mui/material';
+import { experimentalStyled } from '@mui/material/styles';
 
 const BlogPostCardMediaWrapper = experimentalStyled('div')({
   paddingTop: 'calc(100% * 4 / 4)',

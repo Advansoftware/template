@@ -7,7 +7,7 @@ import {
   ListItem,
   ListItemAvatar,
   ListItemText
-} from '@material-ui/core';
+} from '@mui/material';
 
 const getDetails = (thread, currentUserId) => {
   const otherParticipants = thread.participants.filter((participant) => (participant.id

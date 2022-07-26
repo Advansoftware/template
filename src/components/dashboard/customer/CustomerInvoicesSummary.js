@@ -9,8 +9,8 @@ import {
   TableCell,
   TableRow,
   Typography
-} from '@material-ui/core';
-import ReceiptIcon from '@material-ui/icons/Receipt';
+} from '@mui/material';
+import ReceiptIcon from '@mui/icons-material/Receipt';
 import CurrencyDollarIcon from '../../../icons/CurrencyDollar';
 
 const CustomerInvoicesSummary = (props) => (

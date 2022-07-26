@@ -8,7 +8,7 @@ import {
   MenuItem,
   Popover,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 
 const languageOptions = {
   en: {
@@ -45,78 +45,73 @@ const LanguagePopover = () => {
 
   const selectedOption = languageOptions[i18n.language];
 
-  return (
-    <>
-      <IconButton
-        onClick={handleOpen}
-        ref={anchorRef}
+  return <>
+    <IconButton onClick={handleOpen} ref={anchorRef} size="large">
+      <Box
+        sx={{
+          display: 'flex',
+          height: 20,
+          width: 20,
+          '& img': {
+            width: '100%'
+          }
+        }}
       >
-        <Box
-          sx={{
-            display: 'flex',
-            height: 20,
-            width: 20,
-            '& img': {
-              width: '100%'
-            }
-          }}
+        <img
+          alt={selectedOption.label}
+          src={selectedOption.icon}
+        />
+      </Box>
+    </IconButton>
+    <Popover
+      anchorEl={anchorRef.current}
+      anchorOrigin={{
+        horizontal: 'center',
+        vertical: 'bottom'
+      }}
+      keepMounted
+      onClose={handleClose}
+      open={open}
+      PaperProps={{
+        sx: { width: 240 }
+      }}
+    >
+      {Object.keys(languageOptions).map((language) => (
+        <MenuItem
+          onClick={() => handleChangeLanguage(language)}
+          key={language}
         >
-          <img
-            alt={selectedOption.label}
-            src={selectedOption.icon}
-          />
-        </Box>
-      </IconButton>
-      <Popover
-        anchorEl={anchorRef.current}
-        anchorOrigin={{
-          horizontal: 'center',
-          vertical: 'bottom'
-        }}
-        keepMounted
-        onClose={handleClose}
-        open={open}
-        PaperProps={{
-          sx: { width: 240 }
-        }}
-      >
-        {Object.keys(languageOptions).map((language) => (
-          <MenuItem
-            onClick={() => handleChangeLanguage(language)}
-            key={language}
-          >
-            <ListItemIcon>
-              <Box
-                sx={{
-                  display: 'flex',
-                  height: 20,
-                  width: 20,
-                  '& img': {
-                    width: '100%'
-                  }
-                }}
+          <ListItemIcon>
+            <Box
+              sx={{
+                display: 'flex',
+                height: 20,
+                width: 20,
+                '& img': {
+                  width: '100%'
+                }
+              }}
+            >
+              <img
+                alt={languageOptions[language].label}
+                src={languageOptions[language].icon}
+              />
+            </Box>
+          </ListItemIcon>
+          <ListItemText
+            primary={(
+              <Typography
+                color="textPrimary"
+                variant="subtitle2"
               >
-                <img
-                  alt={languageOptions[language].label}
-                  src={languageOptions[language].icon}
-                />
-              </Box>
-            </ListItemIcon>
-            <ListItemText
-              primary={(
-                <Typography
-                  color="textPrimary"
-                  variant="subtitle2"
-                >
-                  {languageOptions[language].label}
-                </Typography>
-              )}
-            />
-          </MenuItem>
-        ))}
-      </Popover>
-    </>
-  );
+                {languageOptions[language].label}
+              </Typography>
+            )}
+          />
+        </MenuItem>
+      ))}
+    </Popover>
+  </>;
 };
 
 export default LanguagePopover;

@@ -1,6 +1,6 @@
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { AppBar, IconButton, Toolbar } from '@material-ui/core';
+import { AppBar, IconButton, Toolbar } from '@mui/material';
 import MenuIcon from '../../icons/Menu';
 import Logo from '../Logo';
 
@@ -23,7 +23,7 @@ const DocsNavbar = ({ onSidebarMobileOpen }) => (
             lg: 'none'
           }
         }}
-      >
+        size="large">
         <MenuIcon fontSize="small" />
       </IconButton>
       <RouterLink to="/">

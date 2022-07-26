@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { format } from 'date-fns';
-import { Box, Button, ButtonGroup, Grid, IconButton, Tooltip, Typography } from '@material-ui/core';
-import ViewConfigIcon from '@material-ui/icons/ViewComfy';
-import ViewWeekIcon from '@material-ui/icons/ViewWeek';
-import ViewDayIcon from '@material-ui/icons/ViewDay';
-import ViewAgendaIcon from '@material-ui/icons/ViewAgenda';
+import { Box, Button, ButtonGroup, Grid, IconButton, Tooltip, Typography } from '@mui/material';
+import ViewConfigIcon from '@mui/icons-material/ViewComfy';
+import ViewWeekIcon from '@mui/icons-material/ViewWeek';
+import ViewDayIcon from '@mui/icons-material/ViewDay';
+import ViewAgendaIcon from '@mui/icons-material/ViewAgenda';
 
 const viewOptions = [
   {
@@ -82,7 +82,7 @@ const CalendarToolbar = (props) => {
                     ? 'primary'
                     : 'inherit'}
                   onClick={() => handleViewChange(viewOption.value)}
-                >
+                  size="large">
                   <Icon fontSize="small" />
                 </IconButton>
               </Tooltip>

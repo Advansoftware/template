@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Box, Container } from '@material-ui/core';
+import { Box, Container } from '@mui/material';
 import DetailList1 from '../../components/widgets/detail-lists/DetailList1';
 import DetailList2 from '../../components/widgets/detail-lists/DetailList2';
 import DetailList3 from '../../components/widgets/detail-lists/DetailList3';

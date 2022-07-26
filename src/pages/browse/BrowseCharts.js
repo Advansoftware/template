@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Box, Container } from '@material-ui/core';
+import { Box, Container } from '@mui/material';
 import Chart1 from '../../components/widgets/charts/Chart1';
 import Chart2 from '../../components/widgets/charts/Chart2';
 import Chart3 from '../../components/widgets/charts/Chart3';

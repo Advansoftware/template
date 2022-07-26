@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react';
-import { Box, Card, CardContent, Divider, IconButton, TextField, Tooltip } from '@material-ui/core';
-import AddPhotoIcon from '@material-ui/icons/AddPhotoAlternate';
-import AttachFileIcon from '@material-ui/icons/AttachFile';
-import SendIcon from '@material-ui/icons/Send';
+import { Box, Card, CardContent, Divider, IconButton, TextField, Tooltip } from '@mui/material';
+import AddPhotoIcon from '@mui/icons-material/AddPhotoAlternate';
+import AttachFileIcon from '@mui/icons-material/AttachFile';
+import SendIcon from '@mui/icons-material/Send';
 import useAuth from '../../../hooks/useAuth';
 
 const SocialPostAdd = (props) => {
@@ -39,7 +39,7 @@ const SocialPostAdd = (props) => {
               color={value ? 'primary' : 'inherit'}
               component={value ? 'button' : 'span'}
               disabled={!value}
-            >
+              size="large">
               <SendIcon fontSize="small" />
             </IconButton>
           </Tooltip>
@@ -47,18 +47,12 @@ const SocialPostAdd = (props) => {
             <Divider orientation="vertical" />
           </Box>
           <Tooltip title="Attach image">
-            <IconButton
-              edge="end"
-              onClick={handleAttach}
-            >
+            <IconButton edge="end" onClick={handleAttach} size="large">
               <AddPhotoIcon fontSize="small" />
             </IconButton>
           </Tooltip>
           <Tooltip title="Attach file">
-            <IconButton
-              edge="end"
-              onClick={handleAttach}
-            >
+            <IconButton edge="end" onClick={handleAttach} size="large">
               <AttachFileIcon fontSize="small" />
             </IconButton>
           </Tooltip>

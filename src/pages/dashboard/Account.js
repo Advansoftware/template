@@ -11,7 +11,7 @@ import {
   Tab,
   Tabs,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import {
   AccountBillingSettings,
   AccountGeneralSettings,

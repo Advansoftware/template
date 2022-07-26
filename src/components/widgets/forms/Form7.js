@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Link, TextField, Typography } from '@material-ui/core';
+import { Box, Button, Grid, Link, TextField, Typography } from '@mui/material';
 
 const Form7 = () => (
   <Box

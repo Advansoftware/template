@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Box, Container } from '@material-ui/core';
+import { Box, Container } from '@mui/material';
 import QuickStats1 from '../../components/widgets/quick-stats/QuickStats1';
 import QuickStats2 from '../../components/widgets/quick-stats/QuickStats2';
 import QuickStats3 from '../../components/widgets/quick-stats/QuickStats3';

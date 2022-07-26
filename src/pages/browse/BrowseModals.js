@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Box, Container } from '@material-ui/core';
+import { Box, Container } from '@mui/material';
 import Modal1 from '../../components/widgets/modals/Modal1';
 import Modal2 from '../../components/widgets/modals/Modal2';
 import Modal3 from '../../components/widgets/modals/Modal3';

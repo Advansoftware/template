@@ -1,7 +1,7 @@
 import Chart from 'react-apexcharts';
 import { format, subDays } from 'date-fns';
-import { Avatar, Box, Card, Container, Typography } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import { Avatar, Box, Card, Container, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import RefreshIcon from '../../../icons/Refresh';
 
 const getCategories = () => {

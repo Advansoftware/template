@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { isSameDay } from 'date-fns';
-import { Box, Typography } from '@material-ui/core';
+import { Box, Typography } from '@mui/material';
 import ProjectActivity from './ProjectActivity';
 
 const ProjectActivities = (props) => {

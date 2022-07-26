@@ -7,7 +7,7 @@ import {
   Select,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 
 const ContactForm = () => {
   const handleSubmit = (event) => {

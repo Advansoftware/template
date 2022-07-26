@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import MobileDatePicker from '@material-ui/lab/MobileDatePicker';
-import { Avatar, Box, Button, Chip, IconButton, TextField, Typography } from '@material-ui/core';
+import MobileDatePicker from '@mui/lab/MobileDatePicker';
+import { Avatar, Box, Button, Chip, IconButton, TextField, Typography } from '@mui/material';
 import PlusIcon from '../../../icons/Plus';
 
 const Form8 = () => {
@@ -50,7 +50,7 @@ const Form8 = () => {
               name="tags"
               variant="outlined"
             />
-            <IconButton sx={{ ml: 2 }}>
+            <IconButton sx={{ ml: 2 }} size="large">
               <PlusIcon fontSize="small" />
             </IconButton>
           </Box>

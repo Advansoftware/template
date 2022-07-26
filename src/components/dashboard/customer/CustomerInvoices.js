@@ -13,7 +13,7 @@ import {
   TableHead,
   TablePagination,
   TableRow
-} from '@material-ui/core';
+} from '@mui/material';
 import { customerApi } from '../../../__fakeApi__/customerApi';
 import useMounted from '../../../hooks/useMounted';
 import ArrowRightIcon from '../../../icons/ArrowRight';
@@ -102,10 +102,7 @@ const CustomerInvoices = (props) => {
                     </Label>
                   </TableCell>
                   <TableCell align="right">
-                    <IconButton
-                      component={RouterLink}
-                      to="/dashboard/invoices/1"
-                    >
+                    <IconButton component={RouterLink} to="/dashboard/invoices/1" size="large">
                       <ArrowRightIcon fontSize="small" />
                     </IconButton>
                   </TableCell>

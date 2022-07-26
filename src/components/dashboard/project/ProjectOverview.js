@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Box, Card, CardContent, Grid } from '@material-ui/core';
+import { Box, Card, CardContent, Grid } from '@mui/material';
 import FileDropzone from '../../FileDropzone';
 import ProjectBrief from './ProjectBrief';
 import ProjectFileCard from './ProjectFileCard';

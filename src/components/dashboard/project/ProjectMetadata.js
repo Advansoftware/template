@@ -11,7 +11,7 @@ import {
   List,
   ListItem,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import getInitials from '../../../utils/getInitials';
 
 const ProjectMetadata = (props) => {

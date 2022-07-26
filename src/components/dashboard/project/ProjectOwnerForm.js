@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Box, Button, Card, FormHelperText, Paper, Radio, Typography } from '@material-ui/core';
+import { Box, Button, Card, FormHelperText, Paper, Radio, Typography } from '@mui/material';
 
 const typeOptions = [
   {

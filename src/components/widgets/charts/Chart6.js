@@ -1,6 +1,6 @@
 import Chart from 'react-apexcharts';
-import { Box, Card, CardHeader, IconButton } from '@material-ui/core';
-import { alpha, useTheme } from '@material-ui/core/styles';
+import { Box, Card, CardHeader, IconButton } from '@mui/material';
+import { alpha, useTheme } from '@mui/material/styles';
 import Scrollbar from '../../Scrollbar';
 import DotsHorizontalIcon from '../../../icons/DotsHorizontal';
 
@@ -112,7 +112,7 @@ const Chart6 = () => {
       <Card>
         <CardHeader
           action={(
-            <IconButton>
+            <IconButton size="large">
               <DotsHorizontalIcon fontSize="small" />
             </IconButton>
           )}

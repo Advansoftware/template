@@ -9,7 +9,7 @@ import {
   TableCell,
   TableRow,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import ArrowRightIcon from '../../../icons/ArrowRight';
 import CircularProgress from '../../CircularProgress';
 import MoreMenu from '../../MoreMenu';

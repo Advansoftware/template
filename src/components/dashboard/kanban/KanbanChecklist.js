@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import toast from 'react-hot-toast';
-import { Box, Button, LinearProgress, TextField, Typography } from '@material-ui/core';
-import { experimentalStyled } from '@material-ui/core/styles';
+import { Box, Button, LinearProgress, TextField, Typography } from '@mui/material';
+import { experimentalStyled } from '@mui/material/styles';
 import ClipboardListIcon from '../../../icons/ClipboardList';
 import { deleteChecklist, updateChecklist } from '../../../slices/kanban';
 import { useDispatch } from '../../../store';

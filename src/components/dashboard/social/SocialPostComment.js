@@ -1,7 +1,7 @@
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { formatDistanceToNowStrict } from 'date-fns';
-import { Avatar, Box, Link, Typography } from '@material-ui/core';
+import { Avatar, Box, Link, Typography } from '@mui/material';
 
 const SocialPostComment = (props) => {
   const { authorAvatar, authorName, createdAt, message, ...other } = props;

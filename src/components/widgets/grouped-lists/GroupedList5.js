@@ -10,7 +10,7 @@ import {
   TableCell,
   TableRow,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import CircularProgress from '../../CircularProgress';
 import Scrollbar from '../../Scrollbar';
 import ArrowRightIcon from '../../../icons/ArrowRight';
@@ -74,7 +74,7 @@ const GroupedList5 = () => (
     <Card>
       <CardHeader
         action={(
-          <IconButton>
+          <IconButton size="large">
             <DotsHorizontalIcon fontSize="small" />
           </IconButton>
         )}

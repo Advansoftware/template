@@ -1,5 +1,5 @@
 import { Link as RouterLink } from 'react-router-dom';
-import { Box, Chip, Container, Link, Tooltip, Typography } from '@material-ui/core';
+import { Box, Chip, Container, Link, Tooltip, Typography } from '@mui/material';
 
 const platformIcons = {
   Amplify: '/static/icons/amplify.svg',

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link as RouterLink } from 'react-router-dom';
-import { Grid, Box, Card, Container, Skeleton, Typography } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import { Grid, Box, Card, Container, Skeleton, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import ExternalLinkIcon from '../../icons/ExternalLink';
 import gtm from '../../lib/gtm';
 

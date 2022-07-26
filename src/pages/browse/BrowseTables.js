@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Box, Container } from '@material-ui/core';
+import { Box, Container } from '@mui/material';
 import Table1 from '../../components/widgets/tables/Table1';
 import Table2 from '../../components/widgets/tables/Table2';
 import Table3 from '../../components/widgets/tables/Table3';

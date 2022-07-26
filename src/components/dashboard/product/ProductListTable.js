@@ -19,7 +19,7 @@ import {
   TablePagination,
   TableRow,
   TextField
-} from '@material-ui/core';
+} from '@mui/material';
 import ArrowRightIcon from '../../../icons/ArrowRight';
 import ImageIcon from '../../../icons/Image';
 import PencilAltIcon from '../../../icons/PencilAlt';
@@ -552,10 +552,10 @@ const ProductListTable = (props) => {
                         .format(`${product.currency}0,0.00`)}
                     </TableCell>
                     <TableCell align="right">
-                      <IconButton>
+                      <IconButton size="large">
                         <PencilAltIcon fontSize="small" />
                       </IconButton>
-                      <IconButton>
+                      <IconButton size="large">
                         <ArrowRightIcon fontSize="small" />
                       </IconButton>
                     </TableCell>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { Avatar, Box, Button, Card, CardContent, Typography } from '@material-ui/core';
-import StarIcon from '@material-ui/icons/Star';
+import { Avatar, Box, Button, Card, CardContent, Typography } from '@mui/material';
+import StarIcon from '@mui/icons-material/Star';
 import ProjectDescriptionForm from './ProjectDescriptionForm';
 import ProjectDetailsForm from './ProjectDetailsForm';
 import ProjectOwnerForm from './ProjectOwnerForm';

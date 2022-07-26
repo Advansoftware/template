@@ -1,4 +1,4 @@
-import { Box, Card, Grid, Typography } from '@material-ui/core';
+import { Box, Card, Grid, Typography } from '@mui/material';
 import Label from '../../Label';
 
 const QuickStats4 = () => (

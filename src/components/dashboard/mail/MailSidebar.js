@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
-import { Box, Button, Divider, Drawer, List } from '@material-ui/core';
-import { experimentalStyled } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { Box, Button, Divider, Drawer, List } from '@mui/material';
+import { experimentalStyled } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { useDispatch, useSelector } from '../../../store';
 import { closeSidebar, openCompose } from '../../../slices/mail';
 import MailLabel from './MailLabel';

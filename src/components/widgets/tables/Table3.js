@@ -19,7 +19,7 @@ import {
   Tabs,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import Scrollbar from '../../Scrollbar';
 import ArrowRightIcon from '../../../icons/ArrowRight';
 import PencilAltIcon from '../../../icons/PencilAlt';
@@ -300,10 +300,10 @@ const Widget22 = () => (
                       .format(`${customer.currency}0,0.00`)}
                   </TableCell>
                   <TableCell align="right">
-                    <IconButton>
+                    <IconButton size="large">
                       <PencilAltIcon fontSize="small" />
                     </IconButton>
-                    <IconButton>
+                    <IconButton size="large">
                       <ArrowRightIcon fontSize="small" />
                     </IconButton>
                   </TableCell>

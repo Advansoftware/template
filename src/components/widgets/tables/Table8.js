@@ -11,7 +11,7 @@ import {
   TableSortLabel,
   Tooltip,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import InformationCircleIcon from '../../../icons/InformationCircle';
 
 const countries = [

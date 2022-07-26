@@ -14,8 +14,8 @@ import {
   TableRow,
   TextField,
   Typography
-} from '@material-ui/core';
-import ReceiptIcon from '@material-ui/icons/Receipt';
+} from '@mui/material';
+import ReceiptIcon from '@mui/icons-material/Receipt';
 
 const statusOptions = ['Canceled', 'Completed', 'Rejected'];
 

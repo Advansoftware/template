@@ -3,7 +3,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { DragDropContext } from 'react-beautiful-dnd';
 import toast from 'react-hot-toast';
-import { Box, Breadcrumbs, Link, Typography } from '@material-ui/core';
+import { Box, Breadcrumbs, Link, Typography } from '@mui/material';
 import { KanbanColumn, KanbanColumnAdd } from '../../components/dashboard/kanban';
 import ChevronRightIcon from '../../icons/ChevronRight';
 import gtm from '../../lib/gtm';

@@ -15,7 +15,7 @@ import {
   TableSortLabel,
   Tooltip,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import Label from '../../Label';
 import Scrollbar from '../../Scrollbar';
 import ChevronRightIcon from '../../../icons/ChevronRight';
@@ -120,7 +120,7 @@ const Table1 = () => (
     <Card>
       <CardHeader
         action={(
-          <IconButton>
+          <IconButton size="large">
             <DotsHorizontalIcon fontSize="small" />
           </IconButton>
         )}

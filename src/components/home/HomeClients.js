@@ -1,4 +1,4 @@
-import { Box, Card, Container, Grid, Link, Typography } from '@material-ui/core';
+import { Box, Card, Container, Grid, Link, Typography } from '@mui/material';
 
 const HomeClients = (props) => (
   <Box

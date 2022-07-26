@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Box, Container } from '@material-ui/core';
+import { Box, Container } from '@mui/material';
 import Buttons1 from '../../components/widgets/buttons/Buttons1';
 import Buttons2 from '../../components/widgets/buttons/Buttons2';
 import Buttons3 from '../../components/widgets/buttons/Buttons3';

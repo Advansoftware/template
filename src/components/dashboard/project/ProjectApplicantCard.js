@@ -10,7 +10,7 @@ import {
   Divider,
   Link,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 
 const ProjectApplicantCard = (props) => {
   const { avatar, cover, name, skills, ...other } = props;

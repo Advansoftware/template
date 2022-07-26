@@ -1,5 +1,5 @@
 import { formatDistanceToNowStrict, subHours, subMinutes } from 'date-fns';
-import { Avatar, Box, Card, Link, Typography } from '@material-ui/core';
+import { Avatar, Box, Card, Link, Typography } from '@mui/material';
 import DownloadIcon from '../../../icons/Download';
 
 const now = new Date();

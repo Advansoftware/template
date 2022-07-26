@@ -13,7 +13,7 @@ import {
   TextField,
   Toolbar,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import { blogApi } from '../../__fakeApi__/blogApi';
 import { BlogPostCard, BlogNewsletter } from '../../components/blog';
 import PlusIcon from '../../icons/Plus';

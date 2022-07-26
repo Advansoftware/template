@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Button } from '@material-ui/core';
+import { Button } from '@mui/material';
 
 const KanbanCardAction = (props) => {
   const { icon, children, ...other } = props;

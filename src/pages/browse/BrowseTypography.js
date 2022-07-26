@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Box, Container, Grid, Typography } from '@material-ui/core';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import WidgetPreviewer from '../../components/WidgetPreviewer';
 import gtm from '../../lib/gtm';
 

@@ -12,10 +12,10 @@ import {
   Rating,
   Tooltip,
   Typography
-} from '@material-ui/core';
-import red from '@material-ui/core/colors/red';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+} from '@mui/material';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import UsersIcon from '../../../icons/Users';
+import { red } from '@mui/material/colors';
 
 const now = new Date();
 
@@ -82,7 +82,7 @@ const projects = [
   }
 ];
 
-const GridList2 = () => (
+const ImageList2 = () => (
   <Box
     sx={{
       backgroundColor: 'background.default',
@@ -234,7 +234,7 @@ const GridList2 = () => (
                 }}
               >
                 <Tooltip title="Unlike">
-                  <IconButton sx={{ color: red['600'] }}>
+                  <IconButton sx={{ color: red['600'] }} size="large">
                     <FavoriteIcon fontSize="small" />
                   </IconButton>
                 </Tooltip>
@@ -275,4 +275,4 @@ const GridList2 = () => (
   </Box>
 );
 
-export default GridList2;
+export default ImageList2;

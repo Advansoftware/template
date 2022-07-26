@@ -8,8 +8,8 @@ import {
   Checkbox,
   Tooltip,
   Typography
-} from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+} from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import InformationCircleIcon from '../../../icons/InformationCircle';
 
 const data = {

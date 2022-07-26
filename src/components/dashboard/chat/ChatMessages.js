@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import { Box } from '@material-ui/core';
+import { Box } from '@mui/material';
 import useAuth from '../../../hooks/useAuth';
 import Scrollbar from '../../Scrollbar';
 import ChatMessage from './ChatMessage';

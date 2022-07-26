@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { experimentalStyled } from '@material-ui/core/styles';
+import { experimentalStyled } from '@mui/material/styles';
 import BlogNavbar from './BlogNavbar';
 import Footer from '../Footer';
 

@@ -14,7 +14,7 @@ import {
   Link,
   Paper,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import { socialApi } from '../../../__fakeApi__/socialApi';
 import useMounted from '../../../hooks/useMounted';
 import DotsHorizontalIcon from '../../../icons/DotsHorizontal';
@@ -154,7 +154,7 @@ const SocialConnections = (props) => {
                         </Button>
                       )}
                     </Box>
-                    <IconButton>
+                    <IconButton size="large">
                       <DotsHorizontalIcon fontSize="small" />
                     </IconButton>
                   </Box>

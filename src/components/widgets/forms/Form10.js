@@ -1,4 +1,4 @@
-import { Box, Button, TextField, Typography } from '@material-ui/core';
+import { Box, Button, TextField, Typography } from '@mui/material';
 import QuillEditor from '../../QuillEditor';
 
 const Form10 = () => (

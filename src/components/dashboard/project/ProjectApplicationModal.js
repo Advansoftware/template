@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import toast from 'react-hot-toast';
-import { Avatar, Box, Button, Dialog, TextField, Typography } from '@material-ui/core';
+import { Avatar, Box, Button, Dialog, TextField, Typography } from '@mui/material';
 import getInitials from '../../../utils/getInitials';
 
 const ProjectApplicationModal = (props) => {

@@ -7,7 +7,7 @@ import {
   MenuItem,
   Paper,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import CogIcon from '../../../icons/Cog';
 import UserIcon from '../../../icons/User';
 

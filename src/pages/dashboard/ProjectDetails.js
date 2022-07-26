@@ -1,8 +1,8 @@
 import { useCallback, useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { formatDistanceToNowStrict } from 'date-fns';
-import { Box, Button, Container, Divider, Grid, Tab, Tabs, Typography } from '@material-ui/core';
-import SendIcon from '@material-ui/icons/Send';
+import { Box, Button, Container, Divider, Grid, Tab, Tabs, Typography } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
 import { projectApi } from '../../__fakeApi__/projectApi';
 import {
   ProjectActivities,

@@ -9,7 +9,7 @@ import {
   Link,
   Paper,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 
 const plan = {
   adsLeft: 10,

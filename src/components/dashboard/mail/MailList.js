@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Box, Divider } from '@material-ui/core';
+import { Box, Divider } from '@mui/material';
 import { getEmails } from '../../../slices/mail';
 import { useDispatch, useSelector } from '../../../store';
 import MailItem from './MailItem';

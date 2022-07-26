@@ -9,8 +9,8 @@ import {
   Divider,
   Grid,
   Typography
-} from '@material-ui/core';
-import { alpha, useTheme } from '@material-ui/core/styles';
+} from '@mui/material';
+import { alpha, useTheme } from '@mui/material/styles';
 import ArrowRightIcon from '../../../icons/ArrowRight';
 import ChevronDownIcon from '../../../icons/ChevronDown';
 import ChevronUpIcon from '../../../icons/ChevronUp';

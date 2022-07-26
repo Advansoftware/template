@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Box, Drawer } from '@material-ui/core';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { Box, Drawer } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import Logo from '../Logo';
 import NavSection from '../NavSection';
 

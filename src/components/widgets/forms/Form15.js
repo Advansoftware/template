@@ -8,7 +8,7 @@ import {
   Link,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 
 const Form15 = () => (
   <Box

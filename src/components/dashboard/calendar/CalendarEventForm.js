@@ -3,7 +3,7 @@ import toast from 'react-hot-toast';
 import { addMinutes } from 'date-fns';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
-import MobileDateTimePicker from '@material-ui/lab/MobileDateTimePicker';
+import MobileDateTimePicker from '@mui/lab/MobileDateTimePicker';
 import {
   Box,
   Button,
@@ -14,7 +14,7 @@ import {
   Switch,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import TrashIcon from '../../../icons/Trash';
 import { createEvent, deleteEvent, updateEvent } from '../../../slices/calendar';
 import { useDispatch } from '../../../store';
@@ -231,7 +231,7 @@ const CalendarEventForm = (props) => {
             }}
           >
             {event && (
-              <IconButton onClick={() => handleDelete()}>
+              <IconButton onClick={() => handleDelete()} size="large">
                 <TrashIcon fontSize="small" />
               </IconButton>
             )}

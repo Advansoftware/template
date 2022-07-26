@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Box } from '@material-ui/core';
+import { Box } from '@mui/material';
 import { ChatSidebar, ChatThread } from '../../components/dashboard/chat';
 import gtm from '../../lib/gtm';
 import { getThreads } from '../../slices/chat';

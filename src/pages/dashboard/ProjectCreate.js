@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Box, Breadcrumbs, Container, Grid, Link, Typography } from '@material-ui/core';
+import { Box, Breadcrumbs, Container, Grid, Link, Typography } from '@mui/material';
 import { ProjectCreateWizard } from '../../components/dashboard/project';
 import useSettings from '../../hooks/useSettings';
 import ChevronRightIcon from '../../icons/ChevronRight';

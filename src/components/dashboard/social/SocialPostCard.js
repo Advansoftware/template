@@ -15,14 +15,14 @@ import {
   Link,
   Tooltip,
   Typography
-} from '@material-ui/core';
-import red from '@material-ui/core/colors/red';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+} from '@mui/material';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ClockIcon from '../../../icons/Clock';
 import ShareIcon from '../../../icons/Share';
 import SocialPostComment from './SocialPostComment';
 import SocialPostCommentAdd from './SocialPostCommentAdd';
+import { red } from '@mui/material/colors';
 
 const SocialPostCard = (props) => {
   const {
@@ -50,135 +50,130 @@ const SocialPostCard = (props) => {
     setLikes((prevLikes) => prevLikes - 1);
   };
 
-  return (
-    <>
-      <Card {...other}>
-        <CardHeader
-          avatar={(
-            <Avatar
-              component={RouterLink}
-              src={authorAvatar}
-              to="#"
-            />
-          )}
-          disableTypography
-          subheader={(
-            <Box
-              sx={{
-                alignItems: 'center',
-                display: 'flex',
-                mt: 1
-              }}
-            >
-              <ClockIcon
-                fontSize="small"
-                sx={{ color: 'text.secondary' }}
-              />
-              <Typography
-                color="textSecondary"
-                sx={{ ml: '6px' }}
-                variant="caption"
-              >
-                {formatDistanceToNowStrict(createdAt)}
-                {' '}
-                ago
-              </Typography>
-            </Box>
-          )}
-          title={(
-            <Link
-              color="textPrimary"
-              component={RouterLink}
-              to="#"
-              variant="subtitle2"
-            >
-              {authorName}
-            </Link>
-          )}
-        />
-        <Box
-          sx={{
-            pb: 2,
-            px: 3
-          }}
-        >
-          <Typography
-            color="textPrimary"
-            variant="body1"
-          >
-            {message}
-          </Typography>
-          {media && (
-            <Box sx={{ mt: 2 }}>
-              <CardActionArea onClick={() => setExpandMedia(true)}>
-                <CardMedia
-                  image={media}
-                  sx={{
-                    backgroundPosition: 'top',
-                    height: 500
-                  }}
-                />
-              </CardActionArea>
-            </Box>
-          )}
+  return <>
+    <Card {...other}>
+      <CardHeader
+        avatar={(
+          <Avatar
+            component={RouterLink}
+            src={authorAvatar}
+            to="#"
+          />
+        )}
+        disableTypography
+        subheader={(
           <Box
             sx={{
               alignItems: 'center',
               display: 'flex',
-              mt: 2
+              mt: 1
             }}
           >
-            {isLiked
-              ? (
-                <Tooltip title="Unlike">
-                  <IconButton
-                    onClick={handleUnlike}
-                    sx={{ color: red['600'] }}
-                  >
-                    <FavoriteIcon fontSize="small" />
-                  </IconButton>
-                </Tooltip>
-              )
-              : (
-                <Tooltip title="Like">
-                  <IconButton onClick={handleLike}>
-                    <FavoriteBorderIcon fontSize="small" />
-                  </IconButton>
-                </Tooltip>
-              )}
+            <ClockIcon
+              fontSize="small"
+              sx={{ color: 'text.secondary' }}
+            />
             <Typography
               color="textSecondary"
-              variant="subtitle2"
+              sx={{ ml: '6px' }}
+              variant="caption"
             >
-              {likes}
+              {formatDistanceToNowStrict(createdAt)}
+              {' '}
+              ago
             </Typography>
-            <Box sx={{ flexGrow: 1 }} />
-            <IconButton>
-              <ShareIcon fontSize="small" />
-            </IconButton>
           </Box>
-          <Divider sx={{ my: 2 }} />
-          {comments.map((comment) => (
-            <SocialPostComment
-              authorAvatar={comment.author.avatar}
-              authorName={comment.author.name}
-              createdAt={comment.createdAt}
-              key={comment.id}
-              message={comment.message}
-            />
-          ))}
-          <Divider sx={{ my: 2 }} />
-          <SocialPostCommentAdd />
+        )}
+        title={(
+          <Link
+            color="textPrimary"
+            component={RouterLink}
+            to="#"
+            variant="subtitle2"
+          >
+            {authorName}
+          </Link>
+        )}
+      />
+      <Box
+        sx={{
+          pb: 2,
+          px: 3
+        }}
+      >
+        <Typography
+          color="textPrimary"
+          variant="body1"
+        >
+          {message}
+        </Typography>
+        {media && (
+          <Box sx={{ mt: 2 }}>
+            <CardActionArea onClick={() => setExpandMedia(true)}>
+              <CardMedia
+                image={media}
+                sx={{
+                  backgroundPosition: 'top',
+                  height: 500
+                }}
+              />
+            </CardActionArea>
+          </Box>
+        )}
+        <Box
+          sx={{
+            alignItems: 'center',
+            display: 'flex',
+            mt: 2
+          }}
+        >
+          {isLiked
+            ? (
+              <Tooltip title="Unlike">
+                <IconButton onClick={handleUnlike} sx={{ color: red['600'] }} size="large">
+                  <FavoriteIcon fontSize="small" />
+                </IconButton>
+              </Tooltip>
+            )
+            : (
+              <Tooltip title="Like">
+                <IconButton onClick={handleLike} size="large">
+                  <FavoriteBorderIcon fontSize="small" />
+                </IconButton>
+              </Tooltip>
+            )}
+          <Typography
+            color="textSecondary"
+            variant="subtitle2"
+          >
+            {likes}
+          </Typography>
+          <Box sx={{ flexGrow: 1 }} />
+          <IconButton size="large">
+            <ShareIcon fontSize="small" />
+          </IconButton>
         </Box>
-      </Card>
-      {expandMedia && (
-        <Lightbox
-          large={media}
-          onClose={() => setExpandMedia(false)}
-        />
-      )}
-    </>
-  );
+        <Divider sx={{ my: 2 }} />
+        {comments.map((comment) => (
+          <SocialPostComment
+            authorAvatar={comment.author.avatar}
+            authorName={comment.author.name}
+            createdAt={comment.createdAt}
+            key={comment.id}
+            message={comment.message}
+          />
+        ))}
+        <Divider sx={{ my: 2 }} />
+        <SocialPostCommentAdd />
+      </Box>
+    </Card>
+    {expandMedia && (
+      <Lightbox
+        large={media}
+        onClose={() => setExpandMedia(false)}
+      />
+    )}
+  </>;
 };
 
 SocialPostCard.propTypes = {

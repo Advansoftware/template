@@ -1,4 +1,4 @@
-import { Avatar, Box, Container, Typography } from '@material-ui/core';
+import { Avatar, Box, Container, Typography } from '@mui/material';
 
 const HomeTestimonials = (props) => (
   <Box

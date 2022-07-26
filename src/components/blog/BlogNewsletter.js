@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Box, Button, Container, Grid, Skeleton, TextField, Typography } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import { Box, Button, Container, Grid, Skeleton, TextField, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 const BlogNewsletter = () => {
   const theme = useTheme();

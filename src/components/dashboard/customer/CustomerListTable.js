@@ -22,7 +22,7 @@ import {
   Tabs,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import ArrowRightIcon from '../../../icons/ArrowRight';
 import PencilAltIcon from '../../../icons/PencilAlt';
 import SearchIcon from '../../../icons/Search';
@@ -407,16 +407,10 @@ const CustomerListTable = (props) => {
                         .format(`${customer.currency}0,0.00`)}
                     </TableCell>
                     <TableCell align="right">
-                      <IconButton
-                        component={RouterLink}
-                        to="/dashboard/customers/1/edit"
-                      >
+                      <IconButton component={RouterLink} to="/dashboard/customers/1/edit" size="large">
                         <PencilAltIcon fontSize="small" />
                       </IconButton>
-                      <IconButton
-                        component={RouterLink}
-                        to="/dashboard/customers/1"
-                      >
+                      <IconButton component={RouterLink} to="/dashboard/customers/1" size="large">
                         <ArrowRightIcon fontSize="small" />
                       </IconButton>
                     </TableCell>

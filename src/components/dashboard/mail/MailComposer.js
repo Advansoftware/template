@@ -10,10 +10,10 @@ import {
   Portal,
   Tooltip,
   Typography
-} from '@material-ui/core';
-import AddPhotoIcon from '@material-ui/icons/AddPhotoAlternate';
-import AttachFileIcon from '@material-ui/icons/AttachFile';
-import MinimizeIcon from '@material-ui/icons/Minimize';
+} from '@mui/material';
+import AddPhotoIcon from '@mui/icons-material/AddPhotoAlternate';
+import AttachFileIcon from '@mui/icons-material/AttachFile';
+import MinimizeIcon from '@mui/icons-material/Minimize';
 import ArrowsExpandIcon from '../../../icons/ArrowsExpand';
 import XIcon from '../../../icons/X';
 import { closeCompose } from '../../../slices/mail';
@@ -87,16 +87,16 @@ const MailComposer = () => {
           <Box sx={{ flexGrow: 1 }} />
           {isFullScreen
             ? (
-              <IconButton onClick={handleExitFullScreen}>
+              <IconButton onClick={handleExitFullScreen} size="large">
                 <MinimizeIcon fontSize="small" />
               </IconButton>
             )
             : (
-              <IconButton onClick={handleEnterFullScreen}>
+              <IconButton onClick={handleEnterFullScreen} size="large">
                 <ArrowsExpandIcon fontSize="small" />
               </IconButton>
             )}
-          <IconButton onClick={handleClose}>
+          <IconButton onClick={handleClose} size="large">
             <XIcon fontSize="small" />
           </IconButton>
         </Box>

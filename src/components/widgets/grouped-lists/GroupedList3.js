@@ -12,7 +12,7 @@ import {
   ListItem,
   ListItemText,
   Tooltip
-} from '@material-ui/core';
+} from '@mui/material';
 import Scrollbar from '../../Scrollbar';
 import DotsHorizontalIcon from '../../../icons/DotsHorizontal';
 
@@ -135,7 +135,7 @@ const GroupedList3 = () => (
     <Card>
       <CardHeader
         action={(
-          <IconButton>
+          <IconButton size="large">
             <DotsHorizontalIcon fontSize="small" />
           </IconButton>
         )}

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
-import { Box, Button, Card, TextField } from '@material-ui/core';
+import { Box, Button, Card, TextField } from '@mui/material';
 import { createColumn } from '../../../slices/kanban';
 import { useDispatch } from '../../../store';
 

@@ -1,6 +1,6 @@
-import { Avatar, Box, Button, Container, IconButton, Paper, Typography } from '@material-ui/core';
-import { alpha } from '@material-ui/core/styles';
-import WarningIcon from '@material-ui/icons/WarningOutlined';
+import { Avatar, Box, Button, Container, IconButton, Paper, Typography } from '@mui/material';
+import { alpha } from '@mui/material/styles';
+import WarningIcon from '@mui/icons-material/WarningOutlined';
 import XIcon from '../../../icons/X';
 
 const Modal8 = () => (
@@ -22,7 +22,7 @@ const Modal8 = () => (
             top: 8,
             right: 8
           }}
-        >
+          size="large">
           <XIcon />
         </IconButton>
         <Box

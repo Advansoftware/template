@@ -15,8 +15,7 @@ import {
   MenuItem,
   Tooltip,
   Typography
-} from '@material-ui/core';
-import blueGrey from '@material-ui/core/colors/blueGrey';
+} from '@mui/material';
 import ArchiveIcon from '../../../icons/Archive';
 import DocumentTextIcon from '../../../icons/DocumentText';
 import DotsHorizontalIcon from '../../../icons/DotsHorizontal';
@@ -24,6 +23,7 @@ import DownloadIcon from '../../../icons/Download';
 import PencilAltIcon from '../../../icons/PencilAlt';
 import TrashIcon from '../../../icons/Trash';
 import bytesToSize from '../../../utils/bytesToSize';
+import { blueGrey } from '@mui/material/colors';
 
 const files = [
   {
@@ -49,7 +49,7 @@ const files = [
   }
 ];
 
-const GridList3 = () => {
+const ImageList3 = () => {
   const moreRef = useRef(null);
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -195,4 +195,4 @@ const GridList3 = () => {
   );
 };
 
-export default GridList3;
+export default ImageList3;

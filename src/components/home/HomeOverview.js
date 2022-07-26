@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from '@material-ui/core';
+import { Box, Container, Typography } from '@mui/material';
 import ChevronRightIcon from '../../icons/ChevronRight';
 
 const HomeOverview = (props) => (

@@ -13,7 +13,7 @@ import {
   TableRow,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import MailIcon from '../../../icons/Mail';
 
 const now = new Date();

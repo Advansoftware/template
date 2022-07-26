@@ -18,7 +18,7 @@ import {
   TablePagination,
   TableRow,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import ArrowRightIcon from '../../../icons/ArrowRight';
 import PencilAltIcon from '../../../icons/PencilAlt';
 import Label from '../../Label';
@@ -91,139 +91,134 @@ const OrderListTable = (props) => {
   const selectedSomeOrders = selectedOrders.length > 0 && selectedOrders.length < orders.length;
   const selectedAllOrders = selectedOrders.length === orders.length;
 
-  return (
-    <>
-      <Card {...other}>
-        <CardHeader
-          action={<MoreMenu />}
-          title="Orders"
-        />
-        <Divider />
-        <Scrollbar>
-          <Box sx={{ minWidth: 1150 }}>
-            <Table>
-              <TableHead>
-                <TableRow>
-                  <TableCell padding="checkbox">
-                    <Checkbox
-                      checked={selectedAllOrders}
-                      color="primary"
-                      indeterminate={selectedSomeOrders}
-                      onChange={handleSelectAllOrders}
-                    />
-                  </TableCell>
-                  <TableCell>
-                    Number
-                  </TableCell>
-                  <TableCell>
-                    Customer
-                  </TableCell>
-                  <TableCell>
-                    Method
-                  </TableCell>
-                  <TableCell>
-                    Total
-                  </TableCell>
-                  <TableCell>
-                    Status
-                  </TableCell>
-                  <TableCell align="right">
-                    Actions
-                  </TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {paginatedOrders.map((order) => {
-                  const isOrderSelected = selectedOrders.includes(order.id);
-
-                  return (
-                    <TableRow
-                      hover
-                      key={order.id}
-                      selected={selectedOrders.indexOf(order.id) !== -1}
-                    >
-                      <TableCell padding="checkbox">
-                        <Checkbox
-                          checked={isOrderSelected}
-                          color="primary"
-                          onChange={(event) => handleSelectOneOrder(event, order.id)}
-                          value={isOrderSelected}
-                        />
-                      </TableCell>
-                      <TableCell>
-                        <Link
-                          color="textPrimary"
-                          component={RouterLink}
-                          to="/dashboard/orders/1"
-                          underline="none"
-                          variant="subtitle2"
-                        >
-                          {order.number}
-                        </Link>
-                        <Typography
-                          color="textSecondary"
-                          variant="body2"
-                        >
-                          {format(order.createdAt, 'dd MMM yyyy | HH:mm')}
-                        </Typography>
-                      </TableCell>
-                      <TableCell>
-                        <Typography
-                          color="textPrimary"
-                          variant="subtitle2"
-                        >
-                          {order.customer.name}
-                        </Typography>
-                        <Typography
-                          color="textSecondary"
-                          variant="body2"
-                        >
-                          {order.customer.email}
-                        </Typography>
-                      </TableCell>
-                      <TableCell>
-                        {order.paymentMethod}
-                      </TableCell>
-                      <TableCell>
-                        {numeral(order.totalAmount).format(`${order.currency}0,0.00`)}
-                      </TableCell>
-                      <TableCell>
-                        {getStatusLabel(order.status)}
-                      </TableCell>
-                      <TableCell align="right">
-                        <IconButton>
-                          <PencilAltIcon fontSize="small" />
-                        </IconButton>
-                        <IconButton
-                          component={RouterLink}
-                          to="/dashboard/orders/1"
-                        >
-                          <ArrowRightIcon fontSize="small" />
-                        </IconButton>
-                      </TableCell>
-                    </TableRow>
-                  );
-                })}
-              </TableBody>
-            </Table>
-          </Box>
-        </Scrollbar>
-        <TablePagination
-          component="div"
-          count={orders.length}
-          onPageChange={handlePageChange}
-          onRowsPerPageChange={handleLimitChange}
-          page={page}
-          rowsPerPage={limit}
-          rowsPerPageOptions={[5, 10, 25]}
-        />
-      </Card>
-      <OrderListBulkActions
-        open={enableBulkActions}
-        selected={selectedOrders}
+  return <>
+    <Card {...other}>
+      <CardHeader
+        action={<MoreMenu />}
+        title="Orders"
       />
-    </>
-  );
+      <Divider />
+      <Scrollbar>
+        <Box sx={{ minWidth: 1150 }}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell padding="checkbox">
+                  <Checkbox
+                    checked={selectedAllOrders}
+                    color="primary"
+                    indeterminate={selectedSomeOrders}
+                    onChange={handleSelectAllOrders}
+                  />
+                </TableCell>
+                <TableCell>
+                  Number
+                </TableCell>
+                <TableCell>
+                  Customer
+                </TableCell>
+                <TableCell>
+                  Method
+                </TableCell>
+                <TableCell>
+                  Total
+                </TableCell>
+                <TableCell>
+                  Status
+                </TableCell>
+                <TableCell align="right">
+                  Actions
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {paginatedOrders.map((order) => {
+                const isOrderSelected = selectedOrders.includes(order.id);
+
+                return (
+                  <TableRow
+                    hover
+                    key={order.id}
+                    selected={selectedOrders.indexOf(order.id) !== -1}
+                  >
+                    <TableCell padding="checkbox">
+                      <Checkbox
+                        checked={isOrderSelected}
+                        color="primary"
+                        onChange={(event) => handleSelectOneOrder(event, order.id)}
+                        value={isOrderSelected}
+                      />
+                    </TableCell>
+                    <TableCell>
+                      <Link
+                        color="textPrimary"
+                        component={RouterLink}
+                        to="/dashboard/orders/1"
+                        underline="none"
+                        variant="subtitle2"
+                      >
+                        {order.number}
+                      </Link>
+                      <Typography
+                        color="textSecondary"
+                        variant="body2"
+                      >
+                        {format(order.createdAt, 'dd MMM yyyy | HH:mm')}
+                      </Typography>
+                    </TableCell>
+                    <TableCell>
+                      <Typography
+                        color="textPrimary"
+                        variant="subtitle2"
+                      >
+                        {order.customer.name}
+                      </Typography>
+                      <Typography
+                        color="textSecondary"
+                        variant="body2"
+                      >
+                        {order.customer.email}
+                      </Typography>
+                    </TableCell>
+                    <TableCell>
+                      {order.paymentMethod}
+                    </TableCell>
+                    <TableCell>
+                      {numeral(order.totalAmount).format(`${order.currency}0,0.00`)}
+                    </TableCell>
+                    <TableCell>
+                      {getStatusLabel(order.status)}
+                    </TableCell>
+                    <TableCell align="right">
+                      <IconButton size="large">
+                        <PencilAltIcon fontSize="small" />
+                      </IconButton>
+                      <IconButton component={RouterLink} to="/dashboard/orders/1" size="large">
+                        <ArrowRightIcon fontSize="small" />
+                      </IconButton>
+                    </TableCell>
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
+        </Box>
+      </Scrollbar>
+      <TablePagination
+        component="div"
+        count={orders.length}
+        onPageChange={handlePageChange}
+        onRowsPerPageChange={handleLimitChange}
+        page={page}
+        rowsPerPage={limit}
+        rowsPerPageOptions={[5, 10, 25]}
+      />
+    </Card>
+    <OrderListBulkActions
+      open={enableBulkActions}
+      selected={selectedOrders}
+    />
+  </>;
 };
 
 OrderListTable.propTypes = {

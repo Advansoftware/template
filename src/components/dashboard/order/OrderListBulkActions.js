@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Box, Button, Drawer, Grid, Typography } from '@material-ui/core';
+import { Box, Button, Drawer, Grid, Typography } from '@mui/material';
 import CheckIcon from '../../../icons/Check';
 import TrashIcon from '../../../icons/Trash';
 import XIcon from '../../../icons/X';

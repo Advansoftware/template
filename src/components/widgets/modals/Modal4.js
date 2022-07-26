@@ -9,7 +9,7 @@ import {
   ListItemText,
   Paper,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import StatusIndicator from '../../StatusIndicator';
 
 const now = new Date();

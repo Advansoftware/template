@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Grid, IconButton, Link, Paper, Typography } from '@material-ui/core';
+import { Avatar, Box, Button, Grid, IconButton, Link, Paper, Typography } from '@mui/material';
 import DotsHorizontalIcon from '../../../icons/DotsHorizontal';
 
 const connections = [
@@ -25,7 +25,7 @@ const connections = [
   }
 ];
 
-const GridList6 = () => (
+const ImageList6 = () => (
   <Box
     sx={{
       backgroundColor: 'background.default',
@@ -87,7 +87,7 @@ const GridList6 = () => (
                   {connection.status}
                 </Button>
               </Box>
-              <IconButton>
+              <IconButton size="large">
                 <DotsHorizontalIcon fontSize="small" />
               </IconButton>
             </Box>
@@ -98,4 +98,4 @@ const GridList6 = () => (
   </Box>
 );
 
-export default GridList6;
+export default ImageList6;

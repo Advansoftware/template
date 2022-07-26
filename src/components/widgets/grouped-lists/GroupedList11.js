@@ -9,7 +9,7 @@ import {
   TableCell,
   TableRow,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import Label from '../../Label';
 
 const campaigns = [

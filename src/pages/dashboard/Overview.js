@@ -10,7 +10,7 @@ import {
   Container,
   Grid,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import {
   OverviewInbox,
   OverviewLatestTransactions,

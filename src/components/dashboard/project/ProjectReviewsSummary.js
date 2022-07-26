@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Box, Card, CardContent, Grid, Rating, Typography } from '@material-ui/core';
+import { Box, Card, CardContent, Grid, Rating, Typography } from '@mui/material';
 
 const ProjectReviewsSummary = (props) => {
   const { rating, reviewsCount, ...other } = props;

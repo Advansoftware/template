@@ -15,12 +15,12 @@ import {
   Rating,
   Tooltip,
   Typography
-} from '@material-ui/core';
-import red from '@material-ui/core/colors/red';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+} from '@mui/material';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import UsersIcon from '../../../icons/Users';
 import getInitials from '../../../utils/getInitials';
+import { red } from '@mui/material/colors';
 
 const ProjectCard = (props) => {
   const { project, ...other } = props;
@@ -182,17 +182,14 @@ const ProjectCard = (props) => {
           {isLiked
             ? (
               <Tooltip title="Unlike">
-                <IconButton
-                  onClick={handleUnlike}
-                  sx={{ color: red['600'] }}
-                >
+                <IconButton onClick={handleUnlike} sx={{ color: red['600'] }} size="large">
                   <FavoriteIcon fontSize="small" />
                 </IconButton>
               </Tooltip>
             )
             : (
               <Tooltip title="Like">
-                <IconButton onClick={handleLike}>
+                <IconButton onClick={handleLike} size="large">
                   <FavoriteBorderIcon fontSize="small" />
                 </IconButton>
               </Tooltip>

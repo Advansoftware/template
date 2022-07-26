@@ -1,4 +1,4 @@
-import { Box, Grid, TextField } from '@material-ui/core';
+import { Box, Grid, TextField } from '@mui/material';
 
 const InputTextField = () => (
   <Box

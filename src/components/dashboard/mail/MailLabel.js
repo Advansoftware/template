@@ -1,11 +1,11 @@
 import { NavLink as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Box, ButtonBase, ListItem, Typography } from '@material-ui/core';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import LabelIcon from '@material-ui/icons/Label';
-import LabelImportantIcon from '@material-ui/icons/LabelImportant';
-import SendIcon from '@material-ui/icons/Send';
-import StarIcon from '@material-ui/icons/Star';
+import { Box, ButtonBase, ListItem, Typography } from '@mui/material';
+import DraftsIcon from '@mui/icons-material/Drafts';
+import LabelIcon from '@mui/icons-material/Label';
+import LabelImportantIcon from '@mui/icons-material/LabelImportant';
+import SendIcon from '@mui/icons-material/Send';
+import StarIcon from '@mui/icons-material/Star';
 import ExclamationCircle from '../../../icons/ExclamationCircle';
 import InboxIcon from '../../../icons/Inbox';
 import MailIcon from '../../../icons/Mail';

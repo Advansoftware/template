@@ -1,6 +1,6 @@
 import { format, subHours, subMinutes, subSeconds } from 'date-fns';
-import { Avatar, Box, Card, CardMedia, Chip, Grid, Link, Typography } from '@material-ui/core';
-import { experimentalStyled } from '@material-ui/core/styles';
+import { Avatar, Box, Card, CardMedia, Chip, Grid, Link, Typography } from '@mui/material';
+import { experimentalStyled } from '@mui/material/styles';
 
 const now = new Date();
 
@@ -51,7 +51,7 @@ const BlogPostCardMediaWrapper = experimentalStyled('div')({
   position: 'relative'
 });
 
-const GridList1 = () => (
+const ImageList1 = () => (
   <Box
     sx={{
       backgroundColor: 'background.default',
@@ -145,4 +145,4 @@ const GridList1 = () => (
   </Box>
 );
 
-export default GridList1;
+export default ImageList1;

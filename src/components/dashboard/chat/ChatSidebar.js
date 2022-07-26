@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
-import { Box, IconButton, Typography } from '@material-ui/core';
+import { Box, IconButton, Typography } from '@mui/material';
 import { chatApi } from '../../../__fakeApi__/chatApi';
 import CogIcon from '../../../icons/Cog';
 import PencilAltIcon from '../../../icons/PencilAlt';
@@ -75,13 +75,10 @@ const ChatSidebar = () => {
           Chats
         </Typography>
         <Box sx={{ flexGrow: 1 }} />
-        <IconButton>
+        <IconButton size="large">
           <CogIcon fontSize="small" />
         </IconButton>
-        <IconButton
-          component={RouterLink}
-          to="/dashboard/chat/new"
-        >
+        <IconButton component={RouterLink} to="/dashboard/chat/new" size="large">
           <PencilAltIcon fontSize="small" />
         </IconButton>
       </Box>

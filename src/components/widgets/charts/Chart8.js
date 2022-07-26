@@ -8,8 +8,8 @@ import {
   Container,
   Tooltip,
   Typography
-} from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+} from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import ArrowRightIcon from '../../../icons/ArrowRight';
 import InformationCircleIcon from '../../../icons/InformationCircle';
 

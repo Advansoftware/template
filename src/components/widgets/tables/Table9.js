@@ -11,7 +11,7 @@ import {
   TableHead,
   TablePagination,
   TableRow
-} from '@material-ui/core';
+} from '@mui/material';
 import Label from '../../Label';
 import Scrollbar from '../../Scrollbar';
 import ArrowRightIcon from '../../../icons/ArrowRight';
@@ -51,7 +51,7 @@ const Table9 = () => (
     <Card>
       <CardHeader
         action={(
-          <IconButton>
+          <IconButton size="large">
             <DotsHorizontalIcon fontSize="small" />
           </IconButton>
         )}
@@ -112,7 +112,7 @@ const Table9 = () => (
                     </Label>
                   </TableCell>
                   <TableCell align="right">
-                    <IconButton>
+                    <IconButton size="large">
                       <ArrowRightIcon fontSize="small" />
                     </IconButton>
                   </TableCell>

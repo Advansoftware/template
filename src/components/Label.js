@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { experimentalStyled } from '@material-ui/core/styles';
+import { experimentalStyled } from '@mui/material/styles';
 
 const LabelRoot = experimentalStyled('span')((({ theme, styleProps }) => {
   const backgroundColor = theme.palette[styleProps.color].main;

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Box, Container, Typography } from '@material-ui/core';
+import { Box, Container, Typography } from '@mui/material';
 import { socialApi } from '../../__fakeApi__/socialApi';
 import { SocialPostAdd, SocialPostCard } from '../../components/dashboard/social';
 import useMounted from '../../hooks/useMounted';

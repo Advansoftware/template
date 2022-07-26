@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useRoutes } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
-import { CssBaseline, ThemeProvider } from '@material-ui/core';
+import { CssBaseline, ThemeProvider, StyledEngineProvider } from '@mui/material';
 import './i18n';
 import RTL from './components/RTL';
 import SettingsDrawer from './components/SettingsDrawer';
@@ -33,14 +33,16 @@ const App = () => {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <RTL direction={settings.direction}>
-        <CssBaseline />
-        <Toaster position="top-center" />
-        <SettingsDrawer />
-        {auth.isInitialized ? content : <SplashScreen />}
-      </RTL>
-    </ThemeProvider>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
+        <RTL direction={settings.direction}>
+          <CssBaseline />
+          <Toaster position="top-center" />
+          <SettingsDrawer />
+          {auth.isInitialized ? content : <SplashScreen />}
+        </RTL>
+      </ThemeProvider>
+    </StyledEngineProvider>
   );
 };
 

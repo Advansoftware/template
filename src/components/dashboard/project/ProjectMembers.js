@@ -12,7 +12,7 @@ import {
   ListItemAvatar,
   ListItemText,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import getInitials from '../../../utils/getInitials';
 
 const ProjectMembers = (props) => {

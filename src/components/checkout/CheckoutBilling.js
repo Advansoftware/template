@@ -8,7 +8,7 @@ import {
   RadioGroup,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 
 const paymentMethods = [
   {

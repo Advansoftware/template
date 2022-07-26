@@ -6,8 +6,8 @@ import Markdown from 'react-markdown';
 import matter from 'gray-matter';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula';
-import { Container } from '@material-ui/core';
-import { experimentalStyled } from '@material-ui/core/styles';
+import { Container } from '@mui/material';
+import { experimentalStyled } from '@mui/material/styles';
 import useSettings from '../hooks/useSettings';
 import gtm from '../lib/gtm';
 

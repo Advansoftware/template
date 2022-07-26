@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Avatar, Box, Divider, IconButton, TextField, Tooltip } from '@material-ui/core';
-import AddPhotoIcon from '@material-ui/icons/AddPhotoAlternate';
-import AttachFileIcon from '@material-ui/icons/AttachFile';
-import SendIcon from '@material-ui/icons/Send';
+import { Avatar, Box, Divider, IconButton, TextField, Tooltip } from '@mui/material';
+import AddPhotoIcon from '@mui/icons-material/AddPhotoAlternate';
+import AttachFileIcon from '@mui/icons-material/AttachFile';
+import SendIcon from '@mui/icons-material/Send';
 import useAuth from '../../../hooks/useAuth';
 
 const ChatMessageAdd = (props) => {
@@ -73,7 +73,7 @@ const ChatMessageAdd = (props) => {
             color="primary"
             disabled={!body || disabled}
             onClick={handleSend}
-          >
+            size="large">
             <SendIcon fontSize="small" />
           </IconButton>
         </span>
@@ -93,22 +93,14 @@ const ChatMessageAdd = (props) => {
         />
         <Tooltip title="Attach photo">
           <span>
-            <IconButton
-              disabled={disabled}
-              edge="end"
-              onClick={handleAttach}
-            >
+            <IconButton disabled={disabled} edge="end" onClick={handleAttach} size="large">
               <AddPhotoIcon fontSize="small" />
             </IconButton>
           </span>
         </Tooltip>
         <Tooltip title="Attach file">
           <span>
-            <IconButton
-              disabled={disabled}
-              edge="end"
-              onClick={handleAttach}
-            >
+            <IconButton disabled={disabled} edge="end" onClick={handleAttach} size="large">
               <AttachFileIcon fontSize="small" />
             </IconButton>
           </span>

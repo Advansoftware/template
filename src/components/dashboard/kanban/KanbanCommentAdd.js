@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import toast from 'react-hot-toast';
-import { Avatar, Box, TextField } from '@material-ui/core';
+import { Avatar, Box, TextField } from '@mui/material';
 import useAuth from '../../../hooks/useAuth';
 import { addComment } from '../../../slices/kanban';
 import { useDispatch } from '../../../store';

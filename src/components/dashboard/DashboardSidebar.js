@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Avatar, Box, Button, Divider, Drawer, Link, Typography } from '@material-ui/core';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import ReceiptIcon from '@material-ui/icons/Receipt';
+import { Avatar, Box, Button, Divider, Drawer, Link, Typography } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import ReceiptIcon from '@mui/icons-material/Receipt';
 import useAuth from '../../hooks/useAuth';
 import BriefcaseIcon from '../../icons/Briefcase';
 import CalendarIcon from '../../icons/Calendar';

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Box, Container } from '@material-ui/core';
+import { Box, Container } from '@mui/material';
 import InputCheckbox from '../../components/widgets/inputs/InputCheckbox';
 import InputRadio from '../../components/widgets/inputs/InputRadio';
 import InputSwitch from '../../components/widgets/inputs/InputSwitch';

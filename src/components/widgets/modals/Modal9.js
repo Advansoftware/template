@@ -1,5 +1,5 @@
-import { Avatar, Box, Button, Container, Paper, Typography } from '@material-ui/core';
-import { alpha } from '@material-ui/core/styles';
+import { Avatar, Box, Button, Container, Paper, Typography } from '@mui/material';
+import { alpha } from '@mui/material/styles';
 import CheckIcon from '../../../icons/Check';
 
 const Modal9 = () => (

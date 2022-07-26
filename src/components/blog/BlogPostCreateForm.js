@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import MobileDateTimePicker from '@material-ui/lab/MobileDateTimePicker';
+import MobileDateTimePicker from '@mui/lab/MobileDateTimePicker';
 import {
   Box,
   Button,
@@ -12,7 +12,7 @@ import {
   Switch,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import FileDropzone from '../FileDropzone';
 import QuillEditor from '../QuillEditor';
 

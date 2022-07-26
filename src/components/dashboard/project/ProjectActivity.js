@@ -1,7 +1,7 @@
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { formatDistanceToNowStrict } from 'date-fns';
-import { Avatar, Card, Link, Typography } from '@material-ui/core';
+import { Avatar, Card, Link, Typography } from '@mui/material';
 import CurrencyDollarIcon from '../../../icons/CurrencyDollar';
 import DownloadIcon from '../../../icons/Download';
 import TemplateIcon from '../../../icons/Template';

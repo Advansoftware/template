@@ -1,36 +1,37 @@
-import numeral from 'numeral';
-import Chart from 'react-apexcharts';
-import { Box, Card, CardContent, CardHeader, Typography } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import React, { Component } from "react";
+import numeral from "numeral";
+import Chart from "react-apexcharts";
+import { Box, Card, CardContent, CardHeader, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 const data = {
   series: [
     {
-      color: '#7783DB',
-      category: 'Email',
-      data: 37530
+      color: "#7783DB",
+      category: "Email",
+      data: 37530,
     },
     {
-      color: '#7BC67E',
-      category: 'GDN',
-      data: 52717
+      color: "#7BC67E",
+      category: "GDN",
+      data: 52717,
     },
     {
-      color: '#FFB547',
-      category: 'Instagram',
-      data: 62935
+      color: "#FFB547",
+      category: "Instagram",
+      data: 62935,
     },
     {
-      color: '#F06191',
-      category: 'Facebook',
-      data: 90590
+      color: "#F06191",
+      category: "Facebook",
+      data: 90590,
     },
     {
-      color: '#64B6F7',
-      category: 'Google Ads Search',
-      data: 13219
-    }
-  ]
+      color: "#64B6F7",
+      category: "Google Ads Search",
+      data: 13219,
+    },
+  ],
 };
 
 const FinanceIncrementalSales = (props) => {
@@ -38,65 +39,65 @@ const FinanceIncrementalSales = (props) => {
 
   const chartOptions = {
     chart: {
-      background: 'transparent',
+      background: "transparent",
       stacked: false,
       toolbar: {
-        show: false
-      }
+        show: false,
+      },
     },
     colors: data.series.map((item) => item.color),
     dataLabels: {
-      enabled: false
+      enabled: false,
     },
     grid: {
       borderColor: theme.palette.divider,
       yaxis: {
         lines: {
-          show: false
-        }
-      }
+          show: false,
+        },
+      },
     },
     legend: {
-      show: false
+      show: false,
     },
     plotOptions: {
       bar: {
         horizontal: true,
-        barHeight: '45',
-        distributed: true
-      }
+        barHeight: "45",
+        distributed: true,
+      },
     },
     theme: {
-      mode: theme.palette.mode
+      mode: theme.palette.mode,
     },
     tooltip: {
       y: {
-        formatter: (value) => numeral(value).format('$0,0.00')
-      }
+        formatter: (value) => numeral(value).format("$0,0.00"),
+      },
     },
     xaxis: {
       axisBorder: {
         color: theme.palette.divider,
-        show: true
+        show: true,
       },
       axisTicks: {
         color: theme.palette.divider,
-        show: true
+        show: true,
       },
-      categories: data.series.map((item) => item.category)
+      categories: data.series.map((item) => item.category),
     },
     yaxis: {
       labels: {
-        show: false
-      }
-    }
+        show: false,
+      },
+    },
   };
 
   const chartSeries = [
     {
       data: data.series.map((item) => item.data),
-      name: 'Sales'
-    }
+      name: "Sales",
+    },
   ];
 
   return (
@@ -107,24 +108,20 @@ const FinanceIncrementalSales = (props) => {
           <Box
             key={item.category}
             sx={{
-              alignItems: 'center',
-              display: 'flex',
-              p: 1
+              alignItems: "center",
+              display: "flex",
+              p: 1,
             }}
           >
             <Box
               sx={{
                 backgroundColor: item.color,
-                borderRadius: '50%',
+                borderRadius: "50%",
                 height: 8,
-                width: 8
+                width: 8,
               }}
             />
-            <Typography
-              color="textPrimary"
-              sx={{ ml: 2 }}
-              variant="subtitle2"
-            >
+            <Typography color="textPrimary" sx={{ ml: 2 }} variant="subtitle2">
               {item.category}
             </Typography>
           </Box>

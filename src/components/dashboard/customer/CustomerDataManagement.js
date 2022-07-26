@@ -1,4 +1,4 @@
-import { Box, Card, CardHeader, CardContent, Button, Divider, Typography } from '@material-ui/core';
+import { Box, Card, CardHeader, CardContent, Button, Divider, Typography } from '@mui/material';
 import BanIcon from '../../../icons/Ban';
 import DownloadIcon from '../../../icons/Download';
 import TrashIcon from '../../../icons/Trash';

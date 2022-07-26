@@ -1,6 +1,6 @@
 import Chart from 'react-apexcharts';
-import { Box, Card, CardHeader, Divider, IconButton, Typography } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import { Box, Card, CardHeader, Divider, IconButton, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import DotsHorizontalIcon from '../../../icons/DotsHorizontal';
 
 const data = {
@@ -62,7 +62,7 @@ const QuickStats1 = () => {
       <Card>
         <CardHeader
           action={(
-            <IconButton>
+            <IconButton size="large">
               <DotsHorizontalIcon fontSize="small" />
             </IconButton>
           )}

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import toast from 'react-hot-toast';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
-import { Box, Button, Card, Grid, Switch, TextField, Typography } from '@material-ui/core';
+import { Box, Button, Card, Grid, Switch, TextField, Typography } from '@mui/material';
 import wait from '../../../utils/wait';
 
 const CustomerEditForm = (props) => {

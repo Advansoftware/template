@@ -1,6 +1,6 @@
 import * as Yup from 'yup';
 import { Formik } from 'formik';
-import { Alert, Box, Button, FormHelperText, TextField } from '@material-ui/core';
+import { Alert, Box, Button, FormHelperText, TextField } from '@mui/material';
 import useAuth from '../../../hooks/useAuth';
 import useMounted from '../../../hooks/useMounted';
 

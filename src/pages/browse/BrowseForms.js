@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Box, Container } from '@material-ui/core';
+import { Box, Container } from '@mui/material';
 import Form1 from '../../components/widgets/forms/Form1';
 import Form2 from '../../components/widgets/forms/Form2';
 import Form3 from '../../components/widgets/forms/Form3';

@@ -1,4 +1,4 @@
-import MobileDateTimePicker from '@material-ui/lab/MobileDateTimePicker';
+import MobileDateTimePicker from '@mui/lab/MobileDateTimePicker';
 import {
   Box,
   Checkbox,
@@ -9,7 +9,7 @@ import {
   Switch,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 
 const InputMixed = () => (
   <Box

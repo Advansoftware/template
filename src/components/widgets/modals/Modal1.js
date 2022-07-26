@@ -7,9 +7,9 @@ import {
   Paper,
   Tooltip,
   Typography
-} from '@material-ui/core';
-import AddPhotoIcon from '@material-ui/icons/AddPhotoAlternate';
-import AttachFileIcon from '@material-ui/icons/AttachFile';
+} from '@mui/material';
+import AddPhotoIcon from '@mui/icons-material/AddPhotoAlternate';
+import AttachFileIcon from '@mui/icons-material/AttachFile';
 import QuillEditor from '../../QuillEditor';
 import ArrowsExpandIcon from '../../../icons/ArrowsExpand';
 import XIcon from '../../../icons/X';
@@ -49,10 +49,10 @@ const Modal1 = () => (
           New Message
         </Typography>
         <Box sx={{ flexGrow: 1 }} />
-        <IconButton>
+        <IconButton size="large">
           <ArrowsExpandIcon fontSize="small" />
         </IconButton>
-        <IconButton>
+        <IconButton size="large">
           <XIcon fontSize="small" />
         </IconButton>
       </Box>

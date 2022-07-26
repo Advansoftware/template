@@ -11,9 +11,9 @@ import {
   ToggleButton,
   ToggleButtonGroup,
   Typography
-} from '@material-ui/core';
-import ViewModuleIcon from '@material-ui/icons/ViewModule';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+} from '@mui/material';
+import ViewModuleIcon from '@mui/icons-material/ViewModule';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ProjectCard from './ProjectCard';
 
 const ProjectBrowseResults = (props) => {

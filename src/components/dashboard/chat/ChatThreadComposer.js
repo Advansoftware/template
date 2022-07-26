@@ -13,7 +13,7 @@ import {
   Paper,
   Popper,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import { chatApi } from '../../../__fakeApi__/chatApi';
 
 const getFilteredSearchResults = (results, recipients) => {

@@ -9,7 +9,7 @@ import {
   Divider,
   Link,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 
 const applicants = [
   {
@@ -54,7 +54,7 @@ const applicants = [
   }
 ];
 
-const GridList4 = () => (
+const ImageList4 = () => (
   <Box
     sx={{
       backgroundColor: 'background.default',
@@ -134,4 +134,4 @@ const GridList4 = () => (
   </Box>
 );
 
-export default GridList4;
+export default ImageList4;

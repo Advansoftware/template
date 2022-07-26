@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Box, Container, Grid, Switch, Typography, Badge, Skeleton } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import { Box, Container, Grid, Switch, Typography, Badge, Skeleton } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import { PricingPlan } from '../components/pricing';
 import gtm from '../lib/gtm';
 

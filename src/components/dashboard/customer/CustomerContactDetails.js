@@ -10,7 +10,7 @@ import {
   TableCell,
   TableRow,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import LockIcon from '../../../icons/Lock';
 import UserIcon from '../../../icons/User';
 import Label from '../../Label';

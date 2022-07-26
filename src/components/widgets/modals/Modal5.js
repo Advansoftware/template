@@ -10,7 +10,7 @@ import {
   ListItemText,
   Paper,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import ChatAltIcon from '../../../icons/ChatAlt';
 import CreditCardIcon from '../../../icons/CreditCard';
 import ShoppingCartIcon from '../../../icons/ShoppingCart';

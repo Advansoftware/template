@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Box, Breadcrumbs, Button, Container, Grid, Link, Typography } from '@material-ui/core';
+import { Box, Breadcrumbs, Button, Container, Grid, Link, Typography } from '@mui/material';
 import { productApi } from '../../__fakeApi__/productApi';
 import { ProductListTable } from '../../components/dashboard/product';
 import useMounted from '../../hooks/useMounted';

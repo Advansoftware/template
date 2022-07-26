@@ -6,7 +6,7 @@ import {
   Divider,
   LinearProgress,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 
 const QuickStats7 = () => (
   <Box

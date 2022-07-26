@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Box, Container } from '@material-ui/core';
+import { Box, Container } from '@mui/material';
 import GroupedList1 from '../../components/widgets/grouped-lists/GroupedList1';
 import GroupedList2 from '../../components/widgets/grouped-lists/GroupedList2';
 import GroupedList3 from '../../components/widgets/grouped-lists/GroupedList3';

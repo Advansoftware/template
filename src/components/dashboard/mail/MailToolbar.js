@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import { Box, IconButton, InputAdornment, TextField, Tooltip } from '@material-ui/core';
+import { Box, IconButton, InputAdornment, TextField, Tooltip } from '@mui/material';
 import ArrowLeftIcon from '../../../icons/ArrowLeft';
 import SearchIcon from '../../../icons/Search';
 import ChevronLeftIcon from '../../../icons/ChevronLeft';
@@ -34,7 +34,7 @@ const MailToolbar = (props) => {
       {...props}
     >
       <Tooltip title="Back">
-        <IconButton onClick={handleBack}>
+        <IconButton onClick={handleBack} size="large">
           <ArrowLeftIcon fontSize="small" />
         </IconButton>
       </Tooltip>
@@ -63,12 +63,12 @@ const MailToolbar = (props) => {
         />
       </Box>
       <Tooltip title="Previous email">
-        <IconButton>
+        <IconButton size="large">
           <ChevronLeftIcon fontSize="small" />
         </IconButton>
       </Tooltip>
       <Tooltip title="Next email">
-        <IconButton>
+        <IconButton size="large">
           <ChevronRightIcon fontSize="small" />
         </IconButton>
       </Tooltip>

@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { format } from 'date-fns';
 import Markdown from 'react-markdown/with-html';
-import { Avatar, Box, Divider, IconButton, Link, Tooltip, Typography } from '@material-ui/core';
-import { experimentalStyled } from '@material-ui/core/styles';
-import ReplyAllIcon from '@material-ui/icons/ReplyAll';
-import ReplyIcon from '@material-ui/icons/Reply';
+import { Avatar, Box, Divider, IconButton, Link, Tooltip, Typography } from '@mui/material';
+import { experimentalStyled } from '@mui/material/styles';
+import ReplyAllIcon from '@mui/icons-material/ReplyAll';
+import ReplyIcon from '@mui/icons-material/Reply';
 import DotsHorizontalIcon from '../../../icons/DotsHorizontal';
 import TrashIcon from '../../../icons/Trash';
 import { getEmail } from '../../../slices/mail';
@@ -125,23 +125,23 @@ const MailContent = () => {
           }}
         >
           <Tooltip title="Reply">
-            <IconButton>
+            <IconButton size="large">
               <ReplyIcon fontSize="small" />
             </IconButton>
           </Tooltip>
           <Tooltip title="Reply all">
-            <IconButton>
+            <IconButton size="large">
               <ReplyAllIcon fontSize="small" />
             </IconButton>
           </Tooltip>
           <Tooltip title="Delete">
-            <IconButton>
+            <IconButton size="large">
               <TrashIcon fontSize="small" />
             </IconButton>
           </Tooltip>
         </Box>
         <Tooltip title="More options">
-          <IconButton>
+          <IconButton size="large">
             <DotsHorizontalIcon fontSize="small" />
           </IconButton>
         </Tooltip>

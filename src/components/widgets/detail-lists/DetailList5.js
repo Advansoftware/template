@@ -14,8 +14,8 @@ import {
   TableRow,
   TextField,
   Typography
-} from '@material-ui/core';
-import ReceiptIcon from '@material-ui/icons/Receipt';
+} from '@mui/material';
+import ReceiptIcon from '@mui/icons-material/Receipt';
 
 const order = {
   id: '5ecb8a6879877087d4aa2690',

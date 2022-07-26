@@ -6,7 +6,7 @@ import {
   Switch,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 
 const Modal7 = () => (
   <Box

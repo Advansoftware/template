@@ -11,8 +11,8 @@ import {
   MenuItem,
   Tooltip,
   Typography
-} from '@material-ui/core';
-import { experimentalStyled } from '@material-ui/core/styles';
+} from '@mui/material';
+import { experimentalStyled } from '@mui/material/styles';
 import ArchiveIcon from '../../../icons/Archive';
 import BellIcon from '../../../icons/Bell';
 import BanIcon from '../../../icons/Ban';
@@ -102,17 +102,14 @@ const ChatThreadToolbar = (props) => {
         </Typography>
       </Box>
       <Box sx={{ flexGrow: 1 }} />
-      <IconButton>
+      <IconButton size="large">
         <PhoneIcon fontSize="small" />
       </IconButton>
-      <IconButton>
+      <IconButton size="large">
         <CameraIcon fontSize="small" />
       </IconButton>
       <Tooltip title="More options">
-        <IconButton
-          onClick={handleMenuOpen}
-          ref={moreRef}
-        >
+        <IconButton onClick={handleMenuOpen} ref={moreRef} size="large">
           <DotsHorizontalIcon fontSize="small" />
         </IconButton>
       </Tooltip>

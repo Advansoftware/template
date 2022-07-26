@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Box, Container } from '@material-ui/core';
+import { Box, Container } from '@mui/material';
 import ColorsMain from '../../components/widgets/colors/ColorsMain';
 import ColorsSeverity from '../../components/widgets/colors/ColorsSeverity';
 import WidgetPreviewer from '../../components/WidgetPreviewer';

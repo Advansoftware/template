@@ -12,7 +12,7 @@ import {
   ListItem,
   ListItemText,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import ArrowRightIcon from '../../../icons/ArrowRight';
 
 const currencies = [

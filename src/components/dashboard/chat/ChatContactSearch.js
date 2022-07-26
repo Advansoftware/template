@@ -10,7 +10,7 @@ import {
   ListItemAvatar,
   ListItemText,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import SearchIcon from '../../../icons/Search';
 
 const ChatContactSearch = forwardRef((props, ref) => {

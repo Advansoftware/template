@@ -9,7 +9,7 @@ import {
   Link,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import useAuth from '../../../hooks/useAuth';
 import useMounted from '../../../hooks/useMounted';
 

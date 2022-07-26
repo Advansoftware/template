@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Box } from '@material-ui/core';
+import { Box } from '@mui/material';
 import { MailComposer, MailDetails, MailList, MailSidebar } from '../../components/dashboard/mail';
 import gtm from '../../lib/gtm';
 import { getLabels } from '../../slices/mail';

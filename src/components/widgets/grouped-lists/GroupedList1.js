@@ -13,7 +13,7 @@ import {
   ListItemAvatar,
   ListItemText,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import DotsHorizontalIcon from '../../../icons/DotsHorizontal';
 
 const now = new Date();
@@ -87,7 +87,7 @@ const GroupedList1 = () => (
       <Card>
         <CardHeader
           action={(
-            <IconButton>
+            <IconButton size="large">
               <DotsHorizontalIcon fontSize="small" />
             </IconButton>
           )}

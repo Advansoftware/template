@@ -15,8 +15,7 @@ import {
   MenuItem,
   Tooltip,
   Typography
-} from '@material-ui/core';
-import blueGrey from '@material-ui/core/colors/blueGrey';
+} from '@mui/material';
 import ArchiveIcon from '../../../icons/Archive';
 import DocumentTextIcon from '../../../icons/DocumentText';
 import DotsHorizontalIcon from '../../../icons/DotsHorizontal';
@@ -24,6 +23,7 @@ import DownloadIcon from '../../../icons/Download';
 import PencilAltIcon from '../../../icons/PencilAlt';
 import TrashIcon from '../../../icons/Trash';
 import bytesToSize from '../../../utils/bytesToSize';
+import { blueGrey } from '@mui/material/colors';
 
 const ProjectFileCard = (props) => {
   const { mimeType, name, size, url, ...other } = props;

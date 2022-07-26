@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import toast from 'react-hot-toast';
-import { Box, Button, Checkbox, IconButton, TextField, Typography } from '@material-ui/core';
-import { experimentalStyled } from '@material-ui/core/styles';
+import { Box, Button, Checkbox, IconButton, TextField, Typography } from '@mui/material';
+import { experimentalStyled } from '@mui/material/styles';
 import TrashIcon from '../../../icons/Trash';
 import { deleteCheckItem, updateCheckItem } from '../../../slices/kanban';
 import { useDispatch } from '../../../store';
@@ -142,10 +142,7 @@ const KanbanCheckItem = (props) => {
             >
               {checkItem.name}
             </Typography>
-            <IconButton
-              onClick={handleDelete}
-              sx={{ visibility: 'hidden' }}
-            >
+            <IconButton onClick={handleDelete} sx={{ visibility: 'hidden' }} size="large">
               <TrashIcon fontSize="small" />
             </IconButton>
           </Box>

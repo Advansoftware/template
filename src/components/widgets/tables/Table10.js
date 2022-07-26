@@ -10,7 +10,7 @@ import {
   TableCell,
   TableRow,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import Label from '../../Label';
 import Scrollbar from '../../Scrollbar';
 import DotsHorizontalIcon from '../../../icons/DotsHorizontal';
@@ -103,7 +103,7 @@ const Table10 = () => (
     <Card>
       <CardHeader
         action={(
-          <IconButton>
+          <IconButton size="large">
             <DotsHorizontalIcon fontSize="small" />
           </IconButton>
         )}

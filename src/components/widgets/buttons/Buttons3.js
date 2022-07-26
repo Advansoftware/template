@@ -9,8 +9,8 @@ import {
   MenuList,
   Paper,
   Popper
-} from '@material-ui/core';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+} from '@mui/material';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 const options = [
   'Create a merge commit',

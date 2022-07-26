@@ -19,7 +19,7 @@ import {
   TableRow,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import ArrowRightIcon from '../../../icons/ArrowRight';
 import PencilAltIcon from '../../../icons/PencilAlt';
 import SearchIcon from '../../../icons/Search';
@@ -377,16 +377,10 @@ const InvoiceListTable = (props) => {
                       {format(invoice.issueDate, 'dd/MM/yyyy')}
                     </TableCell>
                     <TableCell align="right">
-                      <IconButton
-                        component={RouterLink}
-                        to="#"
-                      >
+                      <IconButton component={RouterLink} to="#" size="large">
                         <PencilAltIcon fontSize="small" />
                       </IconButton>
-                      <IconButton
-                        component={RouterLink}
-                        to="/dashboard/invoices/1"
-                      >
+                      <IconButton component={RouterLink} to="/dashboard/invoices/1" size="large">
                         <ArrowRightIcon fontSize="small" />
                       </IconButton>
                     </TableCell>

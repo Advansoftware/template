@@ -12,7 +12,7 @@ import {
   Grid,
   Link,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import { invoiceApi } from '../../__fakeApi__/invoiceApi';
 import { InvoicePDF, InvoicePreview } from '../../components/dashboard/invoice';
 import useMounted from '../../hooks/useMounted';

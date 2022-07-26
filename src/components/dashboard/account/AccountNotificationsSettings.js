@@ -10,7 +10,7 @@ import {
   FormControlLabel,
   Grid,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import wait from '../../../utils/wait';
 
 const AccountNotificationsSettings = (props) => {

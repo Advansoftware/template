@@ -1,14 +1,14 @@
 import { Link as RouterLink, useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { format } from 'date-fns';
-import { Avatar, Box, Checkbox, IconButton, Tooltip, Typography } from '@material-ui/core';
-import { experimentalStyled } from '@material-ui/core/styles';
-import amber from '@material-ui/core/colors/amber';
-import StarIcon from '@material-ui/icons/Star';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
-import LabelImportantIcon from '@material-ui/icons/LabelImportant';
+import { Avatar, Box, Checkbox, IconButton, Tooltip, Typography } from '@mui/material';
+import { experimentalStyled } from '@mui/material/styles';
+import StarIcon from '@mui/icons-material/Star';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import LabelImportantIcon from '@mui/icons-material/LabelImportant';
 import { useSelector } from '../../../store';
 import getInitials from '../../../utils/getInitials';
+import { amber } from '@mui/material/colors';
 
 const Label = experimentalStyled('span')(({ theme }) => ({
   borderRadius: 2,
@@ -112,7 +112,7 @@ const MailItem = (props) => {
           onChange={handleCheckboxChange}
         />
         <Tooltip title="Starred">
-          <IconButton onClick={handleStarToggle}>
+          <IconButton onClick={handleStarToggle} size="large">
             {email.isStarred
               ? (
                 <StarIcon
@@ -126,7 +126,7 @@ const MailItem = (props) => {
           </IconButton>
         </Tooltip>
         <Tooltip title="Important">
-          <IconButton onClick={handleImportantToggle}>
+          <IconButton onClick={handleImportantToggle} size="large">
             {email.isImportant
               ? (
                 <LabelImportantIcon

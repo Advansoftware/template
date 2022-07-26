@@ -1,6 +1,6 @@
 import Chart from 'react-apexcharts';
-import { Box, Card, CardContent, Container, Typography } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import { Box, Card, CardContent, Container, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 const Chart3 = () => {
   const theme = useTheme();

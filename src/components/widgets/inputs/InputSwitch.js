@@ -1,4 +1,4 @@
-import { Box, Grid, Switch, Typography } from '@material-ui/core';
+import { Box, Grid, Switch, Typography } from '@mui/material';
 
 const InputSwitch = () => (
   <Box

@@ -14,7 +14,7 @@ import {
   TablePagination,
   TableRow,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import Label from '../../Label';
 import Scrollbar from '../../Scrollbar';
 import ArrowRightIcon from '../../../icons/ArrowRight';
@@ -130,7 +130,7 @@ const Table4 = () => (
     <Card>
       <CardHeader
         action={(
-          <IconButton>
+          <IconButton size="large">
             <DotsHorizontalIcon fontSize="small" />
           </IconButton>
         )}
@@ -213,10 +213,10 @@ const Table4 = () => (
                     {getStatusLabel(order.status)}
                   </TableCell>
                   <TableCell align="right">
-                    <IconButton>
+                    <IconButton size="large">
                       <PencilAltIcon fontSize="small" />
                     </IconButton>
-                    <IconButton>
+                    <IconButton size="large">
                       <ArrowRightIcon fontSize="small" />
                     </IconButton>
                   </TableCell>

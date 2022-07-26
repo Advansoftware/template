@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { Box, Grid } from '@material-ui/core';
+import { Box, Grid } from '@mui/material';
 import { socialApi } from '../../../__fakeApi__/socialApi';
 import useMounted from '../../../hooks/useMounted';
 import SocialPostAdd from './SocialPostAdd';

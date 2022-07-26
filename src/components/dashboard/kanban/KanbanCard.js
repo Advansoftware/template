@@ -8,7 +8,7 @@ import {
   CardContent,
   CardMedia,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import CheckIcon from '../../../icons/Check';
 import ChatAltIcon from '../../../icons/ChatAlt';
 import DocumentTextIcon from '../../../icons/DocumentText';

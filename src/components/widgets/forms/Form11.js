@@ -1,4 +1,4 @@
-import { Box, Button, Checkbox, FormControlLabel, Grid, TextField } from '@material-ui/core';
+import { Box, Button, Checkbox, FormControlLabel, Grid, TextField } from '@mui/material';
 
 const Form11 = () => (
   <Box

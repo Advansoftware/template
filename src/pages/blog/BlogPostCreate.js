@@ -10,7 +10,7 @@ import {
   Toolbar,
   Typography,
   IconButton
-} from '@material-ui/core';
+} from '@mui/material';
 import { BlogPostCreateForm } from '../../components/blog';
 import SaveIcon from '../../icons/Save';
 import DotsVertical from '../../icons/DotsVertical';
@@ -21,75 +21,73 @@ const BlogPostCreate = () => {
     gtm.push({ event: 'page_view' });
   }, []);
 
-  return (
-    <>
-      <Helmet>
-        <title>Blog: Post Create | Material Kit Pro</title>
-      </Helmet>
-      <Box
-        sx={{
-          backgroundColor: 'background.paper',
-          minHeight: '100%'
-        }}
-      >
-        <div>
-          <Container maxWidth="lg">
-            <Toolbar
-              disableGutters
-              sx={{ py: 2 }}
+  return <>
+    <Helmet>
+      <title>Blog: Post Create | Material Kit Pro</title>
+    </Helmet>
+    <Box
+      sx={{
+        backgroundColor: 'background.paper',
+        minHeight: '100%'
+      }}
+    >
+      <div>
+        <Container maxWidth="lg">
+          <Toolbar
+            disableGutters
+            sx={{ py: 2 }}
+          >
+            <Grid
+              alignItems="center"
+              container
+              justifyContent="space-between"
+              spacing={3}
             >
-              <Grid
-                alignItems="center"
-                container
-                justifyContent="space-between"
-                spacing={3}
-              >
-                <Grid item>
-                  <Typography
-                    color="textPrimary"
-                    variant="body2"
-                  >
-                    Hello, Jane Rotanson
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Button
-                    color="primary"
-                    component={RouterLink}
-                    size="large"
-                    to="/blog"
-                    variant="outlined"
-                  >
-                    Cancel
-                  </Button>
-                  <Button
-                    color="primary"
-                    component={RouterLink}
-                    size="large"
-                    startIcon={<SaveIcon />}
-                    sx={{ mx: 2 }}
-                    to="/blog/1"
-                    variant="contained"
-                  >
-                    Publish Changes
-                  </Button>
-                  <IconButton edge="end">
-                    <DotsVertical fontSize="small" />
-                  </IconButton>
-                </Grid>
+              <Grid item>
+                <Typography
+                  color="textPrimary"
+                  variant="body2"
+                >
+                  Hello, Jane Rotanson
+                </Typography>
               </Grid>
-            </Toolbar>
-          </Container>
-        </div>
-        <Divider />
-        <Box sx={{ py: 6 }}>
-          <Container maxWidth="lg">
-            <BlogPostCreateForm />
-          </Container>
-        </Box>
+              <Grid item>
+                <Button
+                  color="primary"
+                  component={RouterLink}
+                  size="large"
+                  to="/blog"
+                  variant="outlined"
+                >
+                  Cancel
+                </Button>
+                <Button
+                  color="primary"
+                  component={RouterLink}
+                  size="large"
+                  startIcon={<SaveIcon />}
+                  sx={{ mx: 2 }}
+                  to="/blog/1"
+                  variant="contained"
+                >
+                  Publish Changes
+                </Button>
+                <IconButton edge="end" size="large">
+                  <DotsVertical fontSize="small" />
+                </IconButton>
+              </Grid>
+            </Grid>
+          </Toolbar>
+        </Container>
+      </div>
+      <Divider />
+      <Box sx={{ py: 6 }}>
+        <Container maxWidth="lg">
+          <BlogPostCreateForm />
+        </Container>
       </Box>
-    </>
-  );
+    </Box>
+  </>;
 };
 
 export default BlogPostCreate;

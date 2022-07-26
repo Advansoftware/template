@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Box, Card, CardContent, Container, Divider, Link, Typography } from '@material-ui/core';
+import { Box, Card, CardContent, Container, Divider, Link, Typography } from '@mui/material';
 import AuthBanner from '../../components/authentication/AuthBanner';
 import { VerifyCodeAmplify } from '../../components/authentication/verify-code';
 import Logo from '../../components/Logo';

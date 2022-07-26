@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import { Box, Button, Divider, Typography } from '@material-ui/core';
+import { Box, Button, Divider, Typography } from '@mui/material';
 import CheckIcon from '../../icons/Check';
 
 const PricingPlan = (props) => {

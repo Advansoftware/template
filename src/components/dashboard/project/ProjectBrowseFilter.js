@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Card, Checkbox, Chip, Divider, FormControlLabel, Input } from '@material-ui/core';
+import { Box, Card, Checkbox, Chip, Divider, FormControlLabel, Input } from '@mui/material';
 import SearchIcon from '../../../icons/Search';
 import MultiSelect from '../../MultiSelect';
 

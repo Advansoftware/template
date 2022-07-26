@@ -10,7 +10,7 @@ import {
   ListItemAvatar,
   ListItemText,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import AcademicCapIcon from '../../../icons/AcademicCap';
 import BriefcaseIcon from '../../../icons/Briefcase';
 import HomeIcon from '../../../icons/Home';

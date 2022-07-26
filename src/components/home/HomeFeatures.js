@@ -10,8 +10,8 @@ import {
   ListItemText,
   Skeleton,
   Typography
-} from '@material-ui/core';
-import { alpha, useTheme } from '@material-ui/core/styles';
+} from '@mui/material';
+import { alpha, useTheme } from '@mui/material/styles';
 import LockIcon from '../../icons/Lock';
 import CogIcon from '../../icons/Cog';
 import TemplateIcon from '../../icons/Template';

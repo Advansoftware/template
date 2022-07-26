@@ -10,7 +10,7 @@ import {
   Switch,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 
 const countries = [
   { text: 'Jersey', value: 'JE' },

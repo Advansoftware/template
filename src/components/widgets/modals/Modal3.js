@@ -6,7 +6,7 @@ import {
   InputAdornment,
   Paper,
   TextField
-} from '@material-ui/core';
+} from '@mui/material';
 import SearchIcon from '../../../icons/Search';
 import XIcon from '../../../icons/X';
 
@@ -26,7 +26,7 @@ const Modal3 = () => (
             justifyContent: 'flex-end'
           }}
         >
-          <IconButton>
+          <IconButton size="large">
             <XIcon fontSize="small" />
           </IconButton>
         </Box>

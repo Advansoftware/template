@@ -15,7 +15,7 @@ import {
   Select,
   TextField,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 
 const CheckoutOrderSummary = (props) => {
   const { onQuantityChange, products, shippingTax, subtotal, total, ...other } = props;

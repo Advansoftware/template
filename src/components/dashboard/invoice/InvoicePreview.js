@@ -11,7 +11,7 @@ import {
   TableHead,
   TableRow,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import Logo from '../../Logo';
 import Scrollbar from '../../Scrollbar';
 

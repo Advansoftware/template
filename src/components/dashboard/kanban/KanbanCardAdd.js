@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import toast from 'react-hot-toast';
-import { Box, Button, TextField } from '@material-ui/core';
+import { Box, Button, TextField } from '@mui/material';
 import { createCard } from '../../../slices/kanban';
 import { useDispatch } from '../../../store';
 

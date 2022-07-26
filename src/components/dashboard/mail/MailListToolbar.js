@@ -7,7 +7,7 @@ import {
   TextField,
   Tooltip,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
 import ChevronLeftIcon from '../../../icons/ChevronLeft';
 import ChevronRightIcon from '../../../icons/ChevronRight';
 import DotsHorizontalIcon from '../../../icons/DotsHorizontal';
@@ -58,7 +58,7 @@ const MailListToolbar = (props) => {
             md: 'none'
           }
         }}
-      >
+        size="large">
         <MenuIcon fontSize="small" />
       </IconButton>
       <Box
@@ -109,17 +109,17 @@ const MailListToolbar = (props) => {
           />
         </Box>
         <Tooltip title="Refresh">
-          <IconButton>
+          <IconButton size="large">
             <RefreshIcon fontSize="small" />
           </IconButton>
         </Tooltip>
         <Tooltip title="More options">
-          <IconButton>
+          <IconButton size="large">
             <DotsHorizontalIcon fontSize="small" />
           </IconButton>
         </Tooltip>
         <Tooltip title="Next page">
-          <IconButton>
+          <IconButton size="large">
             <ChevronLeftIcon fontSize="small" />
           </IconButton>
         </Tooltip>
@@ -139,7 +139,7 @@ const MailListToolbar = (props) => {
               {emails}
             </Typography>
             <Tooltip title="Previous page">
-              <IconButton>
+              <IconButton size="large">
                 <ChevronRightIcon fontSize="small" />
               </IconButton>
             </Tooltip>
