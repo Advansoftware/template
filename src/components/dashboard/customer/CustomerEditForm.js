@@ -1,9 +1,18 @@
-import PropTypes from 'prop-types';
-import toast from 'react-hot-toast';
-import * as Yup from 'yup';
-import { Formik } from 'formik';
-import { Box, Button, Card, Grid, Switch, TextField, Typography } from '@mui/material';
-import wait from '../../../utils/wait';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import toast from "react-hot-toast";
+import * as Yup from "yup";
+import { Formik } from "formik";
+import {
+  Box,
+  Button,
+  Card,
+  Grid,
+  Switch,
+  TextField,
+  Typography,
+} from "@mui/material";
+import wait from "../../../utils/wait";
 
 const CustomerEditForm = (props) => {
   const { customer, ...other } = props;
@@ -11,70 +20,65 @@ const CustomerEditForm = (props) => {
   return (
     <Formik
       initialValues={{
-        address1: customer.address1 || '',
-        address2: customer.address2 || '',
-        country: customer.country || '',
-        email: customer.email || '',
+        address1: customer.address1 || "",
+        address2: customer.address2 || "",
+        country: customer.country || "",
+        email: customer.email || "",
         hasDiscountedPrices: customer.hasDiscountedPrices || false,
         isVerified: customer.isVerified || false,
-        name: customer.name || '',
-        phone: customer.phone || '',
-        state: customer.state || '',
-        submit: null
+        name: customer.name || "",
+        phone: customer.phone || "",
+        state: customer.state || "",
+        submit: null,
       }}
-      validationSchema={Yup
-        .object()
-        .shape({
-          address1: Yup.string().max(255),
-          address2: Yup.string().max(255),
-          country: Yup.string().max(255),
-          email: Yup
-            .string()
-            .email('Must be a valid email')
-            .max(255)
-            .required('Email is required'),
-          hasDiscountedPrices: Yup.bool(),
-          isVerified: Yup.bool(),
-          name: Yup
-            .string()
-            .max(255)
-            .required('Name is required'),
-          phone: Yup.string().max(15),
-          state: Yup.string().max(255)
-        })}
-      onSubmit={async (values, { resetForm, setErrors, setStatus, setSubmitting }) => {
+      validationSchema={Yup.object().shape({
+        address1: Yup.string().max(255),
+        address2: Yup.string().max(255),
+        country: Yup.string().max(255),
+        email: Yup.string()
+          .email("Must be a valid email")
+          .max(255)
+          .required("Email is required"),
+        hasDiscountedPrices: Yup.bool(),
+        isVerified: Yup.bool(),
+        name: Yup.string().max(255).required("Name is required"),
+        phone: Yup.string().max(15),
+        state: Yup.string().max(255),
+      })}
+      onSubmit={async (
+        values,
+        { resetForm, setErrors, setStatus, setSubmitting }
+      ) => {
         try {
           // NOTE: Make API request
           await wait(500);
           resetForm();
           setStatus({ success: true });
           setSubmitting(false);
-          toast.success('Customer updated!');
+          toast.success("Customer updated!");
         } catch (err) {
           console.error(err);
-          toast.error('Something went wrong!');
+          toast.error("Something went wrong!");
           setStatus({ success: false });
           setErrors({ submit: err.message });
           setSubmitting(false);
         }
       }}
     >
-      {({ errors, handleBlur, handleChange, handleSubmit, isSubmitting, touched, values }) => (
-        <form
-          onSubmit={handleSubmit}
-          {...other}
-        >
+      {({
+        errors,
+        handleBlur,
+        handleChange,
+        handleSubmit,
+        isSubmitting,
+        touched,
+        values,
+      }) => (
+        <form onSubmit={handleSubmit} {...other}>
           <Card>
             <Box sx={{ p: 3 }}>
-              <Grid
-                container
-                spacing={3}
-              >
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
+              <Grid container spacing={3}>
+                <Grid item md={6} xs={12}>
                   <TextField
                     error={Boolean(touched.name && errors.name)}
                     fullWidth
@@ -88,11 +92,7 @@ const CustomerEditForm = (props) => {
                     variant="outlined"
                   />
                 </Grid>
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
+                <Grid item md={6} xs={12}>
                   <TextField
                     error={Boolean(touched.email && errors.email)}
                     fullWidth
@@ -106,11 +106,7 @@ const CustomerEditForm = (props) => {
                     variant="outlined"
                   />
                 </Grid>
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
+                <Grid item md={6} xs={12}>
                   <TextField
                     error={Boolean(touched.country && errors.country)}
                     fullWidth
@@ -123,11 +119,7 @@ const CustomerEditForm = (props) => {
                     variant="outlined"
                   />
                 </Grid>
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
+                <Grid item md={6} xs={12}>
                   <TextField
                     error={Boolean(touched.state && errors.state)}
                     fullWidth
@@ -140,11 +132,7 @@ const CustomerEditForm = (props) => {
                     variant="outlined"
                   />
                 </Grid>
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
+                <Grid item md={6} xs={12}>
                   <TextField
                     error={Boolean(touched.address1 && errors.address1)}
                     fullWidth
@@ -157,11 +145,7 @@ const CustomerEditForm = (props) => {
                     variant="outlined"
                   />
                 </Grid>
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
+                <Grid item md={6} xs={12}>
                   <TextField
                     error={Boolean(touched.address2 && errors.address2)}
                     fullWidth
@@ -174,11 +158,7 @@ const CustomerEditForm = (props) => {
                     variant="outlined"
                   />
                 </Grid>
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
+                <Grid item md={6} xs={12}>
                   <TextField
                     error={Boolean(touched.phone && errors.phone)}
                     fullWidth
@@ -192,11 +172,7 @@ const CustomerEditForm = (props) => {
                   />
                 </Grid>
                 <Grid item />
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
+                <Grid item md={6} xs={12}>
                   <Typography
                     color="textPrimary"
                     gutterBottom
@@ -204,12 +180,9 @@ const CustomerEditForm = (props) => {
                   >
                     Email Verified
                   </Typography>
-                  <Typography
-                    color="textSecondary"
-                    variant="body2"
-                  >
-                    Disabling this will automatically send the user
-                    a verification email
+                  <Typography color="textSecondary" variant="body2">
+                    Disabling this will automatically send the user a
+                    verification email
                   </Typography>
                   <Switch
                     checked={values.isVerified}
@@ -220,11 +193,7 @@ const CustomerEditForm = (props) => {
                     value={values.isVerified}
                   />
                 </Grid>
-                <Grid
-                  item
-                  md={6}
-                  xs={12}
-                >
+                <Grid item md={6} xs={12}>
                   <Typography
                     color="textPrimary"
                     gutterBottom
@@ -232,12 +201,8 @@ const CustomerEditForm = (props) => {
                   >
                     Discounted Prices
                   </Typography>
-                  <Typography
-                    color="textSecondary"
-                    variant="body2"
-                  >
-                    This will give the user discounted prices for
-                    all products
+                  <Typography color="textSecondary" variant="body2">
+                    This will give the user discounted prices for all products
                   </Typography>
                   <Switch
                     checked={values.hasDiscountedPrices}
@@ -268,7 +233,7 @@ const CustomerEditForm = (props) => {
 };
 
 CustomerEditForm.propTypes = {
-  customer: PropTypes.object.isRequired
+  customer: PropTypes.object.isRequired,
 };
 
 export default CustomerEditForm;

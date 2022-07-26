@@ -1,7 +1,14 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import numeral from "numeral";
 import Chart from "react-apexcharts";
-import { Box, Card, CardContent, CardHeader, Typography, useTheme } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardContent,
+  CardHeader,
+  Typography,
+  useTheme,
+} from "@mui/material";
 
 const data = {
   series: [

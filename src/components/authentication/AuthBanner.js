@@ -1,81 +1,61 @@
-import { Link as RouterLink } from 'react-router-dom';
-import { Box, Chip, Container, Link, Tooltip, Typography } from '@mui/material';
+import React, { Component } from "react";
+import { Link as RouterLink } from "react-router-dom";
+import { Box, Chip, Container, Link, Tooltip, Typography } from "@mui/material";
 
 const platformIcons = {
-  Amplify: '/static/icons/amplify.svg',
-  Auth0: '/static/icons/auth0.svg',
-  Firebase: '/static/icons/firebase.svg',
-  JWT: '/static/icons/jwt.svg'
+  Amplify: "/static/icons/amplify.svg",
+  Auth0: "/static/icons/auth0.svg",
+  Firebase: "/static/icons/firebase.svg",
+  JWT: "/static/icons/jwt.svg",
 };
 
 const AuthBanner = () => (
   <Box
     sx={{
-      backgroundColor: 'background.paper',
+      backgroundColor: "background.paper",
       borderBottom: 1,
-      borderColor: 'divider',
-      py: 2
+      borderColor: "divider",
+      py: 2,
     }}
   >
     <Container maxWidth="md">
       <Box
         sx={{
-          alignItems: 'center',
-          display: 'flex',
-          justifyContent: 'center'
+          alignItems: "center",
+          display: "flex",
+          justifyContent: "center",
         }}
       >
-        <Chip
-          color="primary"
-          label="NEW"
-          size="small"
-        />
+        <Chip color="primary" label="NEW" size="small" />
         <Box
           sx={{
-            alignItems: 'center',
-            display: 'flex',
+            alignItems: "center",
+            display: "flex",
             ml: 2,
-            '& > img': {
+            "& > img": {
               height: 30,
-              mx: 2
-            }
+              mx: 2,
+            },
           }}
         >
-          <Typography
-            color="textPrimary"
-            variant="subtitle2"
-          >
-            Visit our
-            {' '}
+          <Typography color="textPrimary" variant="subtitle2">
+            Visit our{" "}
             <Link component={RouterLink} to="/docs" underline="hover">
               docs
-            </Link>
-            {' '}
+            </Link>{" "}
             and find out how to switch between
           </Typography>
           <Tooltip title="Amplify">
-            <img
-              alt="Amplify"
-              src={platformIcons.Amplify}
-            />
+            <img alt="Amplify" src={platformIcons.Amplify} />
           </Tooltip>
           <Tooltip title="Auth0">
-            <img
-              alt="Auth0"
-              src={platformIcons.Auth0}
-            />
+            <img alt="Auth0" src={platformIcons.Auth0} />
           </Tooltip>
           <Tooltip title="Firebase">
-            <img
-              alt="Firebase"
-              src={platformIcons.Firebase}
-            />
+            <img alt="Firebase" src={platformIcons.Firebase} />
           </Tooltip>
           <Tooltip title="JSON Web Token">
-            <img
-              alt="JWT"
-              src={platformIcons.JWT}
-            />
+            <img alt="JWT" src={platformIcons.JWT} />
           </Tooltip>
         </Box>
       </Box>

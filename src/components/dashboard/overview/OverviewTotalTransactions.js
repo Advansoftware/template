@@ -1,29 +1,30 @@
-import Chart from 'react-apexcharts';
-import { format } from 'date-fns';
-import { Box, Card, CardHeader, Typography, useTheme } from '@mui/material';
-import Scrollbar from '../../Scrollbar';
+import React, { Component } from "react";
+import Chart from "react-apexcharts";
+import { format } from "date-fns";
+import { Box, Card, CardHeader, Typography, useTheme } from "@mui/material";
+import Scrollbar from "../../Scrollbar";
 
 const data = {
   series: [
     {
-      data: [12, 24, 36, 48, 60, 72, 84]
+      data: [12, 24, 36, 48, 60, 72, 84],
     },
     {
-      data: [12, 24, 36, 48, 60, 72, 84]
+      data: [12, 24, 36, 48, 60, 72, 84],
     },
     {
-      data: [12, 24, 36, 48, 60, 72, 84]
-    }
+      data: [12, 24, 36, 48, 60, 72, 84],
+    },
   ],
   categories: [
-    'Capital One',
-    'Ally Bank',
-    'ING',
-    'Ridgewood',
-    'BT Transilvania',
-    'CEC',
-    'CBC'
-  ]
+    "Capital One",
+    "Ally Bank",
+    "ING",
+    "Ridgewood",
+    "BT Transilvania",
+    "CEC",
+    "CBC",
+  ],
 };
 
 const OverviewTotalTransactions = (props) => {
@@ -31,74 +32,74 @@ const OverviewTotalTransactions = (props) => {
 
   const chartOptions = {
     chart: {
-      background: 'transparent',
+      background: "transparent",
       stacked: true,
       toolbar: {
-        show: false
-      }
+        show: false,
+      },
     },
-    colors: ['#3C4693', '#7783DB', '#7783DB'],
+    colors: ["#3C4693", "#7783DB", "#7783DB"],
     dataLabels: {
-      enabled: false
+      enabled: false,
     },
     grid: {
       borderColor: theme.palette.divider,
       xaxis: {
         lines: {
-          show: true
-        }
+          show: true,
+        },
       },
       yaxis: {
         lines: {
-          show: true
-        }
-      }
+          show: true,
+        },
+      },
     },
     states: {
       active: {
         filter: {
-          type: 'none'
-        }
+          type: "none",
+        },
       },
       hover: {
         filter: {
-          type: 'none'
-        }
-      }
+          type: "none",
+        },
+      },
     },
     legend: {
-      show: false
+      show: false,
     },
     stroke: {
-      colors: ['transparent'],
+      colors: ["transparent"],
       show: true,
-      width: 2
+      width: 2,
     },
     theme: {
-      mode: theme.palette.mode
+      mode: theme.palette.mode,
     },
     xaxis: {
       axisBorder: {
-        show: false
+        show: false,
       },
       axisTicks: {
-        show: false
+        show: false,
       },
       categories: data.categories,
       labels: {
         style: {
-          colors: theme.palette.text.secondary
-        }
-      }
+          colors: theme.palette.text.secondary,
+        },
+      },
     },
     yaxis: {
       labels: {
         offsetX: -12,
         style: {
-          colors: theme.palette.text.secondary
-        }
-      }
-    }
+          colors: theme.palette.text.secondary,
+        },
+      },
+    },
   };
 
   const chartSeries = data.series;
@@ -106,14 +107,11 @@ const OverviewTotalTransactions = (props) => {
   return (
     <Card {...props}>
       <CardHeader
-        subheader={(
-          <Typography
-            color="textSecondary"
-            variant="body2"
-          >
-            {format(new Date(), 'MMM yyyy')}
+        subheader={
+          <Typography color="textSecondary" variant="body2">
+            {format(new Date(), "MMM yyyy")}
           </Typography>
-        )}
+        }
         title="Total Transactions"
       />
       <Scrollbar>
@@ -121,7 +119,7 @@ const OverviewTotalTransactions = (props) => {
           sx={{
             height: 336,
             minWidth: 500,
-            px: 2
+            px: 2,
           }}
         >
           <Chart

@@ -1,8 +1,9 @@
-import * as Yup from 'yup';
-import { Formik } from 'formik';
-import { Alert, Box, Button, FormHelperText, TextField } from '@mui/material';
-import useAuth from '../../../hooks/useAuth';
-import useMounted from '../../../hooks/useMounted';
+import React, { Component } from "react";
+import * as Yup from "yup";
+import { Formik } from "formik";
+import { Alert, Box, Button, FormHelperText, TextField } from "@mui/material";
+import useAuth from "../../../hooks/useAuth";
+import useMounted from "../../../hooks/useMounted";
 
 const LoginJWT = (props) => {
   const mounted = useMounted();
@@ -11,23 +12,17 @@ const LoginJWT = (props) => {
   return (
     <Formik
       initialValues={{
-        email: 'demo@devias.io',
-        password: 'Password123!',
-        submit: null
+        email: "demo@devias.io",
+        password: "Password123!",
+        submit: null,
       }}
-      validationSchema={Yup
-        .object()
-        .shape({
-          email: Yup
-            .string()
-            .email('Must be a valid email')
-            .max(255)
-            .required('Email is required'),
-          password: Yup
-            .string()
-            .max(255)
-            .required('Password is required')
-        })}
+      validationSchema={Yup.object().shape({
+        email: Yup.string()
+          .email("Must be a valid email")
+          .max(255)
+          .required("Email is required"),
+        password: Yup.string().max(255).required("Password is required"),
+      })}
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         try {
           await login(values.email, values.password);
@@ -46,12 +41,16 @@ const LoginJWT = (props) => {
         }
       }}
     >
-      {({ errors, handleBlur, handleChange, handleSubmit, isSubmitting, touched, values }) => (
-        <form
-          noValidate
-          onSubmit={handleSubmit}
-          {...props}
-        >
+      {({
+        errors,
+        handleBlur,
+        handleChange,
+        handleSubmit,
+        isSubmitting,
+        touched,
+        values,
+      }) => (
+        <form noValidate onSubmit={handleSubmit} {...props}>
           <TextField
             autoFocus
             error={Boolean(touched.email && errors.email)}
@@ -81,9 +80,7 @@ const LoginJWT = (props) => {
           />
           {errors.submit && (
             <Box sx={{ mt: 3 }}>
-              <FormHelperText error>
-                {errors.submit}
-              </FormHelperText>
+              <FormHelperText error>{errors.submit}</FormHelperText>
             </Box>
           )}
           <Box sx={{ mt: 2 }}>
@@ -101,13 +98,7 @@ const LoginJWT = (props) => {
           <Box sx={{ mt: 2 }}>
             <Alert severity="info">
               <div>
-                Use
-                {' '}
-                <b>demo@devias.io</b>
-                {' '}
-                and password
-                {' '}
-                <b>Password123!</b>
+                Use <b>demo@devias.io</b> and password <b>Password123!</b>
               </div>
             </Alert>
           </Box>

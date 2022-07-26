@@ -1,26 +1,18 @@
-import PropTypes from 'prop-types';
-import { Box, Card, CardContent, Grid } from '@mui/material';
-import FileDropzone from '../../FileDropzone';
-import ProjectBrief from './ProjectBrief';
-import ProjectFileCard from './ProjectFileCard';
-import ProjectMembers from './ProjectMembers';
-import ProjectMetadata from './ProjectMetadata';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Box, Card, CardContent, Grid } from "@mui/material";
+import FileDropzone from "../../FileDropzone";
+import ProjectBrief from "./ProjectBrief";
+import ProjectFileCard from "./ProjectFileCard";
+import ProjectMembers from "./ProjectMembers";
+import ProjectMetadata from "./ProjectMetadata";
 
 const ProjectOverview = (props) => {
   const { project, ...other } = props;
 
   return (
-    <Grid
-      container
-      spacing={3}
-      {...other}
-    >
-      <Grid
-        item
-        lg={8}
-        xl={9}
-        xs={12}
-      >
+    <Grid container spacing={3} {...other}>
+      <Grid item lg={8} xl={9} xs={12}>
         <ProjectBrief
           description={project.description}
           tags={project.tags}
@@ -34,11 +26,11 @@ const ProjectOverview = (props) => {
           </Card>
           <Box
             sx={{
-              display: 'flex',
-              flexWrap: 'wrap',
+              display: "flex",
+              flexWrap: "wrap",
               mb: -1,
               mt: 2,
-              mx: -1
+              mx: -1,
             }}
           >
             {project.files.map((file) => (
@@ -46,7 +38,7 @@ const ProjectOverview = (props) => {
                 key={file.url}
                 sx={{
                   m: 1,
-                  width: 240
+                  width: 240,
                 }}
               >
                 <ProjectFileCard
@@ -60,12 +52,7 @@ const ProjectOverview = (props) => {
           </Box>
         </Box>
       </Grid>
-      <Grid
-        item
-        lg={4}
-        xl={3}
-        xs={12}
-      >
+      <Grid item lg={4} xl={3} xs={12}>
         <ProjectMetadata
           authorAvatar={project.author.avatar}
           authorName={project.author.name}
@@ -83,7 +70,7 @@ const ProjectOverview = (props) => {
 };
 
 ProjectOverview.propTypes = {
-  project: PropTypes.object.isRequired
+  project: PropTypes.object.isRequired,
 };
 
 export default ProjectOverview;

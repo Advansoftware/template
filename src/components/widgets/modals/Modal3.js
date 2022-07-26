@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import {
   Box,
   Button,
@@ -5,25 +6,25 @@ import {
   IconButton,
   InputAdornment,
   Paper,
-  TextField
-} from '@mui/material';
-import SearchIcon from '../../../icons/Search';
-import XIcon from '../../../icons/X';
+  TextField,
+} from "@mui/material";
+import SearchIcon from "../../../icons/Search";
+import XIcon from "../../../icons/X";
 
 const Modal3 = () => (
   <Box
     sx={{
-      backgroundColor: 'background.default',
-      minHeight: '100%',
-      p: 3
+      backgroundColor: "background.default",
+      minHeight: "100%",
+      p: 3,
     }}
   >
     <Paper elevation={12}>
       <Box sx={{ p: 3 }}>
         <Box
           sx={{
-            display: 'flex',
-            justifyContent: 'flex-end'
+            display: "flex",
+            justifyContent: "flex-end",
           }}
         >
           <IconButton size="large">
@@ -35,8 +36,8 @@ const Modal3 = () => (
         <Container maxWidth="md">
           <Box
             sx={{
-              alignItems: 'center',
-              display: 'flex'
+              alignItems: "center",
+              display: "flex",
             }}
           >
             <TextField
@@ -46,7 +47,7 @@ const Modal3 = () => (
                   <InputAdornment position="start">
                     <SearchIcon fontSize="small" />
                   </InputAdornment>
-                )
+                ),
               }}
               placeholder="Search..."
             />

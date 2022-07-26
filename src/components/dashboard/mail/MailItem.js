@@ -1,6 +1,6 @@
-import { Link as RouterLink, useParams } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { format } from 'date-fns';
+import { Link as RouterLink, useParams } from "react-router-dom";
+import PropTypes from "prop-types";
+import { format } from "date-fns";
 import {
   Avatar,
   Box,
@@ -9,15 +9,15 @@ import {
   Tooltip,
   Typography,
   experimentalStyled,
-  amber,
-} from '@mui/material';
-import StarIcon from '@mui/icons-material/Star';
-import StarBorderIcon from '@mui/icons-material/StarBorder';
-import LabelImportantIcon from '@mui/icons-material/LabelImportant';
-import { useSelector } from '../../../store';
-import getInitials from '../../../utils/getInitials';
+} from "@mui/material";
+import { amber } from "@mui/material/colors";
+import StarIcon from "@mui/icons-material/Star";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
+import LabelImportantIcon from "@mui/icons-material/LabelImportant";
+import { useSelector } from "../../../store";
+import getInitials from "../../../utils/getInitials";
 
-const Label = experimentalStyled('span')(({ theme }) => ({
+const Label = experimentalStyled("span")(({ theme }) => ({
   borderRadius: 2,
   color: theme.palette.common.white,
   fontFamily: theme.typography.fontFamily,
@@ -26,12 +26,12 @@ const Label = experimentalStyled('span')(({ theme }) => ({
   paddingBottom: 2,
   paddingLeft: 4,
   paddingRight: 4,
-  paddingTop: 2
+  paddingTop: 2,
 }));
 
 const getTo = (params, emailId) => {
   const { systemLabel, customLabel } = params;
-  const baseUrl = '/dashboard/mail';
+  const baseUrl = "/dashboard/mail";
 
   if (systemLabel) {
     return `${baseUrl}/${systemLabel}/${emailId}`;
@@ -74,43 +74,43 @@ const MailItem = (props) => {
   return (
     <Box
       sx={{
-        alignItems: 'center',
-        backgroundColor: 'background.paper',
+        alignItems: "center",
+        backgroundColor: "background.paper",
         borderBottom: (theme) => ` 1px solid ${theme.palette.divider}`,
-        display: 'flex',
+        display: "flex",
         p: 2,
         ...(!email.isUnread && {
-          position: 'relative',
-          '&:before': {
-            backgroundColor: 'error.main',
+          position: "relative",
+          "&:before": {
+            backgroundColor: "error.main",
             content: '" "',
-            height: '100%',
+            height: "100%",
             left: 0,
-            position: 'absolute',
+            position: "absolute",
             top: 0,
-            width: 4
+            width: 4,
           },
-          '& $name, & $subject': {
-            fontWeight: 600
-          }
+          "& $name, & $subject": {
+            fontWeight: 600,
+          },
         }),
         ...(selected && {
-          backgroundColor: 'action.selected'
+          backgroundColor: "action.selected",
         }),
-        '&:hover': {
-          backgroundColor: 'action.hover'
-        }
+        "&:hover": {
+          backgroundColor: "action.hover",
+        },
       }}
       {...other}
     >
       <Box
         sx={{
-          alignItems: 'center',
+          alignItems: "center",
           display: {
-            md: 'flex',
-            xs: 'none'
+            md: "flex",
+            xs: "none",
           },
-          mr: 1
+          mr: 1,
         }}
       >
         <Checkbox
@@ -120,28 +120,20 @@ const MailItem = (props) => {
         />
         <Tooltip title="Starred">
           <IconButton onClick={handleStarToggle} size="large">
-            {email.isStarred
-              ? (
-                <StarIcon
-                  fontSize="small"
-                  sx={{ color: amber[400] }}
-                />
-              )
-              : (
-                <StarBorderIcon fontSize="small" />
-              )}
+            {email.isStarred ? (
+              <StarIcon fontSize="small" sx={{ color: amber[400] }} />
+            ) : (
+              <StarBorderIcon fontSize="small" />
+            )}
           </IconButton>
         </Tooltip>
         <Tooltip title="Important">
           <IconButton onClick={handleImportantToggle} size="large">
-            {email.isImportant
-              ? (
-                <LabelImportantIcon
-                  fontSize="small"
-                  sx={{ color: amber[400] }}
-                />
-              )
-              : <LabelImportantIcon fontSize="small" />}
+            {email.isImportant ? (
+              <LabelImportantIcon fontSize="small" sx={{ color: amber[400] }} />
+            ) : (
+              <LabelImportantIcon fontSize="small" />
+            )}
           </IconButton>
         </Tooltip>
       </Box>
@@ -149,43 +141,41 @@ const MailItem = (props) => {
         component={RouterLink}
         to={to}
         sx={{
-          cursor: 'pointer',
-          display: 'flex',
+          cursor: "pointer",
+          display: "flex",
           flexGrow: 1,
-          minWidth: '1px',
-          textDecoration: 'none'
+          minWidth: "1px",
+          textDecoration: "none",
         }}
       >
-        <Avatar src={email.from.avatar}>
-          {getInitials(email.from.name)}
-        </Avatar>
+        <Avatar src={email.from.avatar}>{getInitials(email.from.name)}</Avatar>
         <Box
           sx={{
             alignItems: {
-              md: 'center'
+              md: "center",
             },
             display: {
-              md: 'flex'
+              md: "flex",
             },
             flexGrow: {
-              md: 1
+              md: 1,
             },
-            minWidth: '1px',
-            ml: 1
+            minWidth: "1px",
+            ml: 1,
           }}
         >
           <Typography
             color="textPrimary"
             sx={{
               flexBasis: {
-                md: 180
+                md: 180,
               },
               minWidth: {
-                md: 180
+                md: 180,
               },
               ...(!email.isUnread && {
-                fontWeight: 600
-              })
+                fontWeight: 600,
+              }),
             }}
             variant="body2"
           >
@@ -196,12 +186,12 @@ const MailItem = (props) => {
             sx={{
               maxWidth: 400,
               mr: 2,
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-              whiteSpace: 'nowrap',
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
               ...(!email.isUnread && {
-                fontWeight: 600
-              })
+                fontWeight: 600,
+              }),
             }}
             variant="body2"
           >
@@ -210,31 +200,30 @@ const MailItem = (props) => {
           <Box
             sx={{
               display: {
-                xs: 'none',
-                sm: 'block'
-              }
+                xs: "none",
+                sm: "block",
+              },
             }}
           >
             <Typography
               color="textSecondary"
               sx={{
                 flexGrow: 1,
-                marginRight: 'auto',
+                marginRight: "auto",
                 maxWidth: 800,
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                whiteSpace: 'nowrap'
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                whiteSpace: "nowrap",
               }}
               variant="body2"
             >
-              -
-              {email.message}
+              -{email.message}
             </Typography>
             {email.labelIds.length > 0 && (
               <Box
                 sx={{
-                  display: 'flex',
-                  mx: 2
+                  display: "flex",
+                  mx: 2,
                 }}
               >
                 {email.labelIds.map((labelId) => {
@@ -245,10 +234,7 @@ const MailItem = (props) => {
                   }
 
                   return (
-                    <Label
-                      key={label.id}
-                      sx={{ backgroundColor: label.color }}
-                    >
+                    <Label key={label.id} sx={{ backgroundColor: label.color }}>
                       {label.name}
                     </Label>
                   );
@@ -256,12 +242,8 @@ const MailItem = (props) => {
               </Box>
             )}
           </Box>
-          <Typography
-            color="textSecondary"
-            noWrap
-            variant="caption"
-          >
-            {format(email.createdAt, 'dd MMM yyyy')}
+          <Typography color="textSecondary" noWrap variant="caption">
+            {format(email.createdAt, "dd MMM yyyy")}
           </Typography>
         </Box>
       </Box>
@@ -273,7 +255,7 @@ MailItem.propTypes = {
   email: PropTypes.object.isRequired,
   onDeselect: PropTypes.func,
   onSelect: PropTypes.func,
-  selected: PropTypes.bool.isRequired
+  selected: PropTypes.bool.isRequired,
 };
 
 export default MailItem;

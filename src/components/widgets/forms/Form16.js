@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import {
   Box,
   Button,
@@ -8,45 +9,38 @@ import {
   Divider,
   Link,
   TextField,
-  Typography
-} from '@mui/material';
+  Typography,
+} from "@mui/material";
 
 const Form16 = () => (
   <Box
     sx={{
-      backgroundColor: 'background.default',
-      minHeight: '100%',
-      p: 3
+      backgroundColor: "background.default",
+      minHeight: "100%",
+      p: 3,
     }}
   >
     <Container maxWidth="sm">
       <Card>
         <CardContent
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
+            display: "flex",
+            flexDirection: "column",
             minHeight: 400,
-            p: 4
+            p: 4,
           }}
         >
           <Box
             sx={{
-              display: 'flex',
-              justifyContent: 'space-between'
+              display: "flex",
+              justifyContent: "space-between",
             }}
           >
             <Box>
-              <Typography
-                color="textPrimary"
-                variant="h4"
-              >
+              <Typography color="textPrimary" variant="h4">
                 Register
               </Typography>
-              <Typography
-                color="textSecondary"
-                sx={{ mt: 1 }}
-                variant="body2"
-              >
+              <Typography color="textSecondary" sx={{ mt: 1 }} variant="body2">
                 Register on the internal platform
               </Typography>
             </Box>
@@ -54,15 +48,15 @@ const Form16 = () => (
               alt="Amplify"
               src="/static/icons/amplify.svg"
               style={{
-                maxWidth: '53.62px',
-                width: '100%'
+                maxWidth: "53.62px",
+                width: "100%",
               }}
             />
           </Box>
           <Box
             sx={{
               flexGrow: 1,
-              mt: 3
+              mt: 3,
             }}
           >
             <form onSubmit={(event) => event.preventDefault()}>
@@ -91,23 +85,21 @@ const Form16 = () => (
               />
               <Box
                 sx={{
-                  alignItems: 'center',
-                  display: 'flex',
+                  alignItems: "center",
+                  display: "flex",
                   ml: -1,
-                  mt: 2
+                  mt: 2,
                 }}
               >
-                <Checkbox
-                  color="primary"
-                  name="policy"
-                />
-                <Typography
-                  color="textSecondary"
-                  variant="body2"
-                >
-                  I have read the
-                  {' '}
-                  <Link color="primary" component="a" href="#" underline="hover">
+                <Checkbox color="primary" name="policy" />
+                <Typography color="textSecondary" variant="body2">
+                  I have read the{" "}
+                  <Link
+                    color="primary"
+                    component="a"
+                    href="#"
+                    underline="hover"
+                  >
                     Terms and Conditions
                   </Link>
                 </Typography>
@@ -126,7 +118,12 @@ const Form16 = () => (
             </form>
           </Box>
           <Divider sx={{ my: 3 }} />
-          <Link color="textSecondary" href="#" variant="body2" underline="hover">
+          <Link
+            color="textSecondary"
+            href="#"
+            variant="body2"
+            underline="hover"
+          >
             Having an account
           </Link>
         </CardContent>

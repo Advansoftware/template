@@ -1,12 +1,13 @@
-import { Outlet } from 'react-router-dom';
-import BlogNavbar from './BlogNavbar';
-import Footer from '../Footer';
-import { experimentalStyled } from '@mui/material';
+import React, { Component } from "react";
+import { Outlet } from "react-router-dom";
+import BlogNavbar from "./BlogNavbar";
+import Footer from "../Footer";
+import { experimentalStyled } from "@mui/material";
 
-const BlogLayoutRoot = experimentalStyled('div')(({ theme }) => ({
+const BlogLayoutRoot = experimentalStyled("div")(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
-  height: '100%',
-  paddingTop: 64
+  height: "100%",
+  paddingTop: 64,
 }));
 
 const BlogLayout = () => (

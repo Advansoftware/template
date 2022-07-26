@@ -1,5 +1,5 @@
-import { useRef, useState } from 'react';
-import PropTypes from 'prop-types';
+import { useRef, useState } from "react";
+import PropTypes from "prop-types";
 import {
   Box,
   Button,
@@ -15,15 +15,15 @@ import {
   MenuItem,
   Tooltip,
   Typography,
-  blueGrey,
-} from '@mui/material';
-import ArchiveIcon from '../../../icons/Archive';
-import DocumentTextIcon from '../../../icons/DocumentText';
-import DotsHorizontalIcon from '../../../icons/DotsHorizontal';
-import DownloadIcon from '../../../icons/Download';
-import PencilAltIcon from '../../../icons/PencilAlt';
-import TrashIcon from '../../../icons/Trash';
-import bytesToSize from '../../../utils/bytesToSize';
+} from "@mui/material";
+import { blueGrey } from "@mui/material/colors";
+import ArchiveIcon from "../../../icons/Archive";
+import DocumentTextIcon from "../../../icons/DocumentText";
+import DotsHorizontalIcon from "../../../icons/DotsHorizontal";
+import DownloadIcon from "../../../icons/Download";
+import PencilAltIcon from "../../../icons/PencilAlt";
+import TrashIcon from "../../../icons/Trash";
+import bytesToSize from "../../../utils/bytesToSize";
 
 const ProjectFileCard = (props) => {
   const { mimeType, name, size, url, ...other } = props;
@@ -40,44 +40,33 @@ const ProjectFileCard = (props) => {
 
   return (
     <Card {...other}>
-      {mimeType.includes('image/')
-        ? (
-          <CardMedia
-            image={url}
-            sx={{ height: 140 }}
-          />
-        )
-        : (
-          <Box
-            sx={{
-              alignItems: 'center',
-              backgroundColor: blueGrey['50'],
-              color: '#000000',
-              display: 'flex',
-              height: 140,
-              justifyContent: 'center'
-            }}
-          >
-            <DocumentTextIcon fontSize="large" />
-          </Box>
-        )}
+      {mimeType.includes("image/") ? (
+        <CardMedia image={url} sx={{ height: 140 }} />
+      ) : (
+        <Box
+          sx={{
+            alignItems: "center",
+            backgroundColor: blueGrey["50"],
+            color: "#000000",
+            display: "flex",
+            height: 140,
+            justifyContent: "center",
+          }}
+        >
+          <DocumentTextIcon fontSize="large" />
+        </Box>
+      )}
       <CardContent
         sx={{
-          display: 'flex',
-          justifyContent: 'space-between'
+          display: "flex",
+          justifyContent: "space-between",
         }}
       >
         <div>
-          <Typography
-            color="textPrimary"
-            variant="subtitle2"
-          >
+          <Typography color="textPrimary" variant="subtitle2">
             {name}
           </Typography>
-          <Typography
-            color="textSecondary"
-            variant="caption"
-          >
+          <Typography color="textSecondary" variant="caption">
             {bytesToSize(size)}
           </Typography>
         </div>
@@ -108,21 +97,21 @@ const ProjectFileCard = (props) => {
       <Menu
         anchorEl={moreRef.current}
         anchorOrigin={{
-          horizontal: 'left',
-          vertical: 'top'
+          horizontal: "left",
+          vertical: "top",
         }}
         elevation={1}
         onClose={handleMenuClose}
         open={openMenu}
         PaperProps={{
           sx: {
-            maxWidth: '100%',
-            width: 250
-          }
+            maxWidth: "100%",
+            width: 250,
+          },
         }}
         transformOrigin={{
-          horizontal: 'left',
-          vertical: 'top'
+          horizontal: "left",
+          vertical: "top",
         }}
       >
         <MenuItem divider>
@@ -152,7 +141,7 @@ ProjectFileCard.propTypes = {
   mimeType: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   size: PropTypes.number.isRequired,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
 };
 
 export default ProjectFileCard;

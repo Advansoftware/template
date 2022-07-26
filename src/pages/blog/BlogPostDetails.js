@@ -1,5 +1,4 @@
-import { Component } from "react";
-
+import React, { Component } from "react";
 import { useCallback, useEffect, useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Helmet } from "react-helmet-async";

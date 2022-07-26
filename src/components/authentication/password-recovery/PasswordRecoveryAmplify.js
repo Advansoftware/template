@@ -1,9 +1,10 @@
-import { useNavigate } from 'react-router-dom';
-import * as Yup from 'yup';
-import { Formik } from 'formik';
-import { Box, Button, FormHelperText, TextField } from '@mui/material';
-import useAuth from '../../../hooks/useAuth';
-import useMounted from '../../../hooks/useMounted';
+import React, { Component } from "react";
+import { useNavigate } from "react-router-dom";
+import * as Yup from "yup";
+import { Formik } from "formik";
+import { Box, Button, FormHelperText, TextField } from "@mui/material";
+import useAuth from "../../../hooks/useAuth";
+import useMounted from "../../../hooks/useMounted";
 
 const PasswordRecoveryAmplify = () => {
   const mounted = useMounted();
@@ -13,26 +14,23 @@ const PasswordRecoveryAmplify = () => {
   return (
     <Formik
       initialValues={{
-        email: '',
-        submit: null
+        email: "",
+        submit: null,
       }}
-      validationSchema={Yup
-        .object()
-        .shape({
-          email: Yup
-            .string()
-            .email('Must be a valid email')
-            .max(255)
-            .required('Email is required')
-        })}
+      validationSchema={Yup.object().shape({
+        email: Yup.string()
+          .email("Must be a valid email")
+          .max(255)
+          .required("Email is required"),
+      })}
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         try {
           await passwordRecovery(values.email);
 
-          navigate('/authentication/password-reset', {
+          navigate("/authentication/password-reset", {
             state: {
-              username: values.email
-            }
+              username: values.email,
+            },
           });
         } catch (err) {
           console.error(err);
@@ -44,11 +42,16 @@ const PasswordRecoveryAmplify = () => {
         }
       }}
     >
-      {({ errors, handleBlur, handleChange, handleSubmit, isSubmitting, touched, values }) => (
-        <form
-          noValidate
-          onSubmit={handleSubmit}
-        >
+      {({
+        errors,
+        handleBlur,
+        handleChange,
+        handleSubmit,
+        isSubmitting,
+        touched,
+        values,
+      }) => (
+        <form noValidate onSubmit={handleSubmit}>
           <TextField
             autoFocus
             error={Boolean(touched.email && errors.email)}
@@ -65,9 +68,7 @@ const PasswordRecoveryAmplify = () => {
           />
           {errors.submit && (
             <Box sx={{ mt: 3 }}>
-              <FormHelperText error>
-                {errors.submit}
-              </FormHelperText>
+              <FormHelperText error>{errors.submit}</FormHelperText>
             </Box>
           )}
           <Box sx={{ mt: 3 }}>

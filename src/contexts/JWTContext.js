@@ -1,11 +1,12 @@
-import { createContext, useEffect, useReducer } from 'react';
-import PropTypes from 'prop-types';
-import { authApi } from '../__fakeApi__/authApi';
+import React, { Component } from "react";
+import { createContext, useEffect, useReducer } from "react";
+import PropTypes from "prop-types";
+import { authApi } from "../__fakeApi__/authApi";
 
 const initialState = {
   isAuthenticated: false,
   isInitialized: false,
-  user: null
+  user: null,
 };
 
 const handlers = {
@@ -16,7 +17,7 @@ const handlers = {
       ...state,
       isAuthenticated,
       isInitialized: true,
-      user
+      user,
     };
   },
   LOGIN: (state, action) => {
@@ -25,13 +26,13 @@ const handlers = {
     return {
       ...state,
       isAuthenticated: true,
-      user
+      user,
     };
   },
   LOGOUT: (state) => ({
     ...state,
     isAuthenticated: false,
-    user: null
+    user: null,
   }),
   REGISTER: (state, action) => {
     const { user } = action.payload;
@@ -39,21 +40,20 @@ const handlers = {
     return {
       ...state,
       isAuthenticated: true,
-      user
+      user,
     };
-  }
+  },
 };
 
-const reducer = (state, action) => (handlers[action.type]
-  ? handlers[action.type](state, action)
-  : state);
+const reducer = (state, action) =>
+  handlers[action.type] ? handlers[action.type](state, action) : state;
 
 const AuthContext = createContext({
   ...initialState,
-  platform: 'JWT',
+  platform: "JWT",
   login: () => Promise.resolve(),
   logout: () => Promise.resolve(),
-  register: () => Promise.resolve()
+  register: () => Promise.resolve(),
 });
 
 export const AuthProvider = (props) => {
@@ -63,35 +63,35 @@ export const AuthProvider = (props) => {
   useEffect(() => {
     const initialize = async () => {
       try {
-        const accessToken = window.localStorage.getItem('accessToken');
+        const accessToken = window.localStorage.getItem("accessToken");
 
         if (accessToken) {
           const user = await authApi.me(accessToken);
 
           dispatch({
-            type: 'INITIALIZE',
+            type: "INITIALIZE",
             payload: {
               isAuthenticated: true,
-              user
-            }
+              user,
+            },
           });
         } else {
           dispatch({
-            type: 'INITIALIZE',
+            type: "INITIALIZE",
             payload: {
               isAuthenticated: false,
-              user: null
-            }
+              user: null,
+            },
           });
         }
       } catch (err) {
         console.error(err);
         dispatch({
-          type: 'INITIALIZE',
+          type: "INITIALIZE",
           payload: {
             isAuthenticated: false,
-            user: null
-          }
+            user: null,
+          },
         });
       }
     };
@@ -103,32 +103,32 @@ export const AuthProvider = (props) => {
     const accessToken = await authApi.login({ email, password });
     const user = await authApi.me(accessToken);
 
-    localStorage.setItem('accessToken', accessToken);
+    localStorage.setItem("accessToken", accessToken);
 
     dispatch({
-      type: 'LOGIN',
+      type: "LOGIN",
       payload: {
-        user
-      }
+        user,
+      },
     });
   };
 
   const logout = async () => {
-    localStorage.removeItem('accessToken');
-    dispatch({ type: 'LOGOUT' });
+    localStorage.removeItem("accessToken");
+    dispatch({ type: "LOGOUT" });
   };
 
   const register = async (email, name, password) => {
     const accessToken = await authApi.register({ email, name, password });
     const user = await authApi.me(accessToken);
 
-    localStorage.setItem('accessToken', accessToken);
+    localStorage.setItem("accessToken", accessToken);
 
     dispatch({
-      type: 'REGISTER',
+      type: "REGISTER",
       payload: {
-        user
-      }
+        user,
+      },
     });
   };
 
@@ -136,10 +136,10 @@ export const AuthProvider = (props) => {
     <AuthContext.Provider
       value={{
         ...state,
-        platform: 'JWT',
+        platform: "JWT",
         login,
         logout,
-        register
+        register,
       }}
     >
       {children}
@@ -148,7 +148,7 @@ export const AuthProvider = (props) => {
 };
 
 AuthProvider.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default AuthContext;

@@ -1,6 +1,14 @@
-import { useState } from 'react';
-import MobileDateTimePicker from '@mui/lab/MobileDateTimePicker';
-import { Box, Button, Divider, FormControlLabel, Switch, TextField } from '@mui/material';
+import React, { Component } from "react";
+import { useState } from "react";
+import MobileDateTimePicker from "@mui/lab/MobileDateTimePicker";
+import {
+  Box,
+  Button,
+  Divider,
+  FormControlLabel,
+  Switch,
+  TextField,
+} from "@mui/material";
 
 const Form6 = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -9,18 +17,13 @@ const Form6 = () => {
   return (
     <Box
       sx={{
-        backgroundColor: 'background.paper',
-        minHeight: '100%',
-        p: 3
+        backgroundColor: "background.paper",
+        minHeight: "100%",
+        p: 3,
       }}
     >
       <form onSubmit={(event) => event.preventDefault()}>
-        <TextField
-          fullWidth
-          label="Title"
-          name="title"
-          variant="outlined"
-        />
+        <TextField fullWidth label="Title" name="title" variant="outlined" />
         <Box sx={{ mt: 2 }}>
           <TextField
             fullWidth
@@ -31,12 +34,7 @@ const Form6 = () => {
         </Box>
         <Box sx={{ mt: 2 }}>
           <FormControlLabel
-            control={(
-              <Switch
-                color="primary"
-                name="allDay"
-              />
-            )}
+            control={<Switch color="primary" name="allDay" />}
             label="All day"
           />
         </Box>
@@ -45,11 +43,7 @@ const Form6 = () => {
             onChange={(newDate) => setStartDate(newDate)}
             label="Start date"
             renderInput={(inputProps) => (
-              <TextField
-                fullWidth
-                variant="outlined"
-                {...inputProps}
-              />
+              <TextField fullWidth variant="outlined" {...inputProps} />
             )}
             value={startDate}
           />
@@ -59,11 +53,7 @@ const Form6 = () => {
             onChange={(newDate) => setEndDate(newDate)}
             label="End date"
             renderInput={(inputProps) => (
-              <TextField
-                fullWidth
-                variant="outlined"
-                {...inputProps}
-              />
+              <TextField fullWidth variant="outlined" {...inputProps} />
             )}
             value={endDate}
           />
@@ -71,15 +61,12 @@ const Form6 = () => {
         <Divider sx={{ my: 2 }} />
         <Box
           sx={{
-            alignItems: 'center',
-            display: 'flex'
+            alignItems: "center",
+            display: "flex",
           }}
         >
           <Box sx={{ flexGrow: 1 }} />
-          <Button
-            color="primary"
-            variant="text"
-          >
+          <Button color="primary" variant="text">
             Cancel
           </Button>
           <Button

@@ -1,41 +1,44 @@
-import { Link as RouterLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { formatDistanceToNowStrict } from 'date-fns';
-import { Avatar, Box, Card, CardHeader, Link, Rating, Typography } from '@mui/material';
-import getInitials from '../../../utils/getInitials';
+import React, { Component } from "react";
+import { Link as RouterLink } from "react-router-dom";
+import PropTypes from "prop-types";
+import { formatDistanceToNowStrict } from "date-fns";
+import {
+  Avatar,
+  Box,
+  Card,
+  CardHeader,
+  Link,
+  Rating,
+  Typography,
+} from "@mui/material";
+import getInitials from "../../../utils/getInitials";
 
 const ProjectReviewCard = (props) => {
-  const { authorAvatar, authorName, comment, createdAt, value, ...other } = props;
+  const { authorAvatar, authorName, comment, createdAt, value, ...other } =
+    props;
 
   return (
     <Card {...other}>
       <CardHeader
-        avatar={(
-          <Avatar src={authorAvatar}>
-            {getInitials(authorName)}
-          </Avatar>
-        )}
+        avatar={<Avatar src={authorAvatar}>{getInitials(authorName)}</Avatar>}
         disableTypography
-        subheader={(
+        subheader={
           <Box
             sx={{
-              alignItems: 'center',
-              display: 'flex',
-              flexWrap: 'wrap',
-              mt: 1
+              alignItems: "center",
+              display: "flex",
+              flexWrap: "wrap",
+              mt: 1,
             }}
           >
             <Box
               sx={{
-                alignItems: 'center',
-                display: 'flex',
-                mr: 1
+                alignItems: "center",
+                display: "flex",
+                mr: 1,
               }}
             >
-              <Rating
-                readOnly
-                value={value}
-              />
+              <Rating readOnly value={value} />
               <Typography
                 color="textPrimary"
                 sx={{ ml: 1 }}
@@ -44,45 +47,34 @@ const ProjectReviewCard = (props) => {
                 {value}
               </Typography>
             </Box>
-            <Typography
-              color="textSecondary"
-              variant="body2"
-            >
-              | For
-              {' '}
+            <Typography color="textSecondary" variant="body2">
+              | For{" "}
               <Link color="textPrimary" variant="subtitle2" underline="hover">
                 Low Budget
-              </Link>
-              {' '}
-              |
-              {' '}
-              {formatDistanceToNowStrict(createdAt)}
-              {' '}
-              ago
+              </Link>{" "}
+              | {formatDistanceToNowStrict(createdAt)} ago
             </Typography>
           </Box>
-        )}
-        title={(
+        }
+        title={
           <Link
             color="textPrimary"
             component={RouterLink}
             to="#"
             variant="subtitle2"
-            underline="hover">
+            underline="hover"
+          >
             {authorName}
           </Link>
-        )}
+        }
       />
       <Box
         sx={{
           pb: 2,
-          px: 3
+          px: 3,
         }}
       >
-        <Typography
-          color="textSecondary"
-          variant="body1"
-        >
+        <Typography color="textSecondary" variant="body1">
           {comment}
         </Typography>
       </Box>
@@ -95,7 +87,7 @@ ProjectReviewCard.propTypes = {
   authorName: PropTypes.string.isRequired,
   comment: PropTypes.string.isRequired,
   createdAt: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired
+  value: PropTypes.number.isRequired,
 };
 
 export default ProjectReviewCard;
