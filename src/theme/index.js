@@ -1,5 +1,5 @@
 import merge from 'lodash/merge';
-import { responsiveFontSizes } from '@mui/material/styles';
+import { responsiveFontSizes, adaptV4Theme } from '@mui/material/styles';
 import { THEMES } from '../constants';
 import { lightShadows, darkShadows } from './shadows';
 
