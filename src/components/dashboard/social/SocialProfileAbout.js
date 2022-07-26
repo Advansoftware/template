@@ -84,11 +84,7 @@ const SocialProfileAbout = (props) => {
                       {' '}
                       at
                       {' '}
-                      <Link
-                        color="textPrimary"
-                        href="#"
-                        variant="subtitle2"
-                      >
+                      <Link color="textPrimary" href="#" variant="subtitle2" underline="hover">
                         {currentJobCompany}
                       </Link>
                     </Typography>
@@ -101,11 +97,7 @@ const SocialProfileAbout = (props) => {
                       Past:
                       {previousJobTitle}
                       {' '}
-                      <Link
-                        color="textSecondary"
-                        href="#"
-                        variant="caption"
-                      >
+                      <Link color="textSecondary" href="#" variant="caption" underline="hover">
                         {previousJobCompany}
                       </Link>
                     </Typography>
@@ -125,7 +117,7 @@ const SocialProfileAbout = (props) => {
                       color="textSecondary"
                       sx={{ cursor: 'pointer' }}
                       variant="body2"
-                    >
+                      underline="hover">
                       Add school or collage
                     </Link>
                   )}
@@ -147,11 +139,7 @@ const SocialProfileAbout = (props) => {
                     >
                       Lives in
                       {' '}
-                      <Link
-                        color="textPrimary"
-                        href="#"
-                        variant="subtitle2"
-                      >
+                      <Link color="textPrimary" href="#" variant="subtitle2" underline="hover">
                         {currentCity}
                       </Link>
                     </Typography>
@@ -163,11 +151,7 @@ const SocialProfileAbout = (props) => {
                     >
                       Originally from
                       {' '}
-                      <Link
-                        color="textSecondary"
-                        href="#"
-                        variant="caption"
-                      >
+                      <Link color="textSecondary" href="#" variant="caption" underline="hover">
                         {originCity}
                       </Link>
                     </Typography>

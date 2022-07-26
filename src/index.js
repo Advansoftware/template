@@ -9,11 +9,11 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider as ReduxProvider } from 'react-redux';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import StyledEngineProvider from '@mui/material/StyledEngineProvider';
 import App from './App';
 import { AuthProvider } from './contexts/JWTContext';
 import { SettingsProvider } from './contexts/SettingsContext';
 import store from './store';
+import { StyledEngineProvider } from '@mui/material';
 
 ReactDOM.render(
   <StrictMode>

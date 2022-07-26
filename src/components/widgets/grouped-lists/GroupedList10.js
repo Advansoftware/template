@@ -61,10 +61,7 @@ const GroupedList10 = () => (
           sx={{ ml: 2 }}
           variant="body2"
         >
-          <Link
-            color="textPrimary"
-            variant="subtitle2"
-          >
+          <Link color="textPrimary" variant="subtitle2" underline="hover">
             {activity.subject}
           </Link>
           {' '}

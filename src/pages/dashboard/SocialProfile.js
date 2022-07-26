@@ -11,7 +11,8 @@ import {
   Tab,
   Tabs,
   Tooltip,
-  Typography
+  Typography,
+  blueGrey,
 } from '@mui/material';
 import AddPhotoIcon from '@mui/icons-material/AddPhotoAlternate';
 import { socialApi } from '../../__fakeApi__/socialApi';
@@ -19,7 +20,6 @@ import { SocialConnections, SocialTimeline } from '../../components/dashboard/so
 import useMounted from '../../hooks/useMounted';
 import DotsVerticalIcon from '../../icons/DotsVertical';
 import gtm from '../../lib/gtm';
-import { blueGrey } from '@mui/material/colors';
 
 const tabs = [
   { label: 'Timeline', value: 'timeline' },

@@ -55,7 +55,7 @@ const HomeClients = (props) => (
               href="/docs"
               sx={{ color: 'primary.contrastText' }}
               variant="body2"
-            >
+              underline="hover">
               Getting started guide
             </Link>
             <Box
@@ -113,7 +113,7 @@ const HomeClients = (props) => (
               href="/browse"
               sx={{ color: 'primary.contrastText' }}
               variant="body2"
-            >
+              underline="hover">
               Browse Components
             </Link>
             <Box

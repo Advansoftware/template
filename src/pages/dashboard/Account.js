@@ -41,82 +41,80 @@ const Account = () => {
     setCurrentTab(value);
   };
 
-  return (
-    <>
-      <Helmet>
-        <title>Dashboard: Account | Material Kit Pro</title>
-      </Helmet>
-      <Box
-        sx={{
-          backgroundColor: 'background.default',
-          minHeight: '100%',
-          py: 8
-        }}
-      >
-        <Container maxWidth={settings.compact ? 'xl' : false}>
-          <Grid
-            container
-            justifyContent="space-between"
-            spacing={3}
-          >
-            <Grid item>
-              <Typography
+  return <>
+    <Helmet>
+      <title>Dashboard: Account | Material Kit Pro</title>
+    </Helmet>
+    <Box
+      sx={{
+        backgroundColor: 'background.default',
+        minHeight: '100%',
+        py: 8
+      }}
+    >
+      <Container maxWidth={settings.compact ? 'xl' : false}>
+        <Grid
+          container
+          justifyContent="space-between"
+          spacing={3}
+        >
+          <Grid item>
+            <Typography
+              color="textPrimary"
+              variant="h5"
+            >
+              Account
+            </Typography>
+            <Breadcrumbs
+              aria-label="breadcrumb"
+              separator={<ChevronRightIcon fontSize="small" />}
+              sx={{ mt: 1 }}
+            >
+              <Link
                 color="textPrimary"
-                variant="h5"
+                component={RouterLink}
+                to="/dashboard"
+                variant="subtitle2"
+                underline="hover">
+                Dashboard
+              </Link>
+              <Typography
+                color="textSecondary"
+                variant="subtitle2"
               >
                 Account
               </Typography>
-              <Breadcrumbs
-                aria-label="breadcrumb"
-                separator={<ChevronRightIcon fontSize="small" />}
-                sx={{ mt: 1 }}
-              >
-                <Link
-                  color="textPrimary"
-                  component={RouterLink}
-                  to="/dashboard"
-                  variant="subtitle2"
-                >
-                  Dashboard
-                </Link>
-                <Typography
-                  color="textSecondary"
-                  variant="subtitle2"
-                >
-                  Account
-                </Typography>
-              </Breadcrumbs>
-            </Grid>
+            </Breadcrumbs>
           </Grid>
-          <Box sx={{ mt: 3 }}>
-            <Tabs
-              indicatorColor="primary"
-              onChange={handleTabsChange}
-              scrollButtons="auto"
-              textColor="primary"
-              value={currentTab}
-              variant="scrollable"
-            >
-              {tabs.map((tab) => (
-                <Tab
-                  key={tab.value}
-                  label={tab.label}
-                  value={tab.value}
-                />
-              ))}
-            </Tabs>
-          </Box>
-          <Divider />
-          <Box sx={{ mt: 3 }}>
-            {currentTab === 'general' && <AccountGeneralSettings />}
-            {currentTab === 'billing' && <AccountBillingSettings />}
-            {currentTab === 'notifications' && <AccountNotificationsSettings />}
-            {currentTab === 'security' && <AccountSecuritySettings />}
-          </Box>
-        </Container>
-      </Box>
-    </>
-  );
+        </Grid>
+        <Box sx={{ mt: 3 }}>
+          <Tabs
+            indicatorColor="primary"
+            onChange={handleTabsChange}
+            scrollButtons="auto"
+            textColor="primary"
+            value={currentTab}
+            variant="scrollable"
+          >
+            {tabs.map((tab) => (
+              <Tab
+                key={tab.value}
+                label={tab.label}
+                value={tab.value}
+              />
+            ))}
+          </Tabs>
+        </Box>
+        <Divider />
+        <Box sx={{ mt: 3 }}>
+          {currentTab === 'general' && <AccountGeneralSettings />}
+          {currentTab === 'billing' && <AccountBillingSettings />}
+          {currentTab === 'notifications' && <AccountNotificationsSettings />}
+          {currentTab === 'security' && <AccountSecuritySettings />}
+        </Box>
+      </Container>
+    </Box>
+  </>;
 };
 
 export default Account;

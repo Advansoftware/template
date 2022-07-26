@@ -14,7 +14,8 @@ import {
   IconButton,
   Link,
   Tooltip,
-  Typography
+  Typography,
+  red,
 } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
@@ -22,7 +23,6 @@ import ClockIcon from '../../../icons/Clock';
 import ShareIcon from '../../../icons/Share';
 import SocialPostComment from './SocialPostComment';
 import SocialPostCommentAdd from './SocialPostCommentAdd';
-import { red } from '@mui/material/colors';
 
 const SocialPostCard = (props) => {
   const {
@@ -90,7 +90,7 @@ const SocialPostCard = (props) => {
             component={RouterLink}
             to="#"
             variant="subtitle2"
-          >
+            underline="hover">
             {authorName}
           </Link>
         )}

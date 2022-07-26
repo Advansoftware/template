@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Box, Button, Container, Grid, Skeleton, TextField, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Box, Button, Container, Grid, Skeleton, TextField, Typography, useTheme } from '@mui/material';
 
 const BlogNewsletter = () => {
   const theme = useTheme();

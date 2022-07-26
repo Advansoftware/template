@@ -37,106 +37,104 @@ const ProductList = () => {
     getProducts();
   }, [getProducts]);
 
-  return (
-    <>
-      <Helmet>
-        <title>Dashboard: Product List | Material Kit Pro</title>
-      </Helmet>
-      <Box
-        sx={{
-          backgroundColor: 'background.default',
-          minHeight: '100%',
-          py: 8
-        }}
-      >
-        <Container maxWidth={settings.compact ? 'xl' : false}>
-          <Grid
-            container
-            justifyContent="space-between"
-            spacing={3}
-          >
-            <Grid item>
-              <Typography
+  return <>
+    <Helmet>
+      <title>Dashboard: Product List | Material Kit Pro</title>
+    </Helmet>
+    <Box
+      sx={{
+        backgroundColor: 'background.default',
+        minHeight: '100%',
+        py: 8
+      }}
+    >
+      <Container maxWidth={settings.compact ? 'xl' : false}>
+        <Grid
+          container
+          justifyContent="space-between"
+          spacing={3}
+        >
+          <Grid item>
+            <Typography
+              color="textPrimary"
+              variant="h5"
+            >
+              Product List
+            </Typography>
+            <Breadcrumbs
+              aria-label="breadcrumb"
+              separator={<ChevronRightIcon fontSize="small" />}
+              sx={{ mt: 1 }}
+            >
+              <Link
                 color="textPrimary"
-                variant="h5"
+                component={RouterLink}
+                to="/dashboard"
+                variant="subtitle2"
+                underline="hover">
+                Dashboard
+              </Link>
+              <Link
+                color="textPrimary"
+                component={RouterLink}
+                to="/dashboard"
+                variant="subtitle2"
+                underline="hover">
+                Management
+              </Link>
+              <Typography
+                color="textSecondary"
+                variant="subtitle2"
               >
-                Product List
+                Products
               </Typography>
-              <Breadcrumbs
-                aria-label="breadcrumb"
-                separator={<ChevronRightIcon fontSize="small" />}
-                sx={{ mt: 1 }}
+            </Breadcrumbs>
+            <Box
+              sx={{
+                mb: -1,
+                mx: -1,
+                mt: 1
+              }}
+            >
+              <Button
+                color="primary"
+                startIcon={<UploadIcon fontSize="small" />}
+                sx={{ m: 1 }}
+                variant="text"
               >
-                <Link
-                  color="textPrimary"
-                  component={RouterLink}
-                  to="/dashboard"
-                  variant="subtitle2"
-                >
-                  Dashboard
-                </Link>
-                <Link
-                  color="textPrimary"
-                  component={RouterLink}
-                  to="/dashboard"
-                  variant="subtitle2"
-                >
-                  Management
-                </Link>
-                <Typography
-                  color="textSecondary"
-                  variant="subtitle2"
-                >
-                  Products
-                </Typography>
-              </Breadcrumbs>
-              <Box
-                sx={{
-                  mb: -1,
-                  mx: -1,
-                  mt: 1
-                }}
+                Import
+              </Button>
+              <Button
+                color="primary"
+                startIcon={<DownloadIcon fontSize="small" />}
+                sx={{ m: 1 }}
+                variant="text"
               >
-                <Button
-                  color="primary"
-                  startIcon={<UploadIcon fontSize="small" />}
-                  sx={{ m: 1 }}
-                  variant="text"
-                >
-                  Import
-                </Button>
-                <Button
-                  color="primary"
-                  startIcon={<DownloadIcon fontSize="small" />}
-                  sx={{ m: 1 }}
-                  variant="text"
-                >
-                  Export
-                </Button>
-              </Box>
-            </Grid>
-            <Grid item>
-              <Box sx={{ m: -1 }}>
-                <Button
-                  color="primary"
-                  component={RouterLink}
-                  startIcon={<PlusIcon fontSize="small" />}
-                  sx={{ m: 1 }}
-                  to="/dashboard/products/new"
-                  variant="contained"
-                >
-                  New Product
-                </Button>
-              </Box>
-            </Grid>
+                Export
+              </Button>
+            </Box>
           </Grid>
-          <Box sx={{ mt: 3 }}>
-            <ProductListTable products={products} />
-          </Box>
-        </Container>
-      </Box>
-    </>
-  );
+          <Grid item>
+            <Box sx={{ m: -1 }}>
+              <Button
+                color="primary"
+                component={RouterLink}
+                startIcon={<PlusIcon fontSize="small" />}
+                sx={{ m: 1 }}
+                to="/dashboard/products/new"
+                variant="contained"
+              >
+                New Product
+              </Button>
+            </Box>
+          </Grid>
+        </Grid>
+        <Box sx={{ mt: 3 }}>
+          <ProductListTable products={products} />
+        </Box>
+      </Container>
+    </Box>
+  </>;
 };
 
 export default ProductList;

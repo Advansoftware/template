@@ -9,9 +9,9 @@ import {
   List,
   ListItem,
   ListItemText,
-  Typography
+  Typography,
+  useTheme,
 } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import useMounted from '../../../hooks/useMounted';
 import ArrowRightIcon from '../../../icons/ArrowRight';
 

@@ -274,10 +274,7 @@ const Widget22 = () => (
                         }}
                       />
                       <Box sx={{ ml: 1 }}>
-                        <Link
-                          color="inherit"
-                          variant="subtitle2"
-                        >
+                        <Link color="inherit" variant="subtitle2" underline="hover">
                           {customer.name}
                         </Link>
                         <Typography

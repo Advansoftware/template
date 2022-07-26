@@ -126,11 +126,7 @@ const RegisterJWT = (props) => {
             >
               I have read the
               {' '}
-              <Link
-                color="primary"
-                component="a"
-                href="#"
-              >
+              <Link color="primary" component="a" href="#" underline="hover">
                 Terms and Conditions
               </Link>
             </Typography>

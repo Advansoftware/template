@@ -51,129 +51,127 @@ const InvoiceDetails = () => {
     return null;
   }
 
-  return (
-    <>
-      <Helmet>
-        <title>Dashboard: Invoice Details | Material Kit Pro</title>
-      </Helmet>
-      <Box
-        sx={{
-          backgroundColor: 'background.default',
-          minHeight: '100%',
-          py: 8
-        }}
-      >
-        <Container maxWidth={settings.compact ? 'xl' : false}>
-          <Grid
-            container
-            justifyContent="space-between"
-            spacing={3}
-          >
-            <Grid item>
-              <Typography
+  return <>
+    <Helmet>
+      <title>Dashboard: Invoice Details | Material Kit Pro</title>
+    </Helmet>
+    <Box
+      sx={{
+        backgroundColor: 'background.default',
+        minHeight: '100%',
+        py: 8
+      }}
+    >
+      <Container maxWidth={settings.compact ? 'xl' : false}>
+        <Grid
+          container
+          justifyContent="space-between"
+          spacing={3}
+        >
+          <Grid item>
+            <Typography
+              color="textPrimary"
+              variant="h5"
+            >
+              Invoice Details
+            </Typography>
+            <Breadcrumbs
+              aria-label="breadcrumb"
+              separator={<ChevronRightIcon fontSize="small" />}
+              sx={{ mt: 1 }}
+            >
+              <Link
                 color="textPrimary"
-                variant="h5"
+                component={RouterLink}
+                to="/dashboard"
+                variant="subtitle2"
+                underline="hover">
+                Dashboard
+              </Link>
+              <Link
+                color="textPrimary"
+                component={RouterLink}
+                to="/dashboard"
+                variant="subtitle2"
+                underline="hover">
+                Management
+              </Link>
+              <Typography
+                color="textSecondary"
+                variant="subtitle2"
               >
-                Invoice Details
+                Invoices
               </Typography>
-              <Breadcrumbs
-                aria-label="breadcrumb"
-                separator={<ChevronRightIcon fontSize="small" />}
-                sx={{ mt: 1 }}
+            </Breadcrumbs>
+          </Grid>
+          <Grid item>
+            <Box sx={{ m: -1 }}>
+              <Button
+                color="primary"
+                onClick={() => setViewPDF(true)}
+                sx={{ m: 1 }}
+                variant="outlined"
               >
-                <Link
-                  color="textPrimary"
-                  component={RouterLink}
-                  to="/dashboard"
-                  variant="subtitle2"
-                >
-                  Dashboard
-                </Link>
-                <Link
-                  color="textPrimary"
-                  component={RouterLink}
-                  to="/dashboard"
-                  variant="subtitle2"
-                >
-                  Management
-                </Link>
-                <Typography
-                  color="textSecondary"
-                  variant="subtitle2"
-                >
-                  Invoices
-                </Typography>
-              </Breadcrumbs>
-            </Grid>
-            <Grid item>
-              <Box sx={{ m: -1 }}>
+                Preview PDF
+              </Button>
+              <PDFDownloadLink
+                document={<InvoicePDF invoice={invoice} />}
+                fileName="invoice"
+                style={{ textDecoration: 'none' }}
+              >
                 <Button
                   color="primary"
-                  onClick={() => setViewPDF(true)}
                   sx={{ m: 1 }}
-                  variant="outlined"
+                  variant="contained"
                 >
-                  Preview PDF
+                  Download PDF
                 </Button>
-                <PDFDownloadLink
-                  document={<InvoicePDF invoice={invoice} />}
-                  fileName="invoice"
-                  style={{ textDecoration: 'none' }}
-                >
-                  <Button
-                    color="primary"
-                    sx={{ m: 1 }}
-                    variant="contained"
-                  >
-                    Download PDF
-                  </Button>
-                </PDFDownloadLink>
-              </Box>
-            </Grid>
+              </PDFDownloadLink>
+            </Box>
           </Grid>
-          <Divider sx={{ my: 3 }} />
-          <InvoicePreview invoice={invoice} />
-        </Container>
-      </Box>
-      <Dialog
-        fullScreen
-        open={viewPDF}
+        </Grid>
+        <Divider sx={{ my: 3 }} />
+        <InvoicePreview invoice={invoice} />
+      </Container>
+    </Box>
+    <Dialog
+      fullScreen
+      open={viewPDF}
+    >
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          height: '100%'
+        }}
       >
         <Box
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            height: '100%'
+            backgroundColor: 'background.default',
+            p: 2
           }}
         >
-          <Box
-            sx={{
-              backgroundColor: 'background.default',
-              p: 2
-            }}
+          <Button
+            color="primary"
+            startIcon={<ArrowLeftIcon fontSize="small" />}
+            onClick={() => setViewPDF(false)}
+            variant="contained"
           >
-            <Button
-              color="primary"
-              startIcon={<ArrowLeftIcon fontSize="small" />}
-              onClick={() => setViewPDF(false)}
-              variant="contained"
-            >
-              Back
-            </Button>
-          </Box>
-          <Box sx={{ flexGrow: 1 }}>
-            <PDFViewer
-              height="100%"
-              style={{ border: 'none' }}
-              width="100%"
-            >
-              <InvoicePDF invoice={invoice} />
-            </PDFViewer>
-          </Box>
+            Back
+          </Button>
         </Box>
-      </Dialog>
-    </>
-  );
+        <Box sx={{ flexGrow: 1 }}>
+          <PDFViewer
+            height="100%"
+            style={{ border: 'none' }}
+            width="100%"
+          >
+            <InvoicePDF invoice={invoice} />
+          </PDFViewer>
+        </Box>
+      </Box>
+    </Dialog>
+  </>;
 };
 
 export default InvoiceDetails;

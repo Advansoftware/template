@@ -1,5 +1,5 @@
 import Quill from 'react-quill';
-import { experimentalStyled } from '@mui/material/styles';
+import { experimentalStyled } from '@mui/material';
 
 const QuillEditorRoot = experimentalStyled((props) => (
   <Quill {...props} />

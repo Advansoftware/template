@@ -22,113 +22,111 @@ const Analytics = () => {
     gtm.push({ event: 'page_view' });
   }, []);
 
-  return (
-    <>
-      <Helmet>
-        <title>Dashboard: Analytics | Material Kit Pro</title>
-      </Helmet>
-      <Box
-        sx={{
-          backgroundColor: 'background.default',
-          minHeight: '100%',
-          py: 8
-        }}
-      >
-        <Container maxWidth={settings.compact ? 'xl' : false}>
-          <Grid
-            container
-            justifyContent="space-between"
-            spacing={3}
-          >
-            <Grid item>
-              <Typography
+  return <>
+    <Helmet>
+      <title>Dashboard: Analytics | Material Kit Pro</title>
+    </Helmet>
+    <Box
+      sx={{
+        backgroundColor: 'background.default',
+        minHeight: '100%',
+        py: 8
+      }}
+    >
+      <Container maxWidth={settings.compact ? 'xl' : false}>
+        <Grid
+          container
+          justifyContent="space-between"
+          spacing={3}
+        >
+          <Grid item>
+            <Typography
+              color="textPrimary"
+              variant="h5"
+            >
+              Analytics
+            </Typography>
+            <Breadcrumbs
+              aria-label="breadcrumb"
+              separator={<ChevronRightIcon fontSize="small" />}
+              sx={{ mt: 1 }}
+            >
+              <Link
                 color="textPrimary"
-                variant="h5"
+                component={RouterLink}
+                to="/dashboard"
+                variant="subtitle2"
+                underline="hover">
+                Dashboard
+              </Link>
+              <Typography
+                color="textSecondary"
+                variant="subtitle2"
               >
                 Analytics
               </Typography>
-              <Breadcrumbs
-                aria-label="breadcrumb"
-                separator={<ChevronRightIcon fontSize="small" />}
-                sx={{ mt: 1 }}
-              >
-                <Link
-                  color="textPrimary"
-                  component={RouterLink}
-                  to="/dashboard"
-                  variant="subtitle2"
-                >
-                  Dashboard
-                </Link>
-                <Typography
-                  color="textSecondary"
-                  variant="subtitle2"
-                >
-                  Analytics
-                </Typography>
-              </Breadcrumbs>
-            </Grid>
-            <Grid item>
-              <Button
-                endIcon={<DownloadIcon fontSize="small" />}
-                variant="outlined"
-              >
-                Export
-              </Button>
-              <Button
-                color="primary"
-                endIcon={<ChevronDownIcon fontSize="small" />}
-                sx={{ ml: 2 }}
-                variant="contained"
-              >
-                Last month
-              </Button>
-            </Grid>
+            </Breadcrumbs>
           </Grid>
-          <Box sx={{ py: 3 }}>
-            <AnalyticsGeneralOverview />
-          </Box>
+          <Grid item>
+            <Button
+              endIcon={<DownloadIcon fontSize="small" />}
+              variant="outlined"
+            >
+              Export
+            </Button>
+            <Button
+              color="primary"
+              endIcon={<ChevronDownIcon fontSize="small" />}
+              sx={{ ml: 2 }}
+              variant="contained"
+            >
+              Last month
+            </Button>
+          </Grid>
+        </Grid>
+        <Box sx={{ py: 3 }}>
+          <AnalyticsGeneralOverview />
+        </Box>
+        <Grid
+          container
+          spacing={3}
+        >
           <Grid
-            container
-            spacing={3}
+            item
+            xl={9}
+            md={8}
+            xs={12}
           >
-            <Grid
-              item
-              xl={9}
-              md={8}
-              xs={12}
-            >
-              <AnalyticsTrafficSources sx={{ height: '100%' }} />
-            </Grid>
-            <Grid
-              item
-              xl={3}
-              md={4}
-              xs={12}
-            >
-              <AnalyticsVisitsByCountry />
-            </Grid>
-            <Grid
-              item
-              xl={9}
-              md={8}
-              xs={12}
-            >
-              <AnalyticsMostVisitedPages />
-            </Grid>
-            <Grid
-              item
-              xl={3}
-              md={4}
-              xs={12}
-            >
-              <AnalyticsSocialMediaSources />
-            </Grid>
+            <AnalyticsTrafficSources sx={{ height: '100%' }} />
           </Grid>
-        </Container>
-      </Box>
-    </>
-  );
+          <Grid
+            item
+            xl={3}
+            md={4}
+            xs={12}
+          >
+            <AnalyticsVisitsByCountry />
+          </Grid>
+          <Grid
+            item
+            xl={9}
+            md={8}
+            xs={12}
+          >
+            <AnalyticsMostVisitedPages />
+          </Grid>
+          <Grid
+            item
+            xl={3}
+            md={4}
+            xs={12}
+          >
+            <AnalyticsSocialMediaSources />
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  </>;
 };
 
 export default Analytics;

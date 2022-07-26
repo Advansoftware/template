@@ -8,9 +8,9 @@ import {
   Divider,
   Grid,
   Skeleton,
-  Typography
+  Typography,
+  useTheme,
 } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import ExternalLinkIcon from '../../icons/ExternalLink';
 
 const HomeRoles = (props) => {

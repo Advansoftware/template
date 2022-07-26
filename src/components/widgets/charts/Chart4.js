@@ -1,6 +1,5 @@
 import Chart from 'react-apexcharts';
-import { Box, Card, CardContent, CardHeader, Divider, IconButton } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Box, Card, CardContent, CardHeader, Divider, IconButton, useTheme } from '@mui/material';
 import Scrollbar from '../../Scrollbar';
 import DotsHorizontalIcon from '../../../icons/DotsHorizontal';
 

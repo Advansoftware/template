@@ -6,9 +6,9 @@ import {
   IconButton,
   Paper,
   TextareaAutosize,
-  Tooltip
+  Tooltip,
+  experimentalStyled,
 } from '@mui/material';
-import { experimentalStyled } from '@mui/material/styles';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import AddPhotoIcon from '@mui/icons-material/AddPhotoAlternate';
 import useAuth from '../../../hooks/useAuth';

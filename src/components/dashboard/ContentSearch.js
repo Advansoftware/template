@@ -154,7 +154,7 @@ const ContentSearch = () => {
                               component={RouterLink}
                               to="/dashboard"
                               variant="h5"
-                            >
+                              underline="hover">
                               {result.title}
                             </Link>
                             <Typography

@@ -38,68 +38,66 @@ const CustomerEdit = () => {
     return null;
   }
 
-  return (
-    <>
-      <Helmet>
-        <title>Dashboard: Customer Edit | Material Kit Pro</title>
-      </Helmet>
-      <Box
-        sx={{
-          backgroundColor: 'background.default',
-          minHeight: '100%',
-          py: 8
-        }}
-      >
-        <Container maxWidth={settings.compact ? 'xl' : false}>
-          <Grid
-            container
-            justifyContent="space-between"
-            spacing={3}
-          >
-            <Grid item>
-              <Typography
+  return <>
+    <Helmet>
+      <title>Dashboard: Customer Edit | Material Kit Pro</title>
+    </Helmet>
+    <Box
+      sx={{
+        backgroundColor: 'background.default',
+        minHeight: '100%',
+        py: 8
+      }}
+    >
+      <Container maxWidth={settings.compact ? 'xl' : false}>
+        <Grid
+          container
+          justifyContent="space-between"
+          spacing={3}
+        >
+          <Grid item>
+            <Typography
+              color="textPrimary"
+              variant="h5"
+            >
+              Customer Edit
+            </Typography>
+            <Breadcrumbs
+              aria-label="breadcrumb"
+              separator={<ChevronRightIcon fontSize="small" />}
+              sx={{ mt: 1 }}
+            >
+              <Link
                 color="textPrimary"
-                variant="h5"
+                component={RouterLink}
+                to="/dashboard"
+                variant="subtitle2"
+                underline="hover">
+                Dashboard
+              </Link>
+              <Link
+                color="textPrimary"
+                component={RouterLink}
+                to="/dashboard"
+                variant="subtitle2"
+                underline="hover">
+                Management
+              </Link>
+              <Typography
+                color="textSecondary"
+                variant="subtitle2"
               >
-                Customer Edit
+                Customers
               </Typography>
-              <Breadcrumbs
-                aria-label="breadcrumb"
-                separator={<ChevronRightIcon fontSize="small" />}
-                sx={{ mt: 1 }}
-              >
-                <Link
-                  color="textPrimary"
-                  component={RouterLink}
-                  to="/dashboard"
-                  variant="subtitle2"
-                >
-                  Dashboard
-                </Link>
-                <Link
-                  color="textPrimary"
-                  component={RouterLink}
-                  to="/dashboard"
-                  variant="subtitle2"
-                >
-                  Management
-                </Link>
-                <Typography
-                  color="textSecondary"
-                  variant="subtitle2"
-                >
-                  Customers
-                </Typography>
-              </Breadcrumbs>
-            </Grid>
+            </Breadcrumbs>
           </Grid>
-          <Box mt={3}>
-            <CustomerEditForm customer={customer} />
-          </Box>
-        </Container>
-      </Box>
-    </>
-  );
+        </Grid>
+        <Box mt={3}>
+          <CustomerEditForm customer={customer} />
+        </Box>
+      </Container>
+    </Box>
+  </>;
 };
 
 export default CustomerEdit;

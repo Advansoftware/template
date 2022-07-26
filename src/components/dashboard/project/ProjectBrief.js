@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import Markdown from 'react-markdown/with-html';
-import { Box, Card, CardContent, Chip, Grid, Typography } from '@mui/material';
-import { experimentalStyled } from '@mui/material/styles';
+import { Box, Card, CardContent, Chip, Grid, Typography, experimentalStyled } from '@mui/material';
 
 const MarkdownWrapper = experimentalStyled('div')(({ theme }) => ({
   color: theme.palette.text.primary,

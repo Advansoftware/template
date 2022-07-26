@@ -7,9 +7,9 @@ import {
   CardHeader,
   Container,
   Tooltip,
-  Typography
+  Typography,
+  useTheme,
 } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import ArrowRightIcon from '../../../icons/ArrowRight';
 import InformationCircleIcon from '../../../icons/InformationCircle';
 

@@ -1,6 +1,5 @@
 import Chart from 'react-apexcharts';
-import { Card, CardContent, CardHeader } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Card, CardContent, CardHeader, useTheme } from '@mui/material';
 
 const FinanceSalesRevenue = (props) => {
   const theme = useTheme();

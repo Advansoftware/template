@@ -56,7 +56,7 @@ const ChatMessage = (props) => {
               component={RouterLink}
               to="#"
               variant="subtitle2"
-            >
+              underline="hover">
               {senderName}
             </Link>
             <Box sx={{ mt: 1 }}>

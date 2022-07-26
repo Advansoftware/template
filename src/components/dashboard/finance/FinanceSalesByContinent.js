@@ -1,7 +1,6 @@
 import numeral from 'numeral';
 import Chart from 'react-apexcharts';
-import { Box, Card, CardContent, CardHeader } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Box, Card, CardContent, CardHeader, useTheme } from '@mui/material';
 import WorldMap from './WorldMap';
 
 const FinanceSalesByContinent = (props) => {

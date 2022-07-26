@@ -107,11 +107,7 @@ const Form16 = () => (
                 >
                   I have read the
                   {' '}
-                  <Link
-                    color="primary"
-                    component="a"
-                    href="#"
-                  >
+                  <Link color="primary" component="a" href="#" underline="hover">
                     Terms and Conditions
                   </Link>
                 </Typography>
@@ -130,11 +126,7 @@ const Form16 = () => (
             </form>
           </Box>
           <Divider sx={{ my: 3 }} />
-          <Link
-            color="textSecondary"
-            href="#"
-            variant="body2"
-          >
+          <Link color="textSecondary" href="#" variant="body2" underline="hover">
             Having an account
           </Link>
         </CardContent>

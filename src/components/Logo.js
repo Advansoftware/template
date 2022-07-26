@@ -1,4 +1,4 @@
-import { experimentalStyled } from '@mui/material/styles';
+import { experimentalStyled } from '@mui/material';
 
 const LogoRoot = experimentalStyled('svg')``;
 

@@ -11,11 +11,11 @@ import {
   Link,
   Rating,
   Tooltip,
-  Typography
+  Typography,
+  red,
 } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import UsersIcon from '../../../icons/Users';
-import { red } from '@mui/material/colors';
 
 const now = new Date();
 
@@ -119,10 +119,7 @@ const ImageList2 = () => (
               >
                 <Avatar src={project.author.avatar} />
                 <Box sx={{ ml: 2 }}>
-                  <Link
-                    color="textPrimary"
-                    variant="h6"
-                  >
+                  <Link color="textPrimary" variant="h6" underline="hover">
                     {project.title}
                   </Link>
                   <Typography
@@ -131,10 +128,7 @@ const ImageList2 = () => (
                   >
                     by
                     {' '}
-                    <Link
-                      color="textPrimary"
-                      variant="subtitle2"
-                    >
+                    <Link color="textPrimary" variant="subtitle2" underline="hover">
                       {project.author.name}
                     </Link>
                     {' '}

@@ -1,4 +1,4 @@
-import { createSvgIcon } from '@mui/material/utils';
+import { createSvgIcon } from '@mui/material';
 
 const UserAdd = createSvgIcon(
   <svg

@@ -50,10 +50,7 @@ const ProjectReviewCard = (props) => {
             >
               | For
               {' '}
-              <Link
-                color="textPrimary"
-                variant="subtitle2"
-              >
+              <Link color="textPrimary" variant="subtitle2" underline="hover">
                 Low Budget
               </Link>
               {' '}
@@ -71,7 +68,7 @@ const ProjectReviewCard = (props) => {
             component={RouterLink}
             to="#"
             variant="subtitle2"
-          >
+            underline="hover">
             {authorName}
           </Link>
         )}

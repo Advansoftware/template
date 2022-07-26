@@ -9,9 +9,10 @@ import {
   ListItemAvatar,
   ListItemText,
   Skeleton,
-  Typography
+  Typography,
+  alpha,
 } from '@mui/material';
-import { alpha, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import LockIcon from '../../icons/Lock';
 import CogIcon from '../../icons/Cog';
 import TemplateIcon from '../../icons/Template';

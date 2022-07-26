@@ -15,8 +15,8 @@ import {
   Grid,
   Toolbar,
   Typography,
+  experimentalStyled,
 } from "@mui/material";
-import { experimentalStyled } from "@mui/material/styles";
 import { blogApi } from "../../__fakeApi__/blogApi";
 import { BlogPostComment, BlogNewsletter } from "../../components/blog";
 import PencilAltIcon from "../../icons/PencilAlt";

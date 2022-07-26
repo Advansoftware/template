@@ -1,8 +1,7 @@
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { format } from 'date-fns';
-import { Avatar, Box, CardMedia, Chip, Link, Typography } from '@mui/material';
-import { experimentalStyled } from '@mui/material/styles';
+import { Avatar, Box, CardMedia, Chip, Link, Typography, experimentalStyled } from '@mui/material';
 
 const BlogPostCardMediaWrapper = experimentalStyled('div')({
   paddingTop: 'calc(100% * 4 / 4)',
@@ -70,7 +69,7 @@ const BlogPostCard = (props) => {
           component={RouterLink}
           to="/blog/1"
           variant="h5"
-        >
+          underline="hover">
           {title}
         </Link>
         <Typography

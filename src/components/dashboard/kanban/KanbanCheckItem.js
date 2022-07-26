@@ -1,8 +1,15 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import toast from 'react-hot-toast';
-import { Box, Button, Checkbox, IconButton, TextField, Typography } from '@mui/material';
-import { experimentalStyled } from '@mui/material/styles';
+import {
+  Box,
+  Button,
+  Checkbox,
+  IconButton,
+  TextField,
+  Typography,
+  experimentalStyled,
+} from '@mui/material';
 import TrashIcon from '../../../icons/Trash';
 import { deleteCheckItem, updateCheckItem } from '../../../slices/kanban';
 import { useDispatch } from '../../../store';

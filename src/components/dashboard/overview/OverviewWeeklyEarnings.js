@@ -7,9 +7,10 @@ import {
   CardActions,
   CardContent,
   Divider,
-  Typography
+  Typography,
+  alpha,
 } from '@mui/material';
-import { alpha, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import ArrowRightIcon from '../../../icons/ArrowRight';
 import ChevronUpIcon from '../../../icons/ChevronUp';
 

@@ -68,153 +68,151 @@ const CustomerDetails = () => {
     return null;
   }
 
-  return (
-    <>
-      <Helmet>
-        <title>Dashboard: Customer Details | Material Kit Pro</title>
-      </Helmet>
-      <Box
-        sx={{
-          backgroundColor: 'background.default',
-          minHeight: '100%',
-          py: 8
-        }}
-      >
-        <Container maxWidth={settings.compact ? 'xl' : false}>
-          <Grid
-            container
-            justifyContent="space-between"
-            spacing={3}
-          >
-            <Grid item>
-              <Typography
-                color="textPrimary"
-                variant="h5"
-              >
-                {customer.name}
-              </Typography>
-              <Breadcrumbs
-                aria-label="breadcrumb"
-                separator={<ChevronRightIcon fontSize="small" />}
-                sx={{ mt: 1 }}
-              >
-                <Link
-                  color="textPrimary"
-                  component={RouterLink}
-                  to="/dashboard"
-                  variant="subtitle2"
-                >
-                  Dashboard
-                </Link>
-                <Link
-                  color="textPrimary"
-                  component={RouterLink}
-                  to="/dashboard"
-                  variant="subtitle2"
-                >
-                  Management
-                </Link>
-                <Typography
-                  color="textSecondary"
-                  variant="subtitle2"
-                >
-                  Customers
-                </Typography>
-              </Breadcrumbs>
-            </Grid>
-            <Grid item>
-              <Box sx={{ m: -1 }}>
-                <Button
-                  color="primary"
-                  component={RouterLink}
-                  startIcon={<PencilAltIcon fontSize="small" />}
-                  sx={{ m: 1 }}
-                  to="/dashboard/customers/1/edit"
-                  variant="contained"
-                >
-                  Edit
-                </Button>
-              </Box>
-            </Grid>
-          </Grid>
-          <Box sx={{ mt: 3 }}>
-            <Tabs
-              indicatorColor="primary"
-              onChange={handleTabsChange}
-              scrollButtons="auto"
-              textColor="primary"
-              value={currentTab}
-              variant="scrollable"
+  return <>
+    <Helmet>
+      <title>Dashboard: Customer Details | Material Kit Pro</title>
+    </Helmet>
+    <Box
+      sx={{
+        backgroundColor: 'background.default',
+        minHeight: '100%',
+        py: 8
+      }}
+    >
+      <Container maxWidth={settings.compact ? 'xl' : false}>
+        <Grid
+          container
+          justifyContent="space-between"
+          spacing={3}
+        >
+          <Grid item>
+            <Typography
+              color="textPrimary"
+              variant="h5"
             >
-              {tabs.map((tab) => (
-                <Tab
-                  key={tab.value}
-                  label={tab.label}
-                  value={tab.value}
-                />
-              ))}
-            </Tabs>
-          </Box>
-          <Divider />
-          <Box sx={{ mt: 3 }}>
-            {currentTab === 'details' && (
-              <Grid
-                container
-                spacing={3}
+              {customer.name}
+            </Typography>
+            <Breadcrumbs
+              aria-label="breadcrumb"
+              separator={<ChevronRightIcon fontSize="small" />}
+              sx={{ mt: 1 }}
+            >
+              <Link
+                color="textPrimary"
+                component={RouterLink}
+                to="/dashboard"
+                variant="subtitle2"
+                underline="hover">
+                Dashboard
+              </Link>
+              <Link
+                color="textPrimary"
+                component={RouterLink}
+                to="/dashboard"
+                variant="subtitle2"
+                underline="hover">
+                Management
+              </Link>
+              <Typography
+                color="textSecondary"
+                variant="subtitle2"
               >
-                <Grid
-                  item
-                  lg={settings.compact ? 6 : 4}
-                  md={6}
-                  xl={settings.compact ? 6 : 3}
-                  xs={12}
-                >
-                  <CustomerContactDetails
-                    address1={customer.address1}
-                    address2={customer.address2}
-                    country={customer.country}
-                    email={customer.email}
-                    isVerified={customer.isVerified}
-                    phone={customer.phone}
-                    state={customer.state}
-                  />
-                </Grid>
-                <Grid
-                  item
-                  lg={settings.compact ? 6 : 4}
-                  md={6}
-                  xl={settings.compact ? 6 : 3}
-                  xs={12}
-                >
-                  <CustomerInvoicesSummary />
-                </Grid>
-                <Grid
-                  item
-                  lg={settings.compact ? 6 : 4}
-                  md={6}
-                  xl={settings.compact ? 6 : 3}
-                  xs={12}
-                >
-                  <CustomerEmailsSummary />
-                </Grid>
-                <Grid
-                  item
-                  lg={settings.compact ? 6 : 4}
-                  md={6}
-                  xl={settings.compact ? 6 : 3}
-                  xs={12}
-                >
-                  <CustomerDataManagement />
-                </Grid>
+                Customers
+              </Typography>
+            </Breadcrumbs>
+          </Grid>
+          <Grid item>
+            <Box sx={{ m: -1 }}>
+              <Button
+                color="primary"
+                component={RouterLink}
+                startIcon={<PencilAltIcon fontSize="small" />}
+                sx={{ m: 1 }}
+                to="/dashboard/customers/1/edit"
+                variant="contained"
+              >
+                Edit
+              </Button>
+            </Box>
+          </Grid>
+        </Grid>
+        <Box sx={{ mt: 3 }}>
+          <Tabs
+            indicatorColor="primary"
+            onChange={handleTabsChange}
+            scrollButtons="auto"
+            textColor="primary"
+            value={currentTab}
+            variant="scrollable"
+          >
+            {tabs.map((tab) => (
+              <Tab
+                key={tab.value}
+                label={tab.label}
+                value={tab.value}
+              />
+            ))}
+          </Tabs>
+        </Box>
+        <Divider />
+        <Box sx={{ mt: 3 }}>
+          {currentTab === 'details' && (
+            <Grid
+              container
+              spacing={3}
+            >
+              <Grid
+                item
+                lg={settings.compact ? 6 : 4}
+                md={6}
+                xl={settings.compact ? 6 : 3}
+                xs={12}
+              >
+                <CustomerContactDetails
+                  address1={customer.address1}
+                  address2={customer.address2}
+                  country={customer.country}
+                  email={customer.email}
+                  isVerified={customer.isVerified}
+                  phone={customer.phone}
+                  state={customer.state}
+                />
               </Grid>
-            )}
-            {currentTab === 'invoices' && <CustomerInvoices />}
-            {currentTab === 'logs' && <CustomerLogs />}
-          </Box>
-        </Container>
-      </Box>
-    </>
-  );
+              <Grid
+                item
+                lg={settings.compact ? 6 : 4}
+                md={6}
+                xl={settings.compact ? 6 : 3}
+                xs={12}
+              >
+                <CustomerInvoicesSummary />
+              </Grid>
+              <Grid
+                item
+                lg={settings.compact ? 6 : 4}
+                md={6}
+                xl={settings.compact ? 6 : 3}
+                xs={12}
+              >
+                <CustomerEmailsSummary />
+              </Grid>
+              <Grid
+                item
+                lg={settings.compact ? 6 : 4}
+                md={6}
+                xl={settings.compact ? 6 : 3}
+                xs={12}
+              >
+                <CustomerDataManagement />
+              </Grid>
+            </Grid>
+          )}
+          {currentTab === 'invoices' && <CustomerInvoices />}
+          {currentTab === 'logs' && <CustomerLogs />}
+        </Box>
+      </Container>
+    </Box>
+  </>;
 };
 
 export default CustomerDetails;

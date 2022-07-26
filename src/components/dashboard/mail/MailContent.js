@@ -2,8 +2,16 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { format } from 'date-fns';
 import Markdown from 'react-markdown/with-html';
-import { Avatar, Box, Divider, IconButton, Link, Tooltip, Typography } from '@mui/material';
-import { experimentalStyled } from '@mui/material/styles';
+import {
+  Avatar,
+  Box,
+  Divider,
+  IconButton,
+  Link,
+  Tooltip,
+  Typography,
+  experimentalStyled,
+} from '@mui/material';
 import ReplyAllIcon from '@mui/icons-material/ReplyAll';
 import ReplyIcon from '@mui/icons-material/Reply';
 import DotsHorizontalIcon from '../../../icons/DotsHorizontal';
@@ -83,11 +91,7 @@ const MailContent = () => {
               {email.from.name}
             </Typography>
             {' '}
-            <Link
-              color="textSecondary"
-              display="inline"
-              variant="body2"
-            >
+            <Link color="textSecondary" display="inline" variant="body2" underline="hover">
               {email.from.email}
             </Link>
             <Typography
@@ -97,10 +101,7 @@ const MailContent = () => {
               To:
               {' '}
               {email.to.map((person) => (
-                <Link
-                  color="inherit"
-                  key={person.email}
-                >
+                <Link color="inherit" key={person.email} underline="hover">
                   {person.email}
                 </Link>
               ))}

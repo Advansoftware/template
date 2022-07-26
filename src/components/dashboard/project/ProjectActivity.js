@@ -49,7 +49,7 @@ const ProjectActivity = (props) => {
           component={RouterLink}
           to="#"
           variant="subtitle2"
-        >
+          underline="hover">
           {subject}
         </Link>
         {' '}

@@ -7,9 +7,9 @@ import {
   CardHeader,
   Checkbox,
   Tooltip,
-  Typography
+  Typography,
+  useTheme,
 } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import InformationCircleIcon from '../../../icons/InformationCircle';
 
 const data = {

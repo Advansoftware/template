@@ -95,11 +95,7 @@ const Form15 = () => (
             </form>
           </Box>
           <Divider sx={{ my: 3 }} />
-          <Link
-            color="textSecondary"
-            href="#"
-            variant="body2"
-          >
+          <Link color="textSecondary" href="#" variant="body2" underline="hover">
             Create new account
           </Link>
         </CardContent>

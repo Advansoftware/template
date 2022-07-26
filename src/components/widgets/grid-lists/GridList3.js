@@ -14,7 +14,8 @@ import {
   Menu,
   MenuItem,
   Tooltip,
-  Typography
+  Typography,
+  blueGrey,
 } from '@mui/material';
 import ArchiveIcon from '../../../icons/Archive';
 import DocumentTextIcon from '../../../icons/DocumentText';
@@ -23,7 +24,6 @@ import DownloadIcon from '../../../icons/Download';
 import PencilAltIcon from '../../../icons/PencilAlt';
 import TrashIcon from '../../../icons/Trash';
 import bytesToSize from '../../../utils/bytesToSize';
-import { blueGrey } from '@mui/material/colors';
 
 const files = [
   {

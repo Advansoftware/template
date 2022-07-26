@@ -10,12 +10,12 @@ import {
   IconButton,
   Link,
   Tooltip,
-  Typography
+  Typography,
+  red,
 } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ClockIcon from '../../../icons/Clock';
 import ShareIcon from '../../../icons/Share';
-import { red } from '@mui/material/colors';
 
 const now = new Date();
 
@@ -95,10 +95,7 @@ const ImageList5 = () => (
                 </Box>
               )}
               title={(
-                <Link
-                  color="textPrimary"
-                  variant="subtitle2"
-                >
+                <Link color="textPrimary" variant="subtitle2" underline="hover">
                   {post.author.name}
                 </Link>
               )}

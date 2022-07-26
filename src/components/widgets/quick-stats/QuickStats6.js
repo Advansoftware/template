@@ -8,9 +8,10 @@ import {
   CardContent,
   Divider,
   Grid,
-  Typography
+  Typography,
+  alpha,
 } from '@mui/material';
-import { alpha, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import ArrowRightIcon from '../../../icons/ArrowRight';
 import ChevronDownIcon from '../../../icons/ChevronDown';
 import ChevronUpIcon from '../../../icons/ChevronUp';

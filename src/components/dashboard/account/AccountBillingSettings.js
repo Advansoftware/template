@@ -165,11 +165,7 @@ const AccountBillingSettings = (props) => (
           The refunds don&apos;t work once you have the plan, but you can
           always
           {' '}
-          <Link
-            color="primary"
-            component={RouterLink}
-            to="#"
-          >
+          <Link color="primary" component={RouterLink} to="#" underline="hover">
             Cancel your plan
           </Link>
           .

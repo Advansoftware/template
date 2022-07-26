@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
-import { experimentalStyled } from '@mui/material/styles';
 import BlogNavbar from './BlogNavbar';
 import Footer from '../Footer';
+import { experimentalStyled } from '@mui/material';
 
 const BlogLayoutRoot = experimentalStyled('div')(({ theme }) => ({
   backgroundColor: theme.palette.background.default,

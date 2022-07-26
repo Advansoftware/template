@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { Box, Button, Container, Skeleton, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Box, Button, Container, Skeleton, Typography, useTheme } from '@mui/material';
 import CheckCircleIcon from '../../icons/CheckCircle';
 
 const HomeHero = (props) => {

@@ -1,7 +1,6 @@
 import numeral from 'numeral';
 import Chart from 'react-apexcharts';
-import { Box, Grid, Typography, Card } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Box, Grid, Typography, Card, useTheme } from '@mui/material';
 
 const ChartLine = () => {
   const theme = useTheme();

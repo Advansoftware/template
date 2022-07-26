@@ -14,13 +14,13 @@ import {
   Link,
   Rating,
   Tooltip,
-  Typography
+  Typography,
+  red,
 } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import UsersIcon from '../../../icons/Users';
 import getInitials from '../../../utils/getInitials';
-import { red } from '@mui/material/colors';
 
 const ProjectCard = (props) => {
   const { project, ...other } = props;
@@ -66,7 +66,7 @@ const ProjectCard = (props) => {
               component={RouterLink}
               to="#"
               variant="h6"
-            >
+              underline="hover">
               {project.title}
             </Link>
             <Typography
@@ -80,7 +80,7 @@ const ProjectCard = (props) => {
                 component={RouterLink}
                 to="#"
                 variant="subtitle2"
-              >
+                underline="hover">
                 {project.author.name}
               </Link>
               {' '}

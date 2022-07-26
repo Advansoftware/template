@@ -81,7 +81,7 @@ const AccountGeneralSettings = (props) => {
                   color="primary"
                   component={RouterLink}
                   to="/dashboard/account"
-                >
+                  underline="hover">
                   {user.plan}
                 </Link>
               </Typography>

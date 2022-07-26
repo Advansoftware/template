@@ -1,14 +1,12 @@
 import { useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Box, Button, Container, Typography } from '@mui/material';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
+import { Box, Button, Container, Typography, useMediaQuery, useTheme } from '@mui/material';
 import gtm from '../lib/gtm';
 
 const ServerError = () => {
   const theme = useTheme();
-  const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
+  const mobileDevice = useMediaQuery(theme.breakpoints.down('xl'));
 
   useEffect(() => {
     gtm.push({ event: 'page_view' });

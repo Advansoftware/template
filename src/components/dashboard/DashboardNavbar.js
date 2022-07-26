@@ -1,7 +1,6 @@
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { AppBar, Box, IconButton, Toolbar } from '@mui/material';
-import { experimentalStyled } from '@mui/material/styles';
+import { AppBar, Box, IconButton, Toolbar, experimentalStyled } from '@mui/material';
 import MenuIcon from '../../icons/Menu';
 import AccountPopover from './AccountPopover';
 import ContactsPopover from './ContactsPopover';

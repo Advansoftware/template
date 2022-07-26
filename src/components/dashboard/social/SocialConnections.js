@@ -131,7 +131,7 @@ const SocialConnections = (props) => {
                         component={RouterLink}
                         to="#"
                         variant="h5"
-                      >
+                        underline="hover">
                         {connection.name}
                       </Link>
                       <Typography

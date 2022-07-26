@@ -1,14 +1,21 @@
 import { Link as RouterLink, useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { format } from 'date-fns';
-import { Avatar, Box, Checkbox, IconButton, Tooltip, Typography } from '@mui/material';
-import { experimentalStyled } from '@mui/material/styles';
+import {
+  Avatar,
+  Box,
+  Checkbox,
+  IconButton,
+  Tooltip,
+  Typography,
+  experimentalStyled,
+  amber,
+} from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import LabelImportantIcon from '@mui/icons-material/LabelImportant';
 import { useSelector } from '../../../store';
 import getInitials from '../../../utils/getInitials';
-import { amber } from '@mui/material/colors';
 
 const Label = experimentalStyled('span')(({ theme }) => ({
   borderRadius: 2,

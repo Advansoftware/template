@@ -22,117 +22,115 @@ const VerifyCode = () => {
     gtm.push({ event: 'page_view' });
   }, []);
 
-  return (
-    <>
-      <Helmet>
-        <title>Verify Code | Material Kit Pro</title>
-      </Helmet>
-      <Box
-        sx={{
-          backgroundColor: 'background.default',
-          display: 'flex',
-          flexDirection: 'column',
-          minHeight: '100vh'
-        }}
+  return <>
+    <Helmet>
+      <title>Verify Code | Material Kit Pro</title>
+    </Helmet>
+    <Box
+      sx={{
+        backgroundColor: 'background.default',
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '100vh'
+      }}
+    >
+      <AuthBanner />
+      <Container
+        maxWidth="sm"
+        sx={{ py: 10 }}
       >
-        <AuthBanner />
-        <Container
-          maxWidth="sm"
-          sx={{ py: 10 }}
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center'
+          }}
         >
-          <Box
+          <RouterLink to="/">
+            <Logo
+              sx={{
+                height: 40,
+                width: 40
+              }}
+            />
+          </RouterLink>
+        </Box>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            mb: 8
+          }}
+        />
+        <Card>
+          <CardContent
             sx={{
               display: 'flex',
-              justifyContent: 'center'
+              flexDirection: 'column',
+              p: 4
             }}
           >
-            <RouterLink to="/">
-              <Logo
-                sx={{
-                  height: 40,
-                  width: 40
-                }}
-              />
-            </RouterLink>
-          </Box>
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              mb: 8
-            }}
-          />
-          <Card>
-            <CardContent
+            <Box
               sx={{
+                alignItems: 'center',
                 display: 'flex',
-                flexDirection: 'column',
-                p: 4
+                justifyContent: 'space-between',
+                mb: 3
               }}
             >
-              <Box
-                sx={{
-                  alignItems: 'center',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  mb: 3
-                }}
-              >
-                <div>
-                  <Typography
-                    color="textPrimary"
-                    gutterBottom
-                    variant="h4"
-                  >
-                    Verify Code
-                  </Typography>
-                  <Typography
-                    color="textSecondary"
-                    variant="body2"
-                  >
-                    Confirm registration using your verification code
-                  </Typography>
-                </div>
-                <Box
-                  sx={{
-                    height: 32,
-                    '& > img': {
-                      maxHeight: '100%',
-                      width: 'auto'
-                    }
-                  }}
+              <div>
+                <Typography
+                  color="textPrimary"
+                  gutterBottom
+                  variant="h4"
                 >
-                  <img
-                    alt="Auth platform"
-                    src={platformIcons[platform]}
-                  />
-                </Box>
-              </Box>
-              <Box
-                sx={{
-                  flexGrow: 1,
-                  mt: 3
-                }}
-              >
-                {platform === 'Amplify' && <VerifyCodeAmplify />}
-              </Box>
-              <Divider sx={{ my: 3 }} />
-              {platform === 'Amplify' && (
-                <Link
+                  Verify Code
+                </Typography>
+                <Typography
                   color="textSecondary"
-                  component={RouterLink}
-                  to="/authentication/password-recovery"
                   variant="body2"
                 >
-                  Did you not receive the code?
-                </Link>
-              )}
-            </CardContent>
-          </Card>
-        </Container>
-      </Box>
-    </>
-  );
+                  Confirm registration using your verification code
+                </Typography>
+              </div>
+              <Box
+                sx={{
+                  height: 32,
+                  '& > img': {
+                    maxHeight: '100%',
+                    width: 'auto'
+                  }
+                }}
+              >
+                <img
+                  alt="Auth platform"
+                  src={platformIcons[platform]}
+                />
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                flexGrow: 1,
+                mt: 3
+              }}
+            >
+              {platform === 'Amplify' && <VerifyCodeAmplify />}
+            </Box>
+            <Divider sx={{ my: 3 }} />
+            {platform === 'Amplify' && (
+              <Link
+                color="textSecondary"
+                component={RouterLink}
+                to="/authentication/password-recovery"
+                variant="body2"
+                underline="hover">
+                Did you not receive the code?
+              </Link>
+            )}
+          </CardContent>
+        </Card>
+      </Container>
+    </Box>
+  </>;
 };
 
 export default VerifyCode;

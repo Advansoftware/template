@@ -47,10 +47,7 @@ const AuthBanner = () => (
           >
             Visit our
             {' '}
-            <Link
-              component={RouterLink}
-              to="/docs"
-            >
+            <Link component={RouterLink} to="/docs" underline="hover">
               docs
             </Link>
             {' '}

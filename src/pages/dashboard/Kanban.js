@@ -50,78 +50,76 @@ const Kanban = () => {
     }
   };
 
-  return (
-    <>
-      <Helmet>
-        <title>Dashboard: Kanban | Material Kit Pro</title>
-      </Helmet>
-      <Box
-        sx={{
-          backgroundColor: 'background.default',
-          display: 'flex',
-          flexDirection: 'column',
-          height: '100%',
-          overflow: 'hidden'
-        }}
-      >
-        <Box sx={{ p: 3 }}>
-          <Typography
+  return <>
+    <Helmet>
+      <title>Dashboard: Kanban | Material Kit Pro</title>
+    </Helmet>
+    <Box
+      sx={{
+        backgroundColor: 'background.default',
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100%',
+        overflow: 'hidden'
+      }}
+    >
+      <Box sx={{ p: 3 }}>
+        <Typography
+          color="textPrimary"
+          variant="h5"
+        >
+          Kanban
+        </Typography>
+        <Breadcrumbs
+          aria-label="breadcrumb"
+          separator={<ChevronRightIcon fontSize="small" />}
+          sx={{ mt: 1 }}
+        >
+          <Link
             color="textPrimary"
-            variant="h5"
+            component={RouterLink}
+            to="/dashboard"
+            variant="subtitle2"
+            underline="hover">
+            Dashboard
+          </Link>
+          <Typography
+            color="textSecondary"
+            variant="subtitle2"
           >
             Kanban
           </Typography>
-          <Breadcrumbs
-            aria-label="breadcrumb"
-            separator={<ChevronRightIcon fontSize="small" />}
-            sx={{ mt: 1 }}
-          >
-            <Link
-              color="textPrimary"
-              component={RouterLink}
-              to="/dashboard"
-              variant="subtitle2"
-            >
-              Dashboard
-            </Link>
-            <Typography
-              color="textSecondary"
-              variant="subtitle2"
-            >
-              Kanban
-            </Typography>
-          </Breadcrumbs>
-        </Box>
-        <DragDropContext onDragEnd={handleDragEnd}>
+        </Breadcrumbs>
+      </Box>
+      <DragDropContext onDragEnd={handleDragEnd}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexGrow: 1,
+            flexShrink: 1,
+            overflowX: 'auto',
+            overflowY: 'hidden'
+          }}
+        >
           <Box
             sx={{
               display: 'flex',
-              flexGrow: 1,
-              flexShrink: 1,
-              overflowX: 'auto',
-              overflowY: 'hidden'
+              px: 1,
+              py: 3
             }}
           >
-            <Box
-              sx={{
-                display: 'flex',
-                px: 1,
-                py: 3
-              }}
-            >
-              {columns.allIds.map((columnId) => (
-                <KanbanColumn
-                  columnId={columnId}
-                  key={columnId}
-                />
-              ))}
-              <KanbanColumnAdd />
-            </Box>
+            {columns.allIds.map((columnId) => (
+              <KanbanColumn
+                columnId={columnId}
+                key={columnId}
+              />
+            ))}
+            <KanbanColumnAdd />
           </Box>
-        </DragDropContext>
-      </Box>
-    </>
-  );
+        </Box>
+      </DragDropContext>
+    </Box>
+  </>;
 };
 
 export default Kanban;

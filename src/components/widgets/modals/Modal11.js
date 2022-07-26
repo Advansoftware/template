@@ -1,5 +1,4 @@
-import { Avatar, Box, Button, Container, IconButton, Paper, Typography } from '@mui/material';
-import { alpha } from '@mui/material/styles';
+import { Avatar, Box, Button, Container, IconButton, Paper, Typography, alpha } from '@mui/material';
 import WarningIcon from '@mui/icons-material/WarningOutlined';
 import XIcon from '../../../icons/X';
 

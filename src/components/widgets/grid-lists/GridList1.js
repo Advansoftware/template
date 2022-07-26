@@ -1,6 +1,15 @@
 import { format, subHours, subMinutes, subSeconds } from 'date-fns';
-import { Avatar, Box, Card, CardMedia, Chip, Grid, Link, Typography } from '@mui/material';
-import { experimentalStyled } from '@mui/material/styles';
+import {
+  Avatar,
+  Box,
+  Card,
+  CardMedia,
+  Chip,
+  Grid,
+  Link,
+  Typography,
+  experimentalStyled,
+} from '@mui/material';
 
 const now = new Date();
 
@@ -117,10 +126,7 @@ const ImageList1 = () => (
                   </Typography>
                 </Box>
               </Box>
-              <Link
-                color="textPrimary"
-                variant="h5"
-              >
+              <Link color="textPrimary" variant="h5" underline="hover">
                 {post.title}
               </Link>
               <Typography

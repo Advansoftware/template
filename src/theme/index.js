@@ -1,7 +1,9 @@
 import merge from 'lodash/merge';
-import { createTheme, responsiveFontSizes, adaptV4Theme } from '@mui/material/styles';
+import { responsiveFontSizes } from '@mui/material/styles';
 import { THEMES } from '../constants';
 import { lightShadows, darkShadows } from './shadows';
+
+import { createTheme, adaptV4Theme } from '@mui/material';
 
 const baseOptions = {
   direction: 'ltr',

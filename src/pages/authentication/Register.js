@@ -27,112 +27,110 @@ const Register = () => {
     gtm.push({ event: 'page_view' });
   }, []);
 
-  return (
-    <>
-      <Helmet>
-        <title>Register | Material Kit Pro</title>
-      </Helmet>
-      <Box
-        sx={{
-          backgroundColor: 'background.default',
-          display: 'flex',
-          flexDirection: 'column',
-          minHeight: '100vh'
-        }}
+  return <>
+    <Helmet>
+      <title>Register | Material Kit Pro</title>
+    </Helmet>
+    <Box
+      sx={{
+        backgroundColor: 'background.default',
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '100vh'
+      }}
+    >
+      <AuthBanner />
+      <Container
+        maxWidth="sm"
+        sx={{ py: '80px' }}
       >
-        <AuthBanner />
-        <Container
-          maxWidth="sm"
-          sx={{ py: '80px' }}
+        <Box
+          sx={{
+            mb: 8,
+            display: 'flex',
+            justifyContent: 'center'
+          }}
         >
-          <Box
+          <RouterLink to="/">
+            <Logo
+              sx={{
+                height: 40,
+                width: 40
+              }}
+            />
+          </RouterLink>
+        </Box>
+        <Card>
+          <CardContent
             sx={{
-              mb: 8,
               display: 'flex',
-              justifyContent: 'center'
+              flexDirection: 'column',
+              p: 4
             }}
           >
-            <RouterLink to="/">
-              <Logo
-                sx={{
-                  height: 40,
-                  width: 40
-                }}
-              />
-            </RouterLink>
-          </Box>
-          <Card>
-            <CardContent
+            <Box
               sx={{
+                alignItems: 'center',
                 display: 'flex',
-                flexDirection: 'column',
-                p: 4
+                justifyContent: 'space-between',
+                mb: 3
               }}
             >
-              <Box
-                sx={{
-                  alignItems: 'center',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  mb: 3
-                }}
-              >
-                <div>
-                  <Typography
-                    color="textPrimary"
-                    gutterBottom
-                    variant="h4"
-                  >
-                    Register
-                  </Typography>
-                  <Typography
-                    color="textSecondary"
-                    variant="body2"
-                  >
-                    Register on the internal platform
-                  </Typography>
-                </div>
-                <Box
-                  sx={{
-                    height: 32,
-                    '& > img': {
-                      maxHeight: '100%',
-                      width: 'auto'
-                    }
-                  }}
+              <div>
+                <Typography
+                  color="textPrimary"
+                  gutterBottom
+                  variant="h4"
                 >
-                  <img
-                    alt="Auth platform"
-                    src={platformIcons[platform]}
-                  />
-                </Box>
-              </Box>
+                  Register
+                </Typography>
+                <Typography
+                  color="textSecondary"
+                  variant="body2"
+                >
+                  Register on the internal platform
+                </Typography>
+              </div>
               <Box
                 sx={{
-                  flexGrow: 1,
-                  mt: 3
+                  height: 32,
+                  '& > img': {
+                    maxHeight: '100%',
+                    width: 'auto'
+                  }
                 }}
               >
-                {platform === 'Amplify' && <RegisterAmplify />}
-                {platform === 'Auth0' && <RegisterAuth0 />}
-                {platform === 'Firebase' && <RegisterFirebase />}
-                {platform === 'JWT' && <RegisterJWT />}
+                <img
+                  alt="Auth platform"
+                  src={platformIcons[platform]}
+                />
               </Box>
-              <Divider sx={{ my: 3 }} />
-              <Link
-                color="textSecondary"
-                component={RouterLink}
-                to="/authentication/login"
-                variant="body2"
-              >
-                Having an account
-              </Link>
-            </CardContent>
-          </Card>
-        </Container>
-      </Box>
-    </>
-  );
+            </Box>
+            <Box
+              sx={{
+                flexGrow: 1,
+                mt: 3
+              }}
+            >
+              {platform === 'Amplify' && <RegisterAmplify />}
+              {platform === 'Auth0' && <RegisterAuth0 />}
+              {platform === 'Firebase' && <RegisterFirebase />}
+              {platform === 'JWT' && <RegisterJWT />}
+            </Box>
+            <Divider sx={{ my: 3 }} />
+            <Link
+              color="textSecondary"
+              component={RouterLink}
+              to="/authentication/login"
+              variant="body2"
+              underline="hover">
+              Having an account
+            </Link>
+          </CardContent>
+        </Card>
+      </Container>
+    </Box>
+  </>;
 };
 
 export default Register;

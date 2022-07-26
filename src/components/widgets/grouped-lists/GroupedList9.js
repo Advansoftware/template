@@ -90,10 +90,7 @@ const GroupedList9 = () => (
               >
                 | For
                 {' '}
-                <Link
-                  color="textPrimary"
-                  variant="subtitle2"
-                >
+                <Link color="textPrimary" variant="subtitle2" underline="hover">
                   Low Budget
                 </Link>
                 {' '}
@@ -106,10 +103,7 @@ const GroupedList9 = () => (
             </Box>
           )}
           title={(
-            <Link
-              color="textPrimary"
-              variant="subtitle2"
-            >
+            <Link color="textPrimary" variant="subtitle2" underline="hover">
               {review.author.name}
             </Link>
           )}

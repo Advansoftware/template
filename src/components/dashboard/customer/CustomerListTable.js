@@ -384,7 +384,7 @@ const CustomerListTable = (props) => {
                             component={RouterLink}
                             to="/dashboard/customers/1"
                             variant="subtitle2"
-                          >
+                            underline="hover">
                             {customer.name}
                           </Link>
                           <Typography

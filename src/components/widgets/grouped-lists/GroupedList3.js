@@ -157,7 +157,7 @@ const GroupedList3 = () => (
                       noWrap
                       sx={{ cursor: 'pointer' }}
                       variant="subtitle2"
-                    >
+                      underline="hover">
                       {task.title}
                     </Link>
                   )}

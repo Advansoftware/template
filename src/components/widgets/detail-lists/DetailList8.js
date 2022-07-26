@@ -54,11 +54,7 @@ const DetailsList8 = () => (
                 >
                   Product Designer at
                   {' '}
-                  <Link
-                    color="textPrimary"
-                    href="#"
-                    variant="subtitle2"
-                  >
+                  <Link color="textPrimary" href="#" variant="subtitle2" underline="hover">
                     Devias
                   </Link>
                 </Typography>
@@ -70,11 +66,7 @@ const DetailsList8 = () => (
                 >
                   Past: UX Designer
                   {' '}
-                  <Link
-                    color="textSecondary"
-                    href="#"
-                    variant="caption"
-                  >
+                  <Link color="textSecondary" href="#" variant="caption" underline="hover">
                     Focus Aesthetic Dynamics
                   </Link>
                 </Typography>
@@ -94,7 +86,7 @@ const DetailsList8 = () => (
                   color="textSecondary"
                   sx={{ cursor: 'pointer' }}
                   variant="body2"
-                >
+                  underline="hover">
                   Add school or collage
                 </Link>
               )}
@@ -116,11 +108,7 @@ const DetailsList8 = () => (
                 >
                   Lives in
                   {' '}
-                  <Link
-                    color="textPrimary"
-                    href="#"
-                    variant="subtitle2"
-                  >
+                  <Link color="textPrimary" href="#" variant="subtitle2" underline="hover">
                     Bucharest
                   </Link>
                 </Typography>
@@ -132,11 +120,7 @@ const DetailsList8 = () => (
                 >
                   Originally from
                   {' '}
-                  <Link
-                    color="textSecondary"
-                    href="#"
-                    variant="caption"
-                  >
+                  <Link color="textSecondary" href="#" variant="caption" underline="hover">
                     Rm. Valcea
                   </Link>
                 </Typography>

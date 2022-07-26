@@ -40,7 +40,7 @@ const SocialPostComment = (props) => {
             component={RouterLink}
             to="#"
             variant="subtitle2"
-          >
+            underline="hover">
             {authorName}
           </Link>
           <Box sx={{ flexGrow: 1 }} />

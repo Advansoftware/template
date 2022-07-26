@@ -1,6 +1,6 @@
 import { Editor } from 'react-draft-wysiwyg';
 import PropTypes from 'prop-types';
-import { experimentalStyled } from '@mui/material/styles';
+import { experimentalStyled } from '@mui/material';
 
 const DraftEditorRoot = experimentalStyled('div')(({ theme }) => ({
   display: 'flex',

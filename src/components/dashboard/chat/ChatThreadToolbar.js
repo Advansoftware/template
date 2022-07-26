@@ -10,9 +10,9 @@ import {
   Menu,
   MenuItem,
   Tooltip,
-  Typography
+  Typography,
+  experimentalStyled,
 } from '@mui/material';
-import { experimentalStyled } from '@mui/material/styles';
 import ArchiveIcon from '../../../icons/Archive';
 import BellIcon from '../../../icons/Bell';
 import BanIcon from '../../../icons/Ban';

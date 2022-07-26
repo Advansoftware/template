@@ -64,10 +64,7 @@ const ImageList6 = () => (
                   mx: 2
                 }}
               >
-                <Link
-                  color="textPrimary"
-                  variant="h5"
-                >
+                <Link color="textPrimary" variant="h5" underline="hover">
                   {connection.name}
                 </Link>
                 <Typography

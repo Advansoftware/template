@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { experimentalStyled } from '@mui/material/styles';
+import { experimentalStyled } from '@mui/material';
 
 const CircularProgressRoot = experimentalStyled('div')({
   height: 56,

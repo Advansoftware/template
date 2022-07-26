@@ -8,9 +8,9 @@ import {
   ListItem,
   ListItemAvatar,
   ListItemText,
-  Typography
+  Typography,
+  alpha,
 } from '@mui/material';
-import { alpha } from '@mui/material/styles';
 import MinusIcon from '../icons/Minus';
 import Logo from './Logo';
 
@@ -146,7 +146,7 @@ const Footer = (props) => (
                         href={link.href}
                         color="textPrimary"
                         variant="subtitle2"
-                      >
+                        underline="hover">
                         {link.title}
                       </Link>
                     )}
